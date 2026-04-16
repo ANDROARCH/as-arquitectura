@@ -1,162 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Renders | ANDROARQ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Renders | ANDROARQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fuente -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            background: #0a0a0a;
-            font-family: 'Montserrat', sans-serif;
-            color: #fff;
-        }
-
-        /* HERO SOLO PARA ESTA PÁGINA */
-        .hero-renders {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero-content h1 {
-            font-size: 8rem;
-            letter-spacing: 6px;
-            color: #ffffff;
-        }
-
-        .hero-small {
-            font-size: 0.8rem;
-            letter-spacing: 4px;
-            color: #aaa;
-        }
-
-        .hero-sub {
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        /* GALERÍA */
-        .galeria {
-            padding: 80px 10%;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .item img {
-            width: 100%;
-            display: block;
-        }
-        /* SLIDER */
-.slider-section {
-    padding: 100px 0;
+<style>
+body{
+    margin:0;
+    background:#0a0a0a;
+    font-family:'Montserrat',sans-serif;
+    color:#fff;
 }
 
-.slider-container {
-    position: relative;
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.hero h1{
+    font-size:7rem;
+    letter-spacing:6px;
+    color:#fff;
+}
+.hero p{
+    color:#777;
 }
 
-.slider {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+/* SLIDER APPLE STYLE */
+.slider-section{
+    padding:80px 0;
 }
 
-.slider img {
-    min-width: 400px;
-    height: 250px;
-    object-fit: cover;
-    transition: 0.4s;
-    border-radius: 5px;
+.slider{
+    display:flex;
+    gap:40px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding:40px;
 }
 
-.slider img:hover {
-    transform: scale(1.05);
+.slider::-webkit-scrollbar{
+    display:none;
 }
 
-/* BOTONES */
-.nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 2;
+.slide{
+    flex:0 0 60%;
+    scroll-snap-align:center;
+    transition:0.5s;
+    cursor:pointer;
 }
 
-.prev {
-    left: 10px;
+.slide img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.5s;
 }
 
-.next {
-    right: 10px;
+.slide:hover{
+    transform:scale(1.05);
 }
-    </style>
+
+/* LIGHTBOX */
+.lightbox{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.95);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+}
+
+.close{
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .slide{
+        flex:0 0 80%;
+    }
+
+    .slide img{
+        height:250px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <section class="hero-renders">
-        <div class="hero-content">
-            <p class="hero-small">ANDROARQ</p>
-            <h1>RENDERS</h1>
-            <p class="hero-sub">Visualización arquitectónica</p>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>RENDERS</h1>
+        <p>Visualización arquitectónica</p>
+    </div>
+</section>
+
+<!-- SLIDER -->
 <section class="slider-section">
+    <div class="slider">
 
-    <div class="slider-container">
-        
-        <button class="nav prev">&#10094;</button>
-
-        <div class="slider" id="slider">
-            <img src="img/render1.jpg">
-            <img src="img/render2.jpg">
-            <img src="img/render3.jpg">
-            <img src="img/render4.jpg">
-            <img src="img/render5.jpg">
-        </div>
-
-        <button class="nav next">&#10095;</button>
+        <div class="slide"><img src="RENDERS/01.png"></div>
+        <div class="slide"><img src="RENDERS/02.png"></div>
+        <div class="slide"><img src="RENDERS/03.png"></div>
+        <div class="slide"><img src="RENDERS/04.png"></div>
+        <div class="slide"><img src="RENDERS/05.png"></div>
+        <div class="slide"><img src="RENDERS/06.jpg"></div>
+        <div class="slide"><img src="RENDERS/07.jpg"></div>
+        <div class="slide"><img src="RENDERS/08.jpg"></div>
+        <div class="slide"><img src="RENDERS/09.jpg"></div>
+        <div class="slide"><img src="RENDERS/10.png"></div>
+        <div class="slide"><img src="RENDERS/11.jpg"></div>
+        <div class="slide"><img src="RENDERS/12.jpg"></div>
+        <div class="slide"><img src="RENDERS/13.png"></div>
 
     </div>
-
 </section>
-    <section class="galeria">
-        <div class="grid">
-            <div class="item"><img src="img/render1.jpg"></div>
-            <div class="item"><img src="img/render2.jpg"></div>
-            <div class="item"><img src="img/render3.jpg"></div>
-        </div>
-    </section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">✕</span>
+    <img id="lightbox-img">
+</div>
+
 <script>
-    const slider = document.getElementById('slider');
+const slides = document.querySelectorAll('.slide img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
 
-    document.querySelector('.next').addEventListener('click', () => {
-        slider.scrollBy({ left: 400, behavior: 'smooth' });
+slides.forEach(img=>{
+    img.addEventListener('click',()=>{
+        lightbox.style.display='flex';
+        lightboxImg.src = img.src;
     });
+});
 
-    document.querySelector('.prev').addEventListener('click', () => {
-        slider.scrollBy({ left: -400, behavior: 'smooth' });
-    });
+function closeLightbox(){
+    lightbox.style.display='none';
+}
 </script>
+
 </body>
 </html>
