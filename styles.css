@@ -27,7 +27,7 @@ body {
 
 /* TEXTO GRANDE DE FONDO */
 .hero::before {
-    content: "ANDROARQ";
+    content: "ANDRO";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -136,4 +136,15 @@ body {
 .btn-blue {
     background: #3b6edc;
     color: #fff;
+}
+/* SOFTWARE / DOMINIO */
+.software {
+    margin-top: 25px;
+}
+
+.software span {
+    display: block;
+    font-size: 13px;
+    margin-top: 5px;
+    color: #d1d1d1;
 }
