@@ -13,6 +13,7 @@ body{
     background:#0a0a0a;
     font-family:'Montserrat',sans-serif;
     color:#fff;
+    overflow-x:hidden;
 }
 
 /* HERO */
@@ -32,7 +33,7 @@ body{
     color:#777;
 }
 
-/* SLIDER APPLE STYLE */
+/* SLIDER PRO */
 .slider-section{
     padding:80px 0;
 }
@@ -53,19 +54,29 @@ body{
     flex:0 0 60%;
     scroll-snap-align:center;
     transition:0.5s;
-    cursor:pointer;
+    position:relative;
 }
 
 .slide img{
     width:100%;
-    height:400px;
+    height:420px;
     object-fit:cover;
-    border-radius:10px;
+    border-radius:12px;
     transition:0.5s;
+    cursor:pointer;
 }
 
-.slide:hover{
-    transform:scale(1.05);
+/* EFECTO ENFOQUE */
+.slide{
+    opacity:0.4;
+    filter:blur(2px);
+    transform:scale(0.9);
+}
+
+.slide.active{
+    opacity:1;
+    filter:blur(0);
+    transform:scale(1);
 }
 
 /* LIGHTBOX */
@@ -124,8 +135,25 @@ body{
 
 <!-- SLIDER -->
 <section class="slider-section">
-    <div class="slider">
+    <div class="slider" id="slider">
 
+        <!-- DUPLICAMOS PARA LOOP -->
+        <!-- ORIGINAL -->
+        <div class="slide"><img src="RENDERS/01.png"></div>
+        <div class="slide"><img src="RENDERS/02.png"></div>
+        <div class="slide"><img src="RENDERS/03.png"></div>
+        <div class="slide"><img src="RENDERS/04.png"></div>
+        <div class="slide"><img src="RENDERS/05.png"></div>
+        <div class="slide"><img src="RENDERS/06.jpg"></div>
+        <div class="slide"><img src="RENDERS/07.jpg"></div>
+        <div class="slide"><img src="RENDERS/08.jpg"></div>
+        <div class="slide"><img src="RENDERS/09.jpg"></div>
+        <div class="slide"><img src="RENDERS/10.png"></div>
+        <div class="slide"><img src="RENDERS/11.jpg"></div>
+        <div class="slide"><img src="RENDERS/12.jpg"></div>
+        <div class="slide"><img src="RENDERS/13.png"></div>
+
+        <!-- DUPLICADO PARA LOOP -->
         <div class="slide"><img src="RENDERS/01.png"></div>
         <div class="slide"><img src="RENDERS/02.png"></div>
         <div class="slide"><img src="RENDERS/03.png"></div>
@@ -150,11 +178,43 @@ body{
 </div>
 
 <script>
-const slides = document.querySelectorAll('.slide img');
+const slider = document.getElementById('slider');
+const slides = document.querySelectorAll('.slide');
+const images = document.querySelectorAll('.slide img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
-slides.forEach(img=>{
+/* ENFOQUE CENTRO */
+function updateCenter(){
+    let center = window.innerWidth / 2;
+
+    slides.forEach(slide=>{
+        const rect = slide.getBoundingClientRect();
+        const slideCenter = rect.left + rect.width / 2;
+
+        if(Math.abs(center - slideCenter) < rect.width / 2){
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
+}
+
+slider.addEventListener('scroll', updateCenter);
+window.addEventListener('load', updateCenter);
+
+/* SCROLL INFINITO */
+slider.addEventListener('scroll', ()=>{
+    if(slider.scrollLeft <= 0){
+        slider.scrollLeft = slider.scrollWidth / 2;
+    }
+    if(slider.scrollLeft >= slider.scrollWidth / 2){
+        slider.scrollLeft = slider.scrollWidth / 4;
+    }
+});
+
+/* LIGHTBOX */
+images.forEach(img=>{
     img.addEventListener('click',()=>{
         lightbox.style.display='flex';
         lightboxImg.src = img.src;
