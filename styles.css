@@ -1,217 +1,174 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Renders | ANDROARQ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap');
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
+/* BODY */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0e0e0e;
+    color: #eaeaea;
+}
 
-        body {
-            background: #0a0a0a;
-            color: #fff;
-        }
+/* HERO */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(to right, #0e0e0e 40%, #111111);
+    display: flex;
+    align-items: center;
+    padding: 80px;
+}
 
-        /* HERO */
-        .hero-renders {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(120deg, #0a0a0a, #111);
-        }
+/* TEXTO FONDO */
+.hero::before {
+    content: "ANDRO";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 180px;
+    font-family: 'Playfair Display', serif;
+    color: rgba(255,255,255,0.03);
+    letter-spacing: 10px;
+    z-index: 0;
+}
 
-        .hero-content {
-            animation: fadeUp 1.2s ease;
-        }
+/* CONTENIDO */
+.hero-content {
+    max-width: 500px;
+    z-index: 2;
+}
 
-        .hero-small {
-            font-size: 0.8rem;
-            letter-spacing: 4px;
-            color: #aaa;
-            margin-bottom: 10px;
-        }
+/* TITULO */
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    margin-bottom: 20px;
+}
 
-        .hero-content h1 {
-            font-size: 8rem;
-            font-weight: 700;
-            letter-spacing: 6px;
-            color: #d96b5f;
-        }
+/* TEXTO */
+.hero p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #bdbdbd;
+    text-align: justify;
+}
 
-        .hero-sub {
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            color: #888;
-            margin-top: 10px;
-        }
+/* ESPECIALIZACIÓN */
+.specialties {
+    margin-top: 25px;
+}
 
-        .hero-btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 25px;
-            border: 1px solid #fff;
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            transition: 0.3s ease;
-        }
+.specialties span {
+    display: block;
+    font-size: 13px;
+    margin-top: 5px;
+    color: #d1d1d1;
+}
 
-        .hero-btn:hover {
-            background: #fff;
-            color: #000;
-        }
+/* SOFTWARE */
+.software {
+    margin-top: 25px;
+}
 
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.software span {
+    display: block;
+    font-size: 13px;
+    margin-top: 5px;
+    color: #d1d1d1;
+}
 
-        /* GALERÍA */
-        .galeria {
-            padding: 80px 10%;
-        }
+/* SECCIÓN */
+.section {
+    background: #f5f5f5;
+    color: #111;
+    padding: 80px;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
 
-        .item {
-            overflow: hidden;
-            position: relative;
-        }
+/* BLOQUES */
+.block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 
-        .item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s ease;
-        }
+.number {
+    font-size: 28px;
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 10px;
+}
 
-        .item:hover img {
-            transform: scale(1.08);
-            filter: brightness(0.7);
-        }
+.block p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #444;
+}
 
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            color: #fff;
-            opacity: 0;
-            transition: 0.4s;
-        }
+.block a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #111;
+    font-weight: 600;
+}
 
-        .item:hover .overlay {
-            opacity: 1;
-        }
+/* BOTONES */
+.btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+}
 
-        .overlay h3 {
-            font-size: 1rem;
-            letter-spacing: 2px;
-        }
+.btn-black {
+    background: #000;
+    color: #fff;
+}
 
-        .overlay p {
-            font-size: 0.8rem;
-            color: #ccc;
-        }
+.btn-blue {
+    background: #3b6edc;
+    color: #fff;
+}
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 4rem;
-            }
-        }
-    </style>
-</head>
+/* WHATSAPP */
+.whatsapp-btn {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    z-index: 999;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
 
-<body>
+.whatsapp-btn img {
+    width: 28px;
+}
 
-    <!-- HERO -->
-    <section class="hero-renders">
-        <div class="hero-content">
-            <p class="hero-small">ANDROARQ</p>
-            <h1>RENDERS</h1>
-            <p class="hero-sub">Visualización arquitectónica</p>
-            <a href="#galeria" class="hero-btn">Ver proyectos</a>
-        </div>
-    </section>
-
-    <!-- GALERÍA -->
-    <section class="galeria" id="galeria">
-        <div class="grid">
-
-            <div class="item">
-                <img src="img/render1.jpg" alt="Render 1">
-                <div class="overlay">
-                    <h3>Proyecto Residencial</h3>
-                    <p>Exterior</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/render2.jpg" alt="Render 2">
-                <div class="overlay">
-                    <h3>Interior Moderno</h3>
-                    <p>Iluminación cálida</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/render3.jpg" alt="Render 3">
-                <div class="overlay">
-                    <h3>Fachada Nocturna</h3>
-                    <p>Visualización comercial</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/render4.jpg" alt="Render 4">
-                <div class="overlay">
-                    <h3>Conceptual</h3>
-                    <p>Fondo blanco</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/render5.jpg" alt="Render 5">
-                <div class="overlay">
-                    <h3>Espacio Público</h3>
-                    <p>Urbanismo</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/render6.jpg" alt="Render 6">
-                <div class="overlay">
-                    <h3>Detalle Material</h3>
-                    <p>Madera + Hormigón</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-</body>
-</html>
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
