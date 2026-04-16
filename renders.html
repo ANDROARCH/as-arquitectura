@@ -28,7 +28,7 @@
         .hero-content h1 {
             font-size: 8rem;
             letter-spacing: 6px;
-            color: #d96b5f;
+            color: #ffffff;
         }
 
         .hero-small {
@@ -57,6 +57,58 @@
             width: 100%;
             display: block;
         }
+        /* SLIDER */
+.slider-section {
+    padding: 100px 0;
+}
+
+.slider-container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.slider img {
+    min-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.slider img:hover {
+    transform: scale(1.05);
+}
+
+/* BOTONES */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
     </style>
 </head>
 
@@ -69,7 +121,25 @@
             <p class="hero-sub">Visualización arquitectónica</p>
         </div>
     </section>
+<section class="slider-section">
 
+    <div class="slider-container">
+        
+        <button class="nav prev">&#10094;</button>
+
+        <div class="slider" id="slider">
+            <img src="img/render1.jpg">
+            <img src="img/render2.jpg">
+            <img src="img/render3.jpg">
+            <img src="img/render4.jpg">
+            <img src="img/render5.jpg">
+        </div>
+
+        <button class="nav next">&#10095;</button>
+
+    </div>
+
+</section>
     <section class="galeria">
         <div class="grid">
             <div class="item"><img src="img/render1.jpg"></div>
@@ -77,6 +147,16 @@
             <div class="item"><img src="img/render3.jpg"></div>
         </div>
     </section>
+<script>
+    const slider = document.getElementById('slider');
 
+    document.querySelector('.next').addEventListener('click', () => {
+        slider.scrollBy({ left: 400, behavior: 'smooth' });
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        slider.scrollBy({ left: -400, behavior: 'smooth' });
+    });
+</script>
 </body>
 </html>
