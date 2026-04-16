@@ -1,9 +1,82 @@
-<section class="hero-renders">
-    <div class="hero-content">
-        <p class="hero-small">ANDROARQ</p>
-        <h1>RENDERS</h1>
-        <p class="hero-sub">Visualización arquitectónica</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Renders | ANDROARQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <a href="#galeria" class="hero-btn">Ver proyectos</a>
-    </div>
-</section>
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: #0a0a0a;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+        }
+
+        /* HERO SOLO PARA ESTA PÁGINA */
+        .hero-renders {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 8rem;
+            letter-spacing: 6px;
+            color: #d96b5f;
+        }
+
+        .hero-small {
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            color: #aaa;
+        }
+
+        .hero-sub {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* GALERÍA */
+        .galeria {
+            padding: 80px 10%;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .item img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero-renders">
+        <div class="hero-content">
+            <p class="hero-small">ANDROARQ</p>
+            <h1>RENDERS</h1>
+            <p class="hero-sub">Visualización arquitectónica</p>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="grid">
+            <div class="item"><img src="img/render1.jpg"></div>
+            <div class="item"><img src="img/render2.jpg"></div>
+            <div class="item"><img src="img/render3.jpg"></div>
+        </div>
+    </section>
+
+</body>
+</html>
