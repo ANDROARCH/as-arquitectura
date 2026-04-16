@@ -14,7 +14,7 @@
 
 body{
     font-family: 'Helvetica Neue', sans-serif;
-    background:#0d0d0d;
+    background:#2b2b2b;
     color:#fff;
 }
 
@@ -39,19 +39,16 @@ body{
     font-weight:600;
 }
 
-/* FILTROS */
+/* BUSCADOR */
 .filters{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
     margin-bottom:40px;
 }
 
 .filters input{
-    flex:1;
+    width:100%;
     padding:12px;
-    background:#111;
-    border:1px solid #222;
+    background:#1f1f1f;
+    border:1px solid #333;
     color:#fff;
     border-radius:6px;
 }
@@ -65,16 +62,15 @@ body{
 
 /* CARD */
 .card{
-    background:#111;
-    border:1px solid #1a1a1a;
+    background:#1f1f1f;
     border-radius:10px;
     overflow:hidden;
-    transition:0.3s;
+    transition:0.4s;
+    position:relative;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:#333;
+    transform:scale(1.02);
 }
 
 /* LINK */
@@ -84,19 +80,45 @@ body{
     color:inherit;
 }
 
-/* PLACEHOLDER */
-.placeholder{
-    height:200px;
-    background:#1a1a1a;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#555;
-    font-size:0.8rem;
-    letter-spacing:2px;
+/* CONTENEDOR IMAGEN */
+.img-container{
+    width:100%;
+    height:220px;
+    overflow:hidden;
+    position:relative;
 }
 
-/* CONTENT */
+/* IMAGEN */
+.img-container img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:0.4s;
+}
+
+/* OVERLAY AMARILLO */
+.img-container::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#ffb300;
+    opacity:0.25;
+    mix-blend-mode:multiply;
+    transition:0.4s;
+}
+
+/* HOVER EFECTOS */
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.card:hover .img-container::after{
+    opacity:0.1;
+}
+
+/* TEXTO */
 .card-content{
     padding:18px;
 }
@@ -110,11 +132,11 @@ body{
 .footer{
     text-align:center;
     padding:40px 0;
-    color:#666;
+    color:#888;
     font-size:0.8rem;
 }
-
 </style>
+
 </head>
 
 <body>
@@ -131,97 +153,27 @@ body{
 
     <div class="grid" id="grid">
 
-        <!-- CARDS -->
+        <!-- PLUGINS 1-8 -->
+        <div class="card"><a href="https://payhip.com/b/Q0ZOv" target="_blank"><div class="img-container"><img src="img/R1.jpeg"></div><div class="card-content"><h3>PLUGINS PACK 01 – MODELADO RÁPIDO EN SKETCHUP</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/heUQP" target="_blank"><div class="img-container"><img src="img/R2.jpeg"></div><div class="card-content"><h3>PLUGINS PACK 02 – LIMPIEZA, CONTROL Y GEOMETRÍA</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/oGiSs" target="_blank"><div class="img-container"><img src="img/R3.jpeg"></div><div class="card-content"><h3>PLUGINS PACK 03 – FORMAS ORGÁNICAS Y SUPERFICIES</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/AH9pd" target="_blank"><div class="img-container"><img src="img/R4.jpeg"></div><div class="card-content"><h3>PLUGINS PACK 04 – TEXTURAS, UV Y MATERIALES</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/tuGZi" target="_blank"><div class="img-container"><img src="img/R5.jpeg"></div><div class="card-content"><h3>PLUGINS PACK 05 – PRODUCTIVIDAD Y AUTOMATIZACIÓN</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/J0MdW" target="_blank"><div class="img-container"><img src="img/R6.jpeg"></div><div class="card-content"><h3>PLUGINS PACK 06 – EXPORTACIÓN, RENDER Y WORKFLOW</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/b4jPA" target="_blank"><div class="img-container"><img src="img/R7.jpeg"></div><div class="card-content"><h3>PLUGINS PACK 07 – ARQUITECTURA, ESTRUCTURA Y CONSTRUCCIÓN</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/hzwoK" target="_blank"><div class="img-container"><img src="img/R8.jpeg"></div><div class="card-content"><h3>PLUGINS PACK 08 – GEOMETRÍA EXPERIMENTAL Y HERRAMIENTAS</h3></div></a></div>
 
-        <div class="card"><a href="https://payhip.com/b/Q0ZOv" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PLUGINS PACK 01 – MODELADO RÁPIDO EN SKETCHUP</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/heUQP" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PLUGINS PACK 02 – LIMPIEZA, CONTROL Y GEOMETRÍA</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/oGiSs" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PLUGINS PACK 03 – FORMAS ORGÁNICAS Y SUPERFICIES</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/AH9pd" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PLUGINS PACK 04 – TEXTURAS, UV Y MATERIALES</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/tuGZi" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PLUGINS PACK 05 – PRODUCTIVIDAD Y AUTOMATIZACIÓN</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/J0MdW" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PLUGINS PACK 06 – EXPORTACIÓN, RENDER Y WORKFLOW</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/b4jPA" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PLUGINS PACK 07 – ARQUITECTURA, ESTRUCTURA Y CONSTRUCCIÓN</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/hzwoK" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PLUGINS PACK 08 – GEOMETRÍA EXPERIMENTAL Y HERRAMIENTAS</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/PTeoj" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PLUGIN MASTER PACK – COLECCIÓN COMPLETA PRO</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/7m3uU" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>ADB ILLUST 2026</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/f78ru" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>LUMION 2023 FULL</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/ptvFY" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>REVIT 2026 FULL</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/dwL1X" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PACK MOBILIARIO INTERIOR PRO SKETCHUP</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/VGwXo" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>ARCH BRUSHES 01</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/3GwXf" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>PHOTOSHOP PACK 01 – BRUSHES + INSTALADOR</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/NF8Ym" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>ARQ PRO PACK</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/ryU0z" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>CAD 2025 FULL</h3></div>
-        </a></div>
-
-        <div class="card"><a href="https://payhip.com/b/OixSG" target="_blank">
-            <div class="placeholder">RECURSO</div>
-            <div class="card-content"><h3>SKETCHUP 2026 FULL</h3></div>
-        </a></div>
+        <!-- OTROS -->
+        <div class="card"><a href="https://payhip.com/b/PTeoj" target="_blank"><div class="img-container"><img src="img/R9.jpeg"></div><div class="card-content"><h3>PLUGIN MASTER PACK – COLECCIÓN COMPLETA PRO</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/7m3uU" target="_blank"><div class="img-container"><img src="img/SKETCHUP.jpeg"></div><div class="card-content"><h3>SKETCHUP</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/f78ru" target="_blank"><div class="img-container"><img src="img/PHOTOSHOP.jpeg"></div><div class="card-content"><h3>PHOTOSHOP 2026</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/ptvFY" target="_blank"><div class="img-container"><img src="img/AUTOCAD2026.jpeg"></div><div class="card-content"><h3>AUTOCAD 2025</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/dwL1X" target="_blank"><div class="img-container"><img src="img/ANDRO PRO PACK.jpeg"></div><div class="card-content"><h3>ANDRO PACK PRO</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/VGwXo" target="_blank"><div class="img-container"><img src="img/PHOTOSHOP PACK 01 – Brushes Instalador PS 2026.jpeg"></div><div class="card-content"><h3>PHOTOSHOP PACK 01 – Brushes + Instalador PS 2026</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/3GwXf" target="_blank"><div class="img-container"><img src="img/ARCH BRUSHES 01.jpeg"></div><div class="card-content"><h3>ARCH BRUSHES 01</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/NF8Ym" target="_blank"><div class="img-container"><img src="img/Pack Mobiliario Interior PRO para SketchUp 5 Texturas GRATUITAS.jpeg"></div><div class="card-content"><h3>Pack Mobiliario Interior PRO para SketchUp +5 Texturas GRATUITAS</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/ryU0z" target="_blank"><div class="img-container"><img src="img/RVIT 2026 FULL.jpeg"></div><div class="card-content"><h3>RVIT 2026 FULL</h3></div></a></div>
+        <div class="card"><a href="https://payhip.com/b/OixSG" target="_blank"><div class="img-container"><img src="img/ADB ILLUST 2026.jpeg"></div><div class="card-content"><h3>ADB ILLUST 2026</h3></div></a></div>
 
     </div>
 
