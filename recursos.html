@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Recursos | ANDRO ARQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+  margin:0;
+  background:#ffffff;
+  color:#111;
+  font-family:'Inter', sans-serif;
+}
+
+.container{
+  max-width:1400px;
+  margin:auto;
+  padding:60px 40px;
+}
+
+h1,h2{
+  font-family:'Playfair Display', serif;
+}
+
+h1{ font-size:48px; }
+h2{ margin:80px 0 20px; }
+
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:40px;
+}
+
+/* CARD */
+.resource-card{
+  border:1px solid #e5e5e5;
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  height:420px;
+  transition:.3s;
+}
+
+.resource-card:hover{
+  transform:translateY(-6px);
+}
+
+/* IMG PERFECTA */
+.resource-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+/* CONTENIDO */
+.card-content{
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.card-content h3{
+  font-size:16px;
+  min-height:42px;
+}
+
+/* BOTONES */
+.card-buttons{
+  margin-top:auto;
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px;
+  text-decoration:none;
+}
+
+.btn-pay{
+  background:#2563EB;
+  color:#fff;
+}
+
+.btn-dark{
+  background:#111;
+  color:#fff;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .cards-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:600px){
+  .cards-grid{ grid-template-columns:1fr; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Recursos</h1>
+
+<!-- OFERTAS -->
+<h2>Ofertas</h2>
+<div class="cards-grid">
+
+<div class="resource-card">
+<img src="img/pack01.png">
+<div class="card-content">
+<h3>ARQ PRO PACK</h3>
+<div class="card-buttons">
+<a href="https://payhip.com/b/dwL1X" class="btn btn-pay">Payhip</a>
+</div>
+</div>
+</div>
+
+<div class="resource-card">
+<img src="img/pspack.png">
+<div class="card-content">
+<h3>PHOTOSHOP PACK 01</h3>
+<div class="card-buttons">
+<a href="#" class="btn btn-pay">Payhip</a>
+</div>
+</div>
+</div>
+
+<div class="resource-card">
+<img src="img/packtotal.png">
+<div class="card-content">
+<h3>PLUGIN MASTER PACK</h3>
+<div class="card-buttons">
+<a href="https://payhip.com/b/PTeoj" class="btn btn-pay">Payhip</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- PACKS -->
+<h2>Paquetes</h2>
+<div class="cards-grid">
+
+<div class="resource-card"><img src="img/pack1.png"><div class="card-content"><h3>Pack Plugins 01</h3><div class="card-buttons"><a href="https://payhip.com/b/Q0ZOv" class="btn btn-pay">Payhip</a></div></div></div>
+
+<div class="resource-card"><img src="img/pack2.png"><div class="card-content"><h3>Pack Plugins 02</h3><div class="card-buttons"><a href="https://payhip.com/b/heUQP" class="btn btn-pay">Payhip</a></div></div></div>
+
+<div class="resource-card"><img src="img/pack3.png"><div class="card-content"><h3>Pack Plugins 03</h3><div class="card-buttons"><a href="https://payhip.com/b/oGiSs" class="btn btn-pay">Payhip</a></div></div></div>
+
+<div class="resource-card"><img src="img/pack4.png"><div class="card-content"><h3>Pack Plugins 04</h3><div class="card-buttons"><a href="https://payhip.com/b/AH9pd" class="btn btn-pay">Payhip</a></div></div></div>
+
+<div class="resource-card"><img src="img/pack5.png"><div class="card-content"><h3>Pack Plugins 05</h3><div class="card-buttons"><a href="https://payhip.com/b/tuGZi" class="btn btn-pay">Payhip</a></div></div></div>
+
+<div class="resource-card"><img src="img/pack6.png"><div class="card-content"><h3>Pack Plugins 06</h3><div class="card-buttons"><a href="https://payhip.com/b/J0MdW" class="btn btn-pay">Payhip</a></div></div></div>
+
+<div class="resource-card"><img src="img/pack7.png"><div class="card-content"><h3>Pack Plugins 07</h3><div class="card-buttons"><a href="https://payhip.com/b/b4jPA" class="btn btn-pay">Payhip</a></div></div></div>
+
+<div class="resource-card"><img src="img/pack8.png"><div class="card-content"><h3>Pack Plugins 08</h3><div class="card-buttons"><a href="https://payhip.com/b/hzwoK" class="btn btn-pay">Payhip</a></div></div></div>
+
+</div>
+
+<!-- SKETCHUP -->
+<h2>SketchUp</h2>
+<div class="cards-grid">
+
+<div class="resource-card">
+<img src="img/atajos1.png">
+<div class="card-content">
+<h3>Atajos básicos</h3>
+</div>
+</div>
+
+<div class="resource-card">
+<img src="img/atajos2.png">
+<div class="card-content">
+<h3>Atajos avanzados</h3>
+</div>
+</div>
+
+<div class="resource-card">
+<img src="img/plugins.png">
+<div class="card-content">
+<h3>5 Plugins esenciales</h3>
+</div>
+</div>
+
+<div class="resource-card">
+<img src="img/sketchup.png">
+<div class="card-content">
+<h3>SketchUp 2026</h3>
+<div class="card-buttons">
+<a href="https://payhip.com/b/7m3uU" class="btn btn-pay">Payhip</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- VARIOS -->
+<h2>Varios</h2>
+<div class="cards-grid">
+
+<div class="resource-card">
+<img src="img/photoshop.png">
+<div class="card-content">
+<h3>Arch Brushes 01</h3>
+<div class="card-buttons">
+<a href="#" class="btn btn-pay">Payhip</a>
+</div>
+</div>
+</div>
+
+<div class="resource-card">
+<img src="img/autocad.png">
+<div class="card-content">
+<h3>Autocad 2025</h3>
+<div class="card-buttons">
+<a href="https://payhip.com/b/ptvFY" class="btn btn-pay">Payhip</a>
+</div>
+</div>
+</div>
+
+<div class="resource-card">
+<img src="img/mobiliario.png">
+<div class="card-content">
+<h3>Pack Mobiliario 01</h3>
+<div class="card-buttons">
+<a href="#" class="btn btn-pay">Payhip</a>
+</div>
+</div>
+</div>
+
+<div class="resource-card">
+<img src="img/ps.png">
+<div class="card-content">
+<h3>Photoshop</h3>
+<div class="card-buttons">
+<a href="https://payhip.com/b/f78ru" class="btn btn-pay">Payhip</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- ESCENAS -->
+<h2>Escenas</h2>
+<div class="cards-grid">
+
+<div class="resource-card">
+<img src="img/escena1.png">
+<div class="card-content">
+<h3>Escena práctica</h3>
+<div class="card-buttons">
+<a href="#" class="btn btn-dark">Patreon</a>
+</div>
+</div>
+</div>
+
+<div class="resource-card">
+<img src="img/escena2.png">
+<div class="card-content">
+<h3>Escenas D5</h3>
+<div class="card-buttons">
+<a href="#" class="btn btn-dark">Patreon</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
