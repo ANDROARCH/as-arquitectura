@@ -24,10 +24,8 @@
         border-color:#fff;
     }
 
-    /* BOTONES EXTRA */
+    /* BOTONES */
     .btn-black{
-        display:inline-block;
-        margin-top:10px;
         padding:8px 16px;
         background:#000;
         color:#fff;
@@ -37,13 +35,34 @@
     }
 
     .btn-blue{
-        display:inline-block;
-        margin-top:10px;
         padding:8px 16px;
         background:#1e90ff;
         color:#fff;
         text-decoration:none;
         font-size:12px;
+    }
+
+    .buttons-recursos{
+        margin-top:15px;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+    }
+
+    /* GRID CENTRADO */
+    .grid{
+        display:flex;
+        justify-content:center;
+        gap:80px;
+        text-align:center;
+    }
+
+    .block{
+        max-width:300px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
     }
     </style>
 
@@ -90,9 +109,7 @@
             <span>Fotomontajes</span>
         </div>
 
-        <!-- BOTÓN CV -->
         <a href="cv.html" class="btn-cv">VER CV</a>
-
     </div>
 </section>
 
@@ -113,14 +130,15 @@
             <p>Materiales y herramientas para potenciar procesos de diseño.</p>
             <a href="recursos.html">Ver recursos →</a>
 
-            <!-- BOTONES -->
-            <a class="btn-black" href="https://www.tiktok.com/@androarq?is_from_webapp=1&sender_device=pc" target="_blank">
-                TikTok @androarq
-            </a>
+            <div class="buttons-recursos">
+                <a class="btn-black" href="https://www.tiktok.com/@androarq?is_from_webapp=1&sender_device=pc" target="_blank">
+                    TikTok @androarq
+                </a>
 
-            <a class="btn-blue" href="https://payhip.com/ANDROARQ" target="_blank">
-                Comprar recursos
-            </a>
+                <a class="btn-blue" href="https://payhip.com/ANDROARQ" target="_blank">
+                    Comprar recursos
+                </a>
+            </div>
         </div>
 
         <div class="block">
