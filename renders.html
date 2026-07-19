@@ -1,237 +1,313 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<title>Renders | ANDROARQ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    margin:0;
-    background:#0a0a0a;
-    font-family:'Montserrat',sans-serif;
-    color:#fff;
-    overflow-x:hidden;
-}
+    <title>Renders | ANDROARQ</title>
 
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-.hero h1{
-    font-size:7rem;
-    letter-spacing:6px;
-    color:#fff;
-}
-.hero p{
-    color:#777;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-/* SLIDER PRO */
-.slider-section{
-    padding:80px 0;
-}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.slider{
-    display:flex;
-    gap:40px;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    padding:40px;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.slider::-webkit-scrollbar{
-    display:none;
-}
+    <link rel="stylesheet" href="css/renders.css">
 
-.slide{
-    flex:0 0 75%;
-    scroll-snap-align:center;
-    transition:0.5s;
-    position:relative;
-}
-
-.slide img{
-    width:100%;
-    aspect-ratio: 1 / 1; /* CUADRADO PERFECTO */
-    object-fit:cover;
-    border-radius:14px;
-    transition:0.5s;
-    cursor:pointer;
-}
-
-/* EFECTO ENFOQUE */
-.slide{
-    opacity:0.4;
-    filter:blur(2px);
-    transform:scale(0.9);
-}
-
-.slide.active{
-    opacity:1;
-    filter:blur(0);
-    transform:scale(1);
-}
-
-/* LIGHTBOX */
-.lightbox{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.95);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:999;
-}
-
-.lightbox img{
-    max-width:90%;
-    max-height:90%;
-}
-
-.close{
-    position:absolute;
-    top:30px;
-    right:40px;
-    font-size:2rem;
-    cursor:pointer;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    .hero h1{
-        font-size:3.5rem;
-    }
-
-    .slide{
-        flex:0 0 80%;
-    }
-
-    .slide img{
-        height:250px;
-    }
-}
-</style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- ===================== HEADER ===================== -->
+
+<header>
+
+<a class="logo" href="index.html">
+ANDROARQ
+</a>
+
+<a class="back" href="index.html">
+← Inicio
+</a>
+
+</header>
+
+<!-- ===================== HERO ===================== -->
+
 <section class="hero">
-    <div>
-        <h1>RENDERS</h1>
-        <p>Visualización arquitectónica</p>
-    </div>
+
+<span>PORTFOLIO</span>
+
+<h1>RENDERS</h1>
+
+<p>
+Visualización Arquitectónica
+</p>
+
 </section>
 
-<!-- SLIDER -->
-<section class="slider-section">
-    <div class="slider" id="slider">
+<!-- ===================== GALERIA ===================== -->
 
-        <!-- DUPLICAMOS PARA LOOP -->
-        <!-- ORIGINAL -->
-        <div class="slide"><img src="RENDERS/01.png"></div>
-        <div class="slide"><img src="RENDERS/02.png"></div>
-        <div class="slide"><img src="RENDERS/03.png"></div>
-        <div class="slide"><img src="RENDERS/04.png"></div>
-        <div class="slide"><img src="RENDERS/05.png"></div>
-        <div class="slide"><img src="RENDERS/06.jpg"></div>
-        <div class="slide"><img src="RENDERS/07.jpg"></div>
-        <div class="slide"><img src="RENDERS/08.jpg"></div>
-        <div class="slide"><img src="RENDERS/09.jpg"></div>
-        <div class="slide"><img src="RENDERS/10.png"></div>
-        <div class="slide"><img src="RENDERS/11.jpg"></div>
-        <div class="slide"><img src="RENDERS/12.jpg"></div>
-        <div class="slide"><img src="RENDERS/13.png"></div>
-        <div class="slide"><img src="RENDERS/14.png"></div>
-        <div class="slide"><img src="RENDERS/15.png"></div>
-        <div class="slide"><img src="RENDERS/16.PNG"></div>
+<section class="gallery">
 
-        <!-- DUPLICADO PARA LOOP -->
-        <div class="slide"><img src="RENDERS/01.png"></div>
-        <div class="slide"><img src="RENDERS/02.png"></div>
-        <div class="slide"><img src="RENDERS/03.png"></div>
-        <div class="slide"><img src="RENDERS/04.png"></div>
-        <div class="slide"><img src="RENDERS/05.png"></div>
-        <div class="slide"><img src="RENDERS/06.jpg"></div>
-        <div class="slide"><img src="RENDERS/07.jpg"></div>
-        <div class="slide"><img src="RENDERS/08.jpg"></div>
-        <div class="slide"><img src="RENDERS/09.jpg"></div>
-        <div class="slide"><img src="RENDERS/10.png"></div>
-        <div class="slide"><img src="RENDERS/11.jpg"></div>
-        <div class="slide"><img src="RENDERS/12.jpg"></div>
-        <div class="slide"><img src="RENDERS/13.png"></div>
-        <div class="slide"><img src="RENDERS/14.png"></div>
-        <div class="slide"><img src="RENDERS/15.png"></div>
-        <div class="slide"><img src="RENDERS/16.PNG"></div>
-        <div class="slide"><img src="RENDERS/17.png"></div>
+<div class="gallery-item wide">
 
-    </div>
-</section>
+<img src="RENDERS/01.png" loading="lazy">
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <span class="close" onclick="closeLightbox()">✕</span>
-    <img id="lightbox-img">
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
 </div>
 
-<script>
-const slider = document.getElementById('slider');
-const slides = document.querySelectorAll('.slide');
-const images = document.querySelectorAll('.slide img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
+</div>
 
-/* ENFOQUE CENTRO */
-function updateCenter(){
-    let center = window.innerWidth / 2;
+<div class="gallery-item">
 
-    slides.forEach(slide=>{
-        const rect = slide.getBoundingClientRect();
-        const slideCenter = rect.left + rect.width / 2;
+<img src="RENDERS/02.png" loading="lazy">
 
-        if(Math.abs(center - slideCenter) < rect.width / 2){
-            slide.classList.add('active');
-        } else {
-            slide.classList.remove('active');
-        }
-    });
-}
+<div class="overlay">
 
-slider.addEventListener('scroll', updateCenter);
-window.addEventListener('load', updateCenter);
+<h3>Render</h3>
 
-/* SCROLL INFINITO */
-slider.addEventListener('scroll', ()=>{
-    if(slider.scrollLeft <= 0){
-        slider.scrollLeft = slider.scrollWidth / 2;
-    }
-    if(slider.scrollLeft >= slider.scrollWidth / 2){
-        slider.scrollLeft = slider.scrollWidth / 4;
-    }
-});
+<p>Arq. Alejandro Salazar</p>
 
-/* LIGHTBOX */
-images.forEach(img=>{
-    img.addEventListener('click',()=>{
-        lightbox.style.display='flex';
-        lightboxImg.src = img.src;
-    });
-});
+</div>
 
-function closeLightbox(){
-    lightbox.style.display='none';
-}
-</script>
+</div>
+
+<div class="gallery-item">
+
+<img src="RENDERS/03.png" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item tall">
+
+<img src="RENDERS/04.png" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="RENDERS/05.png" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item wide">
+
+<img src="RENDERS/06.jpg" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="RENDERS/07.jpg" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="RENDERS/08.jpg" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item tall">
+
+<img src="RENDERS/09.jpg" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="RENDERS/10.png" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item wide">
+
+<img src="RENDERS/11.jpg" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="RENDERS/12.jpg" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="RENDERS/13.png" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item tall">
+
+<img src="RENDERS/14.png" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="RENDERS/15.png" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item wide">
+
+<img src="RENDERS/16.PNG" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="RENDERS/17.png" loading="lazy">
+
+<div class="overlay">
+
+<h3>Render</h3>
+
+<p>Arq. Alejandro Salazar</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== LIGHTBOX ===================== -->
+
+<div class="lightbox">
+
+<span class="close">
+
+✕
+
+</span>
+
+<img>
+
+</div>
+
+<script src="js/renders.js"></script>
 
 </body>
+
 </html>
