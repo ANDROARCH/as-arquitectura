@@ -13,9 +13,303 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
 
-    <link rel="stylesheet" href="css/renders.css">
+/* =========================
+   ESTILOS GENERALES
+========================= */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#faf9f7;
+    color:#111;
+    line-height:1.5;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:28px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(250,249,247,.90);
+    backdrop-filter:blur(14px);
+    z-index:1000;
+}
+
+.logo{
+    text-decoration:none;
+    color:#111;
+    font-size:14px;
+    letter-spacing:4px;
+    font-weight:700;
+}
+
+.back{
+    text-decoration:none;
+    color:#777;
+    font-size:14px;
+    transition:.3s;
+}
+
+.back:hover{
+    color:#000;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero span{
+
+    letter-spacing:8px;
+
+    font-size:12px;
+
+    color:#999;
+
+}
+
+.hero h1{
+
+    font-size:90px;
+
+    font-weight:700;
+
+    margin:20px 0;
+
+    letter-spacing:-3px;
+
+}
+
+.hero p{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+/* =========================
+   GALERIA
+========================= */
+
+.gallery{
+
+    width:min(1600px,92%);
+
+    margin:auto;
+
+    column-count:3;
+
+    column-gap:28px;
+
+    padding-bottom:120px;
+
+}
+
+.gallery-item{
+
+    position:relative;
+
+    margin-bottom:28px;
+
+    break-inside:avoid;
+
+    overflow:hidden;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.55s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(to top,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,0));
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    flex-direction:column;
+
+    padding:28px;
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.gallery-item:hover .overlay{
+
+    opacity:1;
+
+}
+
+.overlay h3{
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.overlay p{
+
+    color:#ddd;
+
+    font-size:13px;
+
+    margin-top:4px;
+
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.95);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+}
+
+.close{
+
+    position:absolute;
+
+    top:40px;
+
+    right:60px;
+
+    color:#fff;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+.gallery{
+
+column-count:2;
+
+}
+
+}
+
+@media(max-width:700px){
+
+header{
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:54px;
+
+}
+
+.gallery{
+
+column-count:1;
+
+}
+
+}
+
+</style>
 </head>
 
 <body>
@@ -305,8 +599,55 @@ Visualización Arquitectónica
 <img>
 
 </div>
+<script>
 
-<script src="js/renders.js"></script>
+const galleryImages = document.querySelectorAll('.gallery img');
+
+const lightbox = document.querySelector('.lightbox');
+
+const lightboxImage = document.querySelector('.lightbox img');
+
+const closeButton = document.querySelector('.close');
+
+galleryImages.forEach(image=>{
+
+    image.addEventListener('click',()=>{
+
+        lightbox.style.display='flex';
+
+        lightboxImage.src=image.src;
+
+    });
+
+});
+
+closeButton.addEventListener('click',()=>{
+
+    lightbox.style.display='none';
+
+});
+
+lightbox.addEventListener('click',(e)=>{
+
+    if(e.target===lightbox){
+
+        lightbox.style.display='none';
+
+    }
+
+});
+
+document.addEventListener('keydown',(e)=>{
+
+    if(e.key==="Escape"){
+
+        lightbox.style.display='none';
+
+    }
+
+});
+
+</script>
 
 </body>
 
