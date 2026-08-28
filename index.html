@@ -4,323 +4,329 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ANDROARQ | Arquitectura</title>
 
     <link rel="stylesheet" href="styles.css">
 
+
     <style>
 
-    /* =====================================================
-       SELECTOR DE IDIOMA
-    ===================================================== */
+        /* =====================================================
+           SELECTOR DE IDIOMA
+        ===================================================== */
 
-    .language-screen{
+        .language-screen{
 
-        position:fixed;
+            position:fixed;
 
-        inset:0;
+            inset:0;
 
-        background:#0d0d0d;
+            background:#0d0d0d;
 
-        color:#fff;
+            color:#fff;
 
-        display:flex;
+            display:flex;
 
-        align-items:center;
+            align-items:center;
 
-        justify-content:center;
+            justify-content:center;
 
-        z-index:99999;
+            z-index:99999;
 
-        transition:opacity .6s ease,
-                   visibility .6s ease;
+            transition:
+                opacity .6s ease,
+                visibility .6s ease;
 
-    }
+        }
 
-    .language-screen.hidden{
 
-        opacity:0;
+        .language-screen.hidden{
 
-        visibility:hidden;
+            opacity:0;
 
-        pointer-events:none;
+            visibility:hidden;
 
-    }
+            pointer-events:none;
 
-    .language-content{
+        }
 
-        width:min(900px,90%);
 
-        text-align:center;
+        .language-content{
 
-    }
+            width:min(900px,90%);
 
-    .language-small{
+            text-align:center;
 
-        font-size:11px;
+        }
 
-        letter-spacing:5px;
 
-        color:#777;
+        .language-small{
 
-        margin-bottom:25px;
+            font-size:11px;
 
-    }
+            letter-spacing:5px;
 
-    .language-title{
+            color:#777;
 
-        font-family:Georgia,serif;
+            margin-bottom:25px;
 
-        font-size:clamp(42px,7vw,82px);
+        }
 
-        font-weight:400;
 
-        margin-bottom:50px;
+        .language-title{
 
-    }
+            font-family:Georgia,serif;
 
-    .language-title span{
+            font-size:clamp(42px,7vw,82px);
 
-        color:#555;
+            font-weight:400;
 
-    }
+            margin-bottom:50px;
 
-    .language-options{
+        }
 
-        display:flex;
 
-        justify-content:center;
+        .language-title span{
 
-        gap:25px;
+            color:#555;
 
-        flex-wrap:wrap;
+        }
 
-    }
-
-    .language-button{
-
-        width:220px;
-
-        padding:22px 30px;
-
-        background:transparent;
-
-        border:1px solid rgba(255,255,255,.35);
-
-        color:#fff;
-
-        cursor:pointer;
-
-        font-size:13px;
-
-        letter-spacing:3px;
-
-        transition:.35s;
-
-    }
-
-    .language-button:hover{
-
-        background:#fff;
-
-        color:#000;
-
-        border-color:#fff;
-
-        transform:translateY(-3px);
-
-    }
-
-
-    /* =====================================================
-       SELECTOR SUPERIOR
-    ===================================================== */
-
-    .language-switcher{
-
-        position:fixed;
-
-        top:28px;
-
-        right:40px;
-
-        z-index:5000;
-
-        display:flex;
-
-        align-items:center;
-
-        gap:8px;
-
-        font-size:10px;
-
-        letter-spacing:2px;
-
-    }
-
-    .language-switcher button{
-
-        background:none;
-
-        border:none;
-
-        color:#888;
-
-        cursor:pointer;
-
-        padding:4px;
-
-        font-size:10px;
-
-        letter-spacing:2px;
-
-        transition:.3s;
-
-    }
-
-    .language-switcher button:hover{
-
-        color:#fff;
-
-    }
-
-    .language-switcher button.active{
-
-        color:#fff;
-
-    }
-
-    .language-divider{
-
-        color:#444;
-
-    }
-
-
-    /* =====================================================
-       BOTÓN CV
-    ===================================================== */
-
-    .btn-cv{
-
-        display:inline-block;
-
-        margin-top:20px;
-
-        padding:10px 22px;
-
-        color:#fff;
-
-        text-decoration:none;
-
-        font-size:13px;
-
-        letter-spacing:2px;
-
-        border:1px solid rgba(255,255,255,0.4);
-
-        transition:0.3s;
-
-    }
-
-    .btn-cv:hover{
-
-        background:#fff;
-
-        color:#000;
-
-        border-color:#fff;
-
-    }
-
-
-    /* =====================================================
-       BOTONES RECURSOS
-    ===================================================== */
-
-    .btn-black{
-
-        padding:8px 16px;
-
-        background:#000;
-
-        color:#fff;
-
-        text-decoration:none;
-
-        font-size:12px;
-
-        border:1px solid rgba(255,255,255,0.2);
-
-    }
-
-    .btn-blue{
-
-        padding:8px 16px;
-
-        background:#1e90ff;
-
-        color:#fff;
-
-        text-decoration:none;
-
-        font-size:12px;
-
-    }
-
-    .buttons-recursos{
-
-        margin-top:15px;
-
-        display:flex;
-
-        flex-direction:column;
-
-        gap:10px;
-
-        align-items:center;
-
-    }
-
-
-    /* =====================================================
-       GRID
-    ===================================================== */
-
-    .grid{
-
-        display:flex;
-
-        justify-content:center;
-
-        gap:80px;
-
-        text-align:center;
-
-    }
-
-    .block{
-
-        max-width:300px;
-
-        display:flex;
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
-
-    @media(max-width:700px){
 
         .language-options{
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:25px;
+
+            flex-wrap:wrap;
+
+        }
+
+
+        .language-button{
+
+            width:220px;
+
+            padding:22px 30px;
+
+            background:transparent;
+
+            border:1px solid rgba(255,255,255,.35);
+
+            color:#fff;
+
+            cursor:pointer;
+
+            font-size:13px;
+
+            letter-spacing:3px;
+
+            transition:.35s;
+
+        }
+
+
+        .language-button:hover{
+
+            background:#fff;
+
+            color:#000;
+
+            border-color:#fff;
+
+            transform:translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           SELECTOR SUPERIOR
+        ===================================================== */
+
+        .language-switcher{
+
+            position:fixed;
+
+            top:28px;
+
+            right:40px;
+
+            z-index:5000;
+
+            display:flex;
+
+            align-items:center;
+
+            gap:8px;
+
+            font-size:10px;
+
+            letter-spacing:2px;
+
+        }
+
+
+        .language-switcher button{
+
+            background:none;
+
+            border:none;
+
+            color:#888;
+
+            cursor:pointer;
+
+            padding:4px;
+
+            font-size:10px;
+
+            letter-spacing:2px;
+
+            transition:.3s;
+
+        }
+
+
+        .language-switcher button:hover{
+
+            color:#fff;
+
+        }
+
+
+        .language-switcher button.active{
+
+            color:#fff;
+
+        }
+
+
+        .language-divider{
+
+            color:#444;
+
+        }
+
+
+        /* =====================================================
+           BOTÓN CV
+        ===================================================== */
+
+        .btn-cv{
+
+            display:inline-block;
+
+            margin-top:20px;
+
+            padding:10px 22px;
+
+            color:#fff;
+
+            text-decoration:none;
+
+            font-size:13px;
+
+            letter-spacing:2px;
+
+            border:1px solid rgba(255,255,255,0.4);
+
+            transition:0.3s;
+
+        }
+
+
+        .btn-cv:hover{
+
+            background:#fff;
+
+            color:#000;
+
+            border-color:#fff;
+
+        }
+
+
+        /* =====================================================
+           BOTONES RECURSOS
+        ===================================================== */
+
+        .btn-black{
+
+            padding:8px 16px;
+
+            background:#000;
+
+            color:#fff;
+
+            text-decoration:none;
+
+            font-size:12px;
+
+            border:1px solid rgba(255,255,255,0.2);
+
+        }
+
+
+        .btn-blue{
+
+            padding:8px 16px;
+
+            background:#1e90ff;
+
+            color:#fff;
+
+            text-decoration:none;
+
+            font-size:12px;
+
+        }
+
+
+        .buttons-recursos{
+
+            margin-top:15px;
+
+            display:flex;
+
+            flex-direction:column;
+
+            gap:10px;
+
+            align-items:center;
+
+        }
+
+
+        /* =====================================================
+           GRID
+        ===================================================== */
+
+        .grid{
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:60px;
+
+            text-align:center;
+
+            flex-wrap:wrap;
+
+        }
+
+
+        .block{
+
+            max-width:250px;
+
+            display:flex;
 
             flex-direction:column;
 
@@ -328,29 +334,49 @@
 
         }
 
-        .language-button{
 
-            width:250px;
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:700px){
+
+            .language-options{
+
+                flex-direction:column;
+
+                align-items:center;
+
+            }
+
+
+            .language-button{
+
+                width:250px;
+
+            }
+
+
+            .language-switcher{
+
+                top:20px;
+
+                right:20px;
+
+            }
+
+
+            .grid{
+
+                flex-direction:column;
+
+                gap:50px;
+
+                align-items:center;
+
+            }
 
         }
-
-        .language-switcher{
-
-            top:20px;
-
-            right:20px;
-
-        }
-
-        .grid{
-
-            flex-direction:column;
-
-            gap:50px;
-
-        }
-
-    }
 
     </style>
 
@@ -364,39 +390,57 @@
      PANTALLA DE IDIOMA
 ===================================================== -->
 
-<div class="language-screen" id="languageScreen">
+<div
+    class="language-screen"
+    id="languageScreen"
+>
 
     <div class="language-content">
 
+
         <div class="language-small">
+
             ANDROARQ
+
         </div>
 
+
         <h1 class="language-title">
+
             Selecciona tu idioma
+
             <span>/</span>
+
             Select your language
+
         </h1>
+
 
         <div class="language-options">
 
+
             <button
                 class="language-button"
-                onclick="selectLanguage('es')">
+                onclick="selectLanguage('es')"
+            >
 
                 ESPAÑOL
 
             </button>
 
+
             <button
                 class="language-button"
-                onclick="selectLanguage('en')">
+                onclick="selectLanguage('en')"
+            >
 
                 ENGLISH
 
             </button>
 
+
         </div>
+
 
     </div>
 
@@ -410,23 +454,31 @@
 
 <div class="language-switcher">
 
+
     <button
         id="langES"
-        onclick="changeLanguage('es')">
+        onclick="changeLanguage('es')"
+    >
 
         ES
 
     </button>
 
-    <span class="language-divider">/</span>
+
+    <span class="language-divider">
+        /
+    </span>
+
 
     <button
         id="langEN"
-        onclick="changeLanguage('en')">
+        onclick="changeLanguage('en')"
+    >
 
         EN
 
     </button>
+
 
 </div>
 
@@ -440,11 +492,13 @@
     href="https://wa.me/593984527298"
     class="whatsapp-btn"
     target="_blank"
-    aria-label="WhatsApp">
+    aria-label="WhatsApp"
+>
 
     <img
         src="img/whatsapp.png"
-        alt="WhatsApp">
+        alt="WhatsApp"
+    >
 
 </a>
 
@@ -456,11 +510,14 @@
 
 <section class="hero">
 
+
     <div class="hero-content">
 
 
         <h1 id="name">
+
             Arq. Alejandro Salazar
+
         </h1>
 
 
@@ -480,21 +537,34 @@
 
         <div class="specialties">
 
+
             <strong id="specialtyTitle">
+
                 Especialización:
+
             </strong>
 
+
             <span id="specialty1">
+
                 Arquitectura
+
             </span>
+
 
             <span id="specialty2">
+
                 Interiores
+
             </span>
 
+
             <span id="specialty3">
+
                 Planificación
+
             </span>
+
 
         </div>
 
@@ -504,9 +574,13 @@
 
         <div class="software">
 
+
             <strong id="softwareTitle">
+
                 Dominio de aplicaciones:
+
             </strong>
+
 
             <span>AutoCAD</span>
 
@@ -530,6 +604,7 @@
 
             <span>Fotomontajes</span>
 
+
         </div>
 
 
@@ -539,7 +614,8 @@
         <a
             href="cv.html"
             class="btn-cv"
-            id="cvButton">
+            id="cvButton"
+        >
 
             VER CV
 
@@ -558,22 +634,75 @@
 
 <section class="section">
 
+
     <div class="grid">
 
 
+
         <!-- =================================================
-             01 RENDERS
+             01 TRÁMITES
         ================================================== -->
 
         <div class="block">
 
+
             <div class="number">
+
                 01
+
             </div>
 
-            <h3 id="rendersTitle">
-                Renders
+
+            <h3 id="proceduresTitle">
+
+                Trámites
+
             </h3>
+
+
+            <p id="proceduresText">
+
+                Trámites, avalúos, diseño,
+                asesoramiento y soluciones
+                arquitectónicas.
+
+            </p>
+
+
+            <a
+                href="tramites.html"
+                id="proceduresLink"
+            >
+
+                Ver servicios →
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             02 RENDERS
+        ================================================== -->
+
+        <div class="block">
+
+
+            <div class="number">
+
+                02
+
+            </div>
+
+
+            <h3 id="rendersTitle">
+
+                Renders
+
+            </h3>
+
 
             <p id="rendersText">
 
@@ -582,31 +711,41 @@
 
             </p>
 
+
             <a
                 href="renders.html"
-                id="rendersLink">
+                id="rendersLink"
+            >
 
                 Ver renders →
 
             </a>
+
 
         </div>
 
 
 
         <!-- =================================================
-             02 RECURSOS
+             03 RECURSOS
         ================================================== -->
 
         <div class="block">
 
+
             <div class="number">
-                02
+
+                03
+
             </div>
 
+
             <h3 id="resourcesTitle">
+
                 Recursos
+
             </h3>
+
 
             <p id="resourcesText">
 
@@ -615,22 +754,27 @@
 
             </p>
 
+
             <a
                 href="recursos.html"
-                id="resourcesLink">
+                id="resourcesLink"
+            >
 
                 Ver recursos →
 
             </a>
 
 
+
             <div class="buttons-recursos">
+
 
                 <a
                     class="btn-black"
                     href="https://www.tiktok.com/@androarq?is_from_webapp=1&sender_device=pc"
                     target="_blank"
-                    id="tiktokButton">
+                    id="tiktokButton"
+                >
 
                     TikTok @androarq
 
@@ -641,31 +785,41 @@
                     class="btn-blue"
                     href="https://payhip.com/ANDROARQ"
                     target="_blank"
-                    id="buyButton">
+                    id="buyButton"
+                >
 
                     Comprar recursos
 
                 </a>
 
+
             </div>
+
 
         </div>
 
 
 
         <!-- =================================================
-             03 CURSOS
+             04 CURSOS
         ================================================== -->
 
         <div class="block">
 
+
             <div class="number">
-                03
+
+                04
+
             </div>
 
+
             <h3 id="coursesTitle">
+
                 Cursos
+
             </h3>
+
 
             <p id="coursesText">
 
@@ -674,18 +828,65 @@
 
             </p>
 
+
             <a
                 href="cursos.html"
-                id="coursesLink">
+                id="coursesLink"
+            >
 
                 Ver cursos →
 
             </a>
 
+
+        </div>
+
+
+
+        <!-- =================================================
+             05 PROYECTOS
+        ================================================== -->
+
+        <div class="block">
+
+
+            <div class="number">
+
+                05
+
+            </div>
+
+
+            <h3 id="projectsTitle">
+
+                Proyectos
+
+            </h3>
+
+
+            <p id="projectsText">
+
+                Proyectos arquitectónicos, diseño interior
+                y propuestas desarrolladas.
+
+            </p>
+
+
+            <a
+                href="#"
+                id="projectsLink"
+            >
+
+                Ver proyectos →
+
+            </a>
+
+
         </div>
 
 
     </div>
+
 
 </section>
 
@@ -704,126 +905,224 @@
 
 const translations = {
 
+
     es: {
+
 
         name:
         "Arq. Alejandro Salazar",
 
+
         description:
         "Diseñador arquitectónico enfocado en la integración entre técnica, materialidad y narrativa espacial. Mi trabajo explora sistemas constructivos sostenibles como la madera laminada, articulando arquitectura contemporánea con identidad local.",
+
 
         specialtyTitle:
         "Especialización:",
 
+
         specialty1:
         "Arquitectura",
+
 
         specialty2:
         "Interiores",
 
+
         specialty3:
         "Planificación",
+
 
         softwareTitle:
         "Dominio de aplicaciones:",
 
+
         cvButton:
         "VER CV",
 
+
+
+        proceduresTitle:
+        "Trámites",
+
+
+        proceduresText:
+        "Trámites, avalúos, diseño, asesoramiento y soluciones arquitectónicas.",
+
+
+        proceduresLink:
+        "Ver servicios →",
+
+
+
         rendersTitle:
         "Renders",
+
 
         rendersText:
         "Visualización arquitectónica con enfoque en atmósfera y narrativa espacial.",
 
+
         rendersLink:
         "Ver renders →",
+
+
 
         resourcesTitle:
         "Recursos",
 
+
         resourcesText:
         "Materiales y herramientas para potenciar procesos de diseño.",
+
 
         resourcesLink:
         "Ver recursos →",
 
+
         tiktokButton:
         "TikTok @androarq",
+
 
         buyButton:
         "Comprar recursos",
 
+
+
         coursesTitle:
         "Cursos",
+
 
         coursesText:
         "Formación práctica en representación, diseño y visualización.",
 
+
         coursesLink:
-        "Ver cursos →"
+        "Ver cursos →",
+
+
+
+        projectsTitle:
+        "Proyectos",
+
+
+        projectsText:
+        "Proyectos arquitectónicos, diseño interior y propuestas desarrolladas.",
+
+
+        projectsLink:
+        "Ver proyectos →"
 
     },
 
 
+
     en: {
+
 
         name:
         "Arch. Alejandro Salazar",
 
+
         description:
         "Architectural designer focused on the integration of technique, materiality and spatial narrative. My work explores sustainable construction systems such as laminated timber, combining contemporary architecture with local identity.",
+
 
         specialtyTitle:
         "Specialization:",
 
+
         specialty1:
         "Architecture",
+
 
         specialty2:
         "Interiors",
 
+
         specialty3:
         "Planning",
+
 
         softwareTitle:
         "Software proficiency:",
 
+
         cvButton:
         "VIEW CV",
+
+
+
+        proceduresTitle:
+        "Services",
+
+
+        proceduresText:
+        "Permits, property valuation, design, consulting and architectural solutions.",
+
+
+        proceduresLink:
+        "View services →",
+
+
 
         rendersTitle:
         "Renders",
 
+
         rendersText:
         "Architectural visualization focused on atmosphere and spatial narrative.",
+
 
         rendersLink:
         "View renders →",
 
+
+
         resourcesTitle:
         "Resources",
+
 
         resourcesText:
         "Materials and tools to enhance the design process.",
 
+
         resourcesLink:
         "View resources →",
+
 
         tiktokButton:
         "TikTok @androarq",
 
+
         buyButton:
         "Buy resources",
+
+
 
         coursesTitle:
         "Courses",
 
+
         coursesText:
         "Practical training in representation, design and visualization.",
 
+
         coursesLink:
-        "View courses →"
+        "View courses →",
+
+
+
+        projectsTitle:
+        "Projects",
+
+
+        projectsText:
+        "Architectural projects, interior design and developed proposals.",
+
+
+        projectsLink:
+        "View projects →"
 
     }
 
@@ -837,79 +1136,150 @@ const translations = {
 
 function applyLanguage(language){
 
-    const t = translations[language];
 
-    document.documentElement.lang = language;
+    const t =
+        translations[language];
+
+
+    document.documentElement.lang =
+        language;
+
 
 
     document.getElementById("name").innerText =
         t.name;
 
+
     document.getElementById("description").innerText =
         t.description;
+
 
     document.getElementById("specialtyTitle").innerText =
         t.specialtyTitle;
 
+
     document.getElementById("specialty1").innerText =
         t.specialty1;
+
 
     document.getElementById("specialty2").innerText =
         t.specialty2;
 
+
     document.getElementById("specialty3").innerText =
         t.specialty3;
+
 
     document.getElementById("softwareTitle").innerText =
         t.softwareTitle;
 
+
     document.getElementById("cvButton").innerText =
         t.cvButton;
+
+
+
+    /* 01 TRÁMITES */
+
+    document.getElementById("proceduresTitle").innerText =
+        t.proceduresTitle;
+
+
+    document.getElementById("proceduresText").innerText =
+        t.proceduresText;
+
+
+    document.getElementById("proceduresLink").innerText =
+        t.proceduresLink;
+
+
+
+    /* 02 RENDERS */
 
     document.getElementById("rendersTitle").innerText =
         t.rendersTitle;
 
+
     document.getElementById("rendersText").innerText =
         t.rendersText;
+
 
     document.getElementById("rendersLink").innerText =
         t.rendersLink;
 
+
+
+    /* 03 RECURSOS */
+
     document.getElementById("resourcesTitle").innerText =
         t.resourcesTitle;
+
 
     document.getElementById("resourcesText").innerText =
         t.resourcesText;
 
+
     document.getElementById("resourcesLink").innerText =
         t.resourcesLink;
+
 
     document.getElementById("tiktokButton").innerText =
         t.tiktokButton;
 
+
     document.getElementById("buyButton").innerText =
         t.buyButton;
+
+
+
+    /* 04 CURSOS */
 
     document.getElementById("coursesTitle").innerText =
         t.coursesTitle;
 
+
     document.getElementById("coursesText").innerText =
         t.coursesText;
+
 
     document.getElementById("coursesLink").innerText =
         t.coursesLink;
 
 
-    /* BOTONES */
+
+    /* 05 PROYECTOS */
+
+    document.getElementById("projectsTitle").innerText =
+        t.projectsTitle;
+
+
+    document.getElementById("projectsText").innerText =
+        t.projectsText;
+
+
+    document.getElementById("projectsLink").innerText =
+        t.projectsLink;
+
+
+
+    /* BOTONES DE IDIOMA */
 
     document.getElementById("langES")
-        .classList.toggle("active", language === "es");
+        .classList.toggle(
+            "active",
+            language === "es"
+        );
+
 
     document.getElementById("langEN")
-        .classList.toggle("active", language === "en");
+        .classList.toggle(
+            "active",
+            language === "en"
+        );
 
 
-    /* GUARDAR */
+
+    /* GUARDAR IDIOMA */
 
     localStorage.setItem(
         "androarq-language",
@@ -926,12 +1296,15 @@ function applyLanguage(language){
 
 function selectLanguage(language){
 
+
     localStorage.setItem(
         "androarq-language",
         language
     );
 
+
     applyLanguage(language);
+
 
     document
         .getElementById("languageScreen")
@@ -958,18 +1331,24 @@ function changeLanguage(language){
 ===================================================== */
 
 const savedLanguage =
-    localStorage.getItem("androarq-language");
+    localStorage.getItem(
+        "androarq-language"
+    );
 
 
 if(savedLanguage){
 
+
     applyLanguage(savedLanguage);
+
 
     document
         .getElementById("languageScreen")
         .classList.add("hidden");
 
+
 }else{
+
 
     applyLanguage("es");
 
