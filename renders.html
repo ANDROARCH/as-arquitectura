@@ -10,14 +10,22 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
 <style>
 
-/* =========================
+/* =====================================================
    ESTILOS GENERALES
-========================= */
+===================================================== */
 
 *{
     margin:0;
@@ -30,52 +38,155 @@ html{
 }
 
 body{
+
     font-family:'Inter',sans-serif;
+
     background:#faf9f7;
+
     color:#111;
+
     line-height:1.5;
+
 }
 
-/* =========================
+
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header{
+
     position:fixed;
+
     top:0;
+
     left:0;
+
     width:100%;
+
     padding:28px 60px;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     background:rgba(250,249,247,.90);
+
     backdrop-filter:blur(14px);
+
     z-index:1000;
+
 }
 
 .logo{
+
     text-decoration:none;
+
     color:#111;
+
     font-size:14px;
+
     letter-spacing:4px;
+
     font-weight:700;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
 }
 
 .back{
+
     text-decoration:none;
+
     color:#777;
+
     font-size:14px;
+
     transition:.3s;
+
 }
 
 .back:hover{
+
     color:#000;
+
 }
 
-/* =========================
+
+/* =====================================================
+   IDIOMA
+===================================================== */
+
+.language-switcher{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+}
+
+.language-switcher button{
+
+    background:none;
+
+    border:none;
+
+    color:#999;
+
+    cursor:pointer;
+
+    padding:4px;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+}
+
+.language-switcher button:hover{
+
+    color:#000;
+
+}
+
+.language-switcher button.active{
+
+    color:#111;
+
+    font-weight:600;
+
+}
+
+.language-divider{
+
+    color:#ccc;
+
+}
+
+
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
 
@@ -123,9 +234,10 @@ header{
 
 }
 
-/* =========================
-   GALERIA
-========================= */
+
+/* =====================================================
+   GALERÍA
+===================================================== */
 
 .gallery{
 
@@ -173,9 +285,10 @@ header{
 
 }
 
-/* =========================
+
+/* =====================================================
    OVERLAY
-========================= */
+===================================================== */
 
 .overlay{
 
@@ -183,9 +296,11 @@ header{
 
     inset:0;
 
-    background:linear-gradient(to top,
-    rgba(0,0,0,.75),
-    rgba(0,0,0,0));
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,0)
+    );
 
     display:flex;
 
@@ -227,9 +342,10 @@ header{
 
 }
 
-/* =========================
+
+/* =====================================================
    LIGHTBOX
-========================= */
+===================================================== */
 
 .lightbox{
 
@@ -273,421 +389,985 @@ header{
 
 }
 
-/* =========================
+
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
 @media(max-width:1000px){
 
-.gallery{
+    .gallery{
 
-column-count:2;
+        column-count:2;
 
-}
+    }
 
 }
 
 @media(max-width:700px){
 
-header{
+    header{
 
-padding:20px;
+        padding:20px;
 
-}
+    }
 
-.hero h1{
+    .header-right{
 
-font-size:54px;
+        gap:12px;
 
-}
+    }
 
-.gallery{
+    .back{
 
-column-count:1;
+        font-size:12px;
 
-}
+    }
+
+    .hero h1{
+
+        font-size:54px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .gallery{
+
+        column-count:1;
+
+    }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- ===================== HEADER ===================== -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
-<a class="logo" href="index.html">
-ANDROARQ
-</a>
 
-<a class="back" href="index.html">
-← Inicio
-</a>
+    <a
+        class="logo"
+        href="index.html"
+    >
+        ANDROARQ
+    </a>
+
+
+    <div class="header-right">
+
+
+        <!-- IDIOMA -->
+
+        <div class="language-switcher">
+
+            <button
+                id="langES"
+                onclick="changeLanguage('es')"
+            >
+                ES
+            </button>
+
+            <span class="language-divider">
+                /
+            </span>
+
+            <button
+                id="langEN"
+                onclick="changeLanguage('en')"
+            >
+                EN
+            </button>
+
+        </div>
+
+
+        <!-- VOLVER -->
+
+        <a
+            class="back"
+            href="index.html"
+            id="backButton"
+        >
+            ← Inicio
+        </a>
+
+
+    </div>
+
 
 </header>
 
-<!-- ===================== HERO ===================== -->
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-<span>PORTFOLIO</span>
 
-<h1>RENDERS</h1>
+    <span id="portfolioLabel">
+        PORTFOLIO
+    </span>
 
-<p>
-Visualización Arquitectónica
-</p>
+
+    <h1 id="rendersTitle">
+        RENDERS
+    </h1>
+
+
+    <p id="rendersSubtitle">
+        Visualización Arquitectónica
+    </p>
+
 
 </section>
 
-<!-- ===================== GALERIA ===================== -->
+
+
+<!-- =====================================================
+     GALERÍA
+===================================================== -->
 
 <section class="gallery">
 
-<div class="gallery-item wide">
 
-<img src="RENDERS/01.png" loading="lazy">
+    <!-- 01 -->
 
-<div class="overlay">
+    <div class="gallery-item">
 
-<h3>Render</h3>
+        <img
+            src="RENDERS/01.png"
+            loading="lazy"
+            alt="Render 01"
+        >
 
-<p>Arq. Alejandro Salazar</p>
+        <div class="overlay">
 
-</div>
+            <h3>
+                Render
+            </h3>
 
-</div>
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-<div class="gallery-item">
+        </div>
 
-<img src="RENDERS/02.png" loading="lazy">
+    </div>
 
-<div class="overlay">
 
-<h3>Render</h3>
 
-<p>Arq. Alejandro Salazar</p>
+    <!-- 02 -->
 
-</div>
+    <div class="gallery-item">
 
-</div>
+        <img
+            src="RENDERS/02.png"
+            loading="lazy"
+            alt="Render 02"
+        >
 
-<div class="gallery-item">
+        <div class="overlay">
 
-<img src="RENDERS/03.png" loading="lazy">
+            <h3>
+                Render
+            </h3>
 
-<div class="overlay">
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-<h3>Render</h3>
+        </div>
 
-<p>Arq. Alejandro Salazar</p>
+    </div>
 
-</div>
 
-</div>
 
-<div class="gallery-item tall">
+    <!-- 03 -->
 
-<img src="RENDERS/04.png" loading="lazy">
+    <div class="gallery-item">
 
-<div class="overlay">
+        <img
+            src="RENDERS/03.png"
+            loading="lazy"
+            alt="Render 03"
+        >
 
-<h3>Render</h3>
+        <div class="overlay">
 
-<p>Arq. Alejandro Salazar</p>
+            <h3>
+                Render
+            </h3>
 
-</div>
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-</div>
+        </div>
 
-<div class="gallery-item">
+    </div>
 
-<img src="RENDERS/05.png" loading="lazy">
 
-<div class="overlay">
 
-<h3>Render</h3>
+    <!-- 04 -->
 
-<p>Arq. Alejandro Salazar</p>
+    <div class="gallery-item">
 
-</div>
+        <img
+            src="RENDERS/04.png"
+            loading="lazy"
+            alt="Render 04"
+        >
 
-</div>
+        <div class="overlay">
 
-<div class="gallery-item wide">
+            <h3>
+                Render
+            </h3>
 
-<img src="RENDERS/06.jpg" loading="lazy">
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-<div class="overlay">
+        </div>
 
-<h3>Render</h3>
+    </div>
 
-<p>Arq. Alejandro Salazar</p>
 
-</div>
 
-</div>
+    <!-- 05 -->
 
-<div class="gallery-item">
+    <div class="gallery-item">
 
-<img src="RENDERS/07.jpg" loading="lazy">
+        <img
+            src="RENDERS/05.png"
+            loading="lazy"
+            alt="Render 05"
+        >
 
-<div class="overlay">
+        <div class="overlay">
 
-<h3>Render</h3>
+            <h3>
+                Render
+            </h3>
 
-<p>Arq. Alejandro Salazar</p>
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
-<div class="gallery-item">
 
-<img src="RENDERS/08.jpg" loading="lazy">
 
-<div class="overlay">
+    <!-- 06 -->
 
-<h3>Render</h3>
+    <div class="gallery-item">
 
-<p>Arq. Alejandro Salazar</p>
+        <img
+            src="RENDERS/06.jpg"
+            loading="lazy"
+            alt="Render 06"
+        >
 
-</div>
+        <div class="overlay">
 
-</div>
+            <h3>
+                Render
+            </h3>
 
-<div class="gallery-item tall">
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-<img src="RENDERS/09.jpg" loading="lazy">
+        </div>
 
-<div class="overlay">
+    </div>
 
-<h3>Render</h3>
 
-<p>Arq. Alejandro Salazar</p>
 
-</div>
+    <!-- 07 -->
 
-</div>
+    <div class="gallery-item">
 
-<div class="gallery-item">
+        <img
+            src="RENDERS/07.jpg"
+            loading="lazy"
+            alt="Render 07"
+        >
 
-<img src="RENDERS/10.png" loading="lazy">
+        <div class="overlay">
 
-<div class="overlay">
+            <h3>
+                Render
+            </h3>
 
-<h3>Render</h3>
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-<p>Arq. Alejandro Salazar</p>
+        </div>
 
-</div>
+    </div>
 
-</div>
 
-<div class="gallery-item wide">
 
-<img src="RENDERS/11.jpg" loading="lazy">
+    <!-- 08 -->
 
-<div class="overlay">
+    <div class="gallery-item">
 
-<h3>Render</h3>
+        <img
+            src="RENDERS/08.jpg"
+            loading="lazy"
+            alt="Render 08"
+        >
 
-<p>Arq. Alejandro Salazar</p>
+        <div class="overlay">
 
-</div>
+            <h3>
+                Render
+            </h3>
 
-</div>
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-<div class="gallery-item">
+        </div>
 
-<img src="RENDERS/12.jpg" loading="lazy">
+    </div>
 
-<div class="overlay">
 
-<h3>Render</h3>
 
-<p>Arq. Alejandro Salazar</p>
+    <!-- 09 -->
 
-</div>
+    <div class="gallery-item">
 
-</div>
+        <img
+            src="RENDERS/09.jpg"
+            loading="lazy"
+            alt="Render 09"
+        >
 
-<div class="gallery-item">
+        <div class="overlay">
 
-<img src="RENDERS/13.png" loading="lazy">
+            <h3>
+                Render
+            </h3>
 
-<div class="overlay">
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-<h3>Render</h3>
+        </div>
 
-<p>Arq. Alejandro Salazar</p>
+    </div>
 
-</div>
 
-</div>
 
-<div class="gallery-item tall">
+    <!-- 10 -->
 
-<img src="RENDERS/14.png" loading="lazy">
+    <div class="gallery-item">
 
-<div class="overlay">
+        <img
+            src="RENDERS/10.png"
+            loading="lazy"
+            alt="Render 10"
+        >
 
-<h3>Render</h3>
+        <div class="overlay">
 
-<p>Arq. Alejandro Salazar</p>
+            <h3>
+                Render
+            </h3>
 
-</div>
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-</div>
+        </div>
 
-<div class="gallery-item">
+    </div>
 
-<img src="RENDERS/15.png" loading="lazy">
 
-<div class="overlay">
 
-<h3>Render</h3>
+    <!-- 11 -->
 
-<p>Arq. Alejandro Salazar</p>
+    <div class="gallery-item">
 
-</div>
+        <img
+            src="RENDERS/11.jpg"
+            loading="lazy"
+            alt="Render 11"
+        >
 
-</div>
+        <div class="overlay">
 
-<div class="gallery-item wide">
+            <h3>
+                Render
+            </h3>
 
-<img src="RENDERS/16.PNG" loading="lazy">
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-<div class="overlay">
+        </div>
 
-<h3>Render</h3>
+    </div>
 
-<p>Arq. Alejandro Salazar</p>
 
-</div>
 
-</div>
+    <!-- 12 -->
 
-    
-<div class="gallery-item">
-<img src="RENDERS/17.png" loading="lazy">
-<div class="overlay">
-<h3>Render</h3>
-<p>Arq. Alejandro Salazar</p>
-</div>
-</div>
+    <div class="gallery-item">
 
-<div class="gallery-item">
-<img src="RENDERS/18.png" loading="lazy">
-<div class="overlay">
-<h3>Render</h3>
-<p>Arq. Alejandro Salazar</p>
-</div>
-</div>
+        <img
+            src="RENDERS/12.jpg"
+            loading="lazy"
+            alt="Render 12"
+        >
 
+        <div class="overlay">
 
-<div class="gallery-item">
-<img src="RENDERS/19.png" loading="lazy">
-<div class="overlay">
-<h3>Render</h3>
-<p>Arq. Alejandro Salazar</p>
-</div>
-</div>   
+            <h3>
+                Render
+            </h3>
 
-<div class="gallery-item">
-<img src="RENDERS/20.png" loading="lazy">
-<div class="overlay">
-<h3>Render</h3>
-<p>Arq. Alejandro Salazar</p>
-</div>
-</div>
-    
-<div class="gallery-item">
-<img src="RENDERS/21.png" loading="lazy">
-<div class="overlay">
-<h3>Render</h3>
-<p>Arq. Alejandro Salazar</p>
-</div>
-</div>
+            <p>
+                Arq. Alejandro Salazar
+            </p>
 
-<div class="gallery-item">
-<img src="RENDERS/22.png" loading="lazy">
-<div class="overlay">
-<h3>Render</h3>
-<p>Arq. Alejandro Salazar</p>
-</div>
-</div>
+        </div>
 
+    </div>
 
 
-</div>
-</div>
+
+    <!-- 13 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/13.png"
+            loading="lazy"
+            alt="Render 13"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 14 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/14.png"
+            loading="lazy"
+            alt="Render 14"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 15 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/15.png"
+            loading="lazy"
+            alt="Render 15"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 16 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/16.PNG"
+            loading="lazy"
+            alt="Render 16"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 17 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/17.png"
+            loading="lazy"
+            alt="Render 17"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 18 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/18.png"
+            loading="lazy"
+            alt="Render 18"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 19 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/19.png"
+            loading="lazy"
+            alt="Render 19"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 20 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/20.png"
+            loading="lazy"
+            alt="Render 20"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 21 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/21.png"
+            loading="lazy"
+            alt="Render 21"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 22 -->
+
+    <div class="gallery-item">
+
+        <img
+            src="RENDERS/22.png"
+            loading="lazy"
+            alt="Render 22"
+        >
+
+        <div class="overlay">
+
+            <h3>
+                Render
+            </h3>
+
+            <p>
+                Arq. Alejandro Salazar
+            </p>
+
+        </div>
+
+    </div>
+
+
 </section>
 
-<!-- ===================== LIGHTBOX ===================== -->
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
 
 <div class="lightbox">
 
-<span class="close">
 
-✕
+    <span class="close">
+        ✕
+    </span>
 
-</span>
 
-<img>
+    <img
+        id="lightboxImage"
+        alt="Render ampliado"
+    >
+
 
 </div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-const galleryImages = document.querySelectorAll('.gallery img');
 
-const lightbox = document.querySelector('.lightbox');
+/* =====================================================
+   ELEMENTOS
+===================================================== */
 
-const lightboxImage = document.querySelector('.lightbox img');
+const galleryImages =
+    document.querySelectorAll('.gallery img');
 
-const closeButton = document.querySelector('.close');
+const lightbox =
+    document.querySelector('.lightbox');
 
-galleryImages.forEach(image=>{
+const lightboxImage =
+    document.querySelector('#lightboxImage');
 
-    image.addEventListener('click',()=>{
+const closeButton =
+    document.querySelector('.close');
 
-        lightbox.style.display='flex';
 
-        lightboxImage.src=image.src;
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+galleryImages.forEach(image => {
+
+    image.addEventListener('click', () => {
+
+        lightbox.style.display = 'flex';
+
+        lightboxImage.src = image.src;
+
+        lightboxImage.alt = image.alt;
 
     });
 
 });
 
-closeButton.addEventListener('click',()=>{
 
-    lightbox.style.display='none';
+closeButton.addEventListener('click', () => {
+
+    lightbox.style.display = 'none';
 
 });
 
-lightbox.addEventListener('click',(e)=>{
 
-    if(e.target===lightbox){
+lightbox.addEventListener('click', (event) => {
 
-        lightbox.style.display='none';
+    if(event.target === lightbox){
+
+        lightbox.style.display = 'none';
 
     }
 
 });
 
-document.addEventListener('keydown',(e)=>{
 
-    if(e.key==="Escape"){
+document.addEventListener('keydown', (event) => {
 
-        lightbox.style.display='none';
+    if(event.key === "Escape"){
+
+        lightbox.style.display = 'none';
 
     }
 
 });
+
+
+
+/* =====================================================
+   TRADUCCIONES
+===================================================== */
+
+const translations = {
+
+    es: {
+
+        pageTitle:
+        "Renders | ANDROARQ",
+
+        portfolio:
+        "PORTFOLIO",
+
+        renders:
+        "RENDERS",
+
+        subtitle:
+        "Visualización Arquitectónica",
+
+        back:
+        "← Inicio"
+
+    },
+
+
+    en: {
+
+        pageTitle:
+        "Renders | ANDROARQ",
+
+        portfolio:
+        "PORTFOLIO",
+
+        renders:
+        "RENDERS",
+
+        subtitle:
+        "Architectural Visualization",
+
+        back:
+        "← Home"
+
+    }
+
+};
+
+
+
+/* =====================================================
+   APLICAR IDIOMA
+===================================================== */
+
+function applyLanguage(language){
+
+    const t =
+        translations[language];
+
+
+    document.documentElement.lang =
+        language;
+
+
+    document.title =
+        t.pageTitle;
+
+
+    document.getElementById(
+        "portfolioLabel"
+    ).innerText =
+        t.portfolio;
+
+
+    document.getElementById(
+        "rendersTitle"
+    ).innerText =
+        t.renders;
+
+
+    document.getElementById(
+        "rendersSubtitle"
+    ).innerText =
+        t.subtitle;
+
+
+    document.getElementById(
+        "backButton"
+    ).innerText =
+        t.back;
+
+
+    document.getElementById(
+        "langES"
+    ).classList.toggle(
+        "active",
+        language === "es"
+    );
+
+
+    document.getElementById(
+        "langEN"
+    ).classList.toggle(
+        "active",
+        language === "en"
+    );
+
+
+    localStorage.setItem(
+        "androarq-language",
+        language
+    );
+
+}
+
+
+
+/* =====================================================
+   CAMBIAR IDIOMA
+===================================================== */
+
+function changeLanguage(language){
+
+    applyLanguage(language);
+
+}
+
+
+
+/* =====================================================
+   IDIOMA GUARDADO
+===================================================== */
+
+const savedLanguage =
+    localStorage.getItem(
+        "androarq-language"
+    );
+
+
+if(savedLanguage){
+
+    applyLanguage(savedLanguage);
+
+}else{
+
+    applyLanguage("es");
+
+}
+
 
 </script>
+
 
 </body>
 
