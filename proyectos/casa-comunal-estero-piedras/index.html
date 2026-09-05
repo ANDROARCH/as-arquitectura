@@ -46,10 +46,17 @@
         body {
             background: var(--ivory);
             color: var(--ink);
+
             font-family: "Inter", sans-serif;
             font-weight: 300;
+
             line-height: 1.7;
+
             overflow-x: hidden;
+        }
+
+        body.modal-open {
+            overflow: hidden;
         }
 
         img {
@@ -69,12 +76,14 @@
 
         /* =========================================
            HEADER
-        ========================================= */
+        ========================================== */
 
         header {
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
 
             z-index: 1000;
@@ -90,8 +99,11 @@
 
         .brand {
             font-size: 12px;
+
             letter-spacing: 0.18em;
+
             text-transform: uppercase;
+
             font-weight: 500;
 
             pointer-events: auto;
@@ -99,10 +111,13 @@
 
         .language {
             display: flex;
+
             align-items: center;
+
             gap: 8px;
 
             font-size: 10px;
+
             letter-spacing: 0.12em;
 
             pointer-events: auto;
@@ -110,11 +125,13 @@
 
         .language button {
             border: 0;
+
             background: transparent;
 
             color: var(--muted);
 
             cursor: pointer;
+
             padding: 4px;
 
             transition: color 0.3s ease;
@@ -126,13 +143,14 @@
 
         .language button.active {
             color: var(--forest);
+
             font-weight: 500;
         }
 
 
         /* =========================================
            HERO
-        ========================================= */
+        ========================================== */
 
         .hero {
             min-height: 100vh;
@@ -140,12 +158,15 @@
             padding: 130px 5vw 60px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: space-between;
         }
 
         .hero-top {
             display: grid;
+
             grid-template-columns: 1fr auto;
 
             gap: 40px;
@@ -236,7 +257,7 @@
 
         /* =========================================
            HERO IMAGE
-        ========================================= */
+        ========================================== */
 
         .hero-image {
             padding: 0 5vw;
@@ -287,7 +308,7 @@
 
         /* =========================================
            INTRO
-        ========================================= */
+        ========================================== */
 
         .intro {
             padding: 180px 10vw;
@@ -338,12 +359,13 @@
 
         /* =========================================
            PROJECT DATA
-        ========================================= */
+        ========================================== */
 
         .project-data {
             margin: 0 10vw;
 
             border-top: 1px solid var(--line);
+
             border-bottom: 1px solid var(--line);
 
             display: grid;
@@ -388,7 +410,7 @@
 
         /* =========================================
            CONCEPT
-        ========================================= */
+        ========================================== */
 
         .concept {
             padding: 190px 10vw;
@@ -451,7 +473,7 @@
 
         /* =========================================
            WIDE IMAGE
-        ========================================= */
+        ========================================== */
 
         .wide-image {
             padding: 0 5vw;
@@ -468,7 +490,7 @@
 
         /* =========================================
            STRATEGY
-        ========================================= */
+        ========================================== */
 
         .strategy {
             padding: 190px 10vw;
@@ -547,7 +569,7 @@
 
         /* =========================================
            GALLERY
-        ========================================= */
+        ========================================== */
 
         .gallery {
             padding: 80px 5vw 190px;
@@ -599,6 +621,8 @@
             overflow: hidden;
 
             background: #ddd;
+
+            cursor: pointer;
         }
 
         .gallery-item img {
@@ -626,8 +650,134 @@
 
 
         /* =========================================
+           DOCUMENTATION
+        ========================================== */
+
+        .documentation {
+            padding: 190px 10vw;
+
+            border-top: 1px solid var(--line);
+        }
+
+        .documentation-header {
+            display: grid;
+
+            grid-template-columns: 1fr 2fr;
+
+            gap: 8vw;
+
+            margin-bottom: 110px;
+        }
+
+        .documentation-title h2 {
+            margin-top: 22px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(45px, 6vw, 82px);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.035em;
+        }
+
+        .documentation-intro {
+            max-width: 650px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            align-self: end;
+        }
+
+        .documentation-list {
+            border-top: 1px solid var(--line);
+        }
+
+        .document-item {
+            display: grid;
+
+            grid-template-columns: 90px 1fr 2fr;
+
+            gap: 40px;
+
+            padding: 55px 0;
+
+            border-bottom: 1px solid var(--line);
+
+            cursor: pointer;
+        }
+
+        .document-number {
+            color: var(--forest);
+
+            font-size: 10px;
+
+            letter-spacing: 0.14em;
+        }
+
+        .document-title {
+            font-family: "Playfair Display", serif;
+
+            font-size: 30px;
+
+            line-height: 1.1;
+
+            font-weight: 400;
+        }
+
+        .document-description {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            max-width: 620px;
+        }
+
+        .document-image {
+            grid-column: 2 / 4;
+
+            margin-top: 25px;
+
+            overflow: hidden;
+
+            background: white;
+        }
+
+        .document-image img {
+            width: 100%;
+
+            aspect-ratio: 2048 / 1446;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.8s cubic-bezier(.2,.65,.25,1);
+        }
+
+        .document-item:hover .document-image img {
+            transform: scale(1.01);
+        }
+
+        .document-hint {
+            margin-top: 12px;
+
+            font-size: 8px;
+
+            letter-spacing: 0.14em;
+
+            text-transform: uppercase;
+
+            color: var(--stone);
+        }
+
+
+        /* =========================================
            FINAL STATEMENT
-        ========================================= */
+        ========================================== */
 
         .final-statement {
             padding: 180px 10vw;
@@ -666,7 +816,7 @@
 
         /* =========================================
            CREDITS
-        ========================================= */
+        ========================================== */
 
         .credits {
             padding: 80px 10vw 160px;
@@ -723,7 +873,7 @@
 
         /* =========================================
            FOOTER
-        ========================================= */
+        ========================================== */
 
         footer {
             padding: 50px 5vw 35px;
@@ -768,7 +918,7 @@
 
         /* =========================================
            WHATSAPP
-        ========================================= */
+        ========================================== */
 
         .whatsapp {
             position: fixed;
@@ -797,8 +947,7 @@
                 0 10px 30px rgba(0,0,0,0.12);
 
             transition:
-                transform 0.3s ease,
-                background 0.3s ease;
+                transform 0.3s ease;
         }
 
         .whatsapp:hover {
@@ -814,8 +963,125 @@
 
 
         /* =========================================
+           MODAL — PLANOS
+        ========================================== */
+
+        .modal {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 2000;
+
+            background: rgba(25, 27, 25, 0.96);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 40px;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+            transition:
+                opacity 0.35s ease,
+                visibility 0.35s ease;
+        }
+
+        .modal.active {
+            opacity: 1;
+
+            visibility: visible;
+
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+        }
+
+        .modal-image {
+            max-width: 94vw;
+            max-height: 92vh;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+
+            box-shadow:
+                0 25px 80px rgba(0,0,0,0.35);
+        }
+
+        .modal-close {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+
+            width: 42px;
+            height: 42px;
+
+            border: 1px solid rgba(255,255,255,0.3);
+
+            background: transparent;
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: rgba(255,255,255,0.1);
+
+            border-color: rgba(255,255,255,0.7);
+        }
+
+        .modal-caption {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            color: rgba(255,255,255,0.7);
+
+            font-size: 9px;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================
            RESPONSIVE
-        ========================================= */
+        ========================================== */
 
         @media (max-width: 900px) {
 
@@ -849,6 +1115,7 @@
 
             .intro,
             .strategy-header,
+            .documentation-header,
             .credits-grid {
                 grid-template-columns: 1fr;
             }
@@ -876,6 +1143,7 @@
 
             .concept,
             .strategy,
+            .documentation,
             .final-statement,
             .credits {
                 padding: 140px 8vw;
@@ -921,6 +1189,22 @@
                 aspect-ratio: 4 / 3;
             }
 
+            .document-item {
+                grid-template-columns: 60px 1fr;
+
+                gap: 20px;
+            }
+
+            .document-description {
+                grid-column: 2;
+            }
+
+            .document-image {
+                grid-column: 2;
+
+                margin-top: 10px;
+            }
+
             footer {
                 padding: 40px 6vw 30px;
 
@@ -928,6 +1212,11 @@
 
                 align-items: flex-start;
             }
+
+            .modal {
+                padding: 20px;
+            }
+
         }
 
 
@@ -978,9 +1267,28 @@
                 grid-column: 2;
             }
 
+            .document-title {
+                font-size: 24px;
+            }
+
+            .document-image {
+                grid-column: 1 / -1;
+            }
+
             .whatsapp {
                 right: 18px;
                 bottom: 18px;
+            }
+
+            .modal-image {
+                max-width: 96vw;
+
+                max-height: 88vh;
+            }
+
+            .modal-close {
+                top: -5px;
+                right: -5px;
             }
 
         }
@@ -999,9 +1307,13 @@
 
     <header>
 
-        <a href="../../index.html" class="brand">
+        <a
+            href="../../index.html"
+            class="brand"
+        >
             ANDRO ARQ
         </a>
+
 
         <div class="language">
 
@@ -1080,7 +1392,6 @@
 
         <!-- =====================================
              HERO IMAGE
-             portada.jpg
         ====================================== -->
 
         <section class="hero-image">
@@ -1132,9 +1443,10 @@
 
                 <p>
                     La Casa Comunal para Estero Piedras nace de la necesidad
-                    de contar con un espacio propio para la comunidad, pensado
-                    para reunir diferentes actividades y generar un lugar con
-                    el que sus habitantes puedan sentirse identificados.
+                    de contar con un espacio propio para la comunidad,
+                    pensado para reunir diferentes actividades y generar
+                    un lugar con el que sus habitantes puedan sentirse
+                    identificados.
                 </p>
 
             </div>
@@ -1191,7 +1503,7 @@
             <div class="data-item">
 
                 <span class="data-label">
-                    Estado
+                    Tipo
                 </span>
 
                 <span class="data-value">
@@ -1267,7 +1579,6 @@
 
         <!-- =====================================
              IMAGE 02
-             exterior-01.jpg
         ====================================== -->
 
         <section class="wide-image">
@@ -1450,21 +1761,21 @@
             <div class="gallery-grid">
 
 
-                <!-- exterior-02.jpg -->
-
-                <figure class="gallery-item large">
+                <figure
+                    class="gallery-item large"
+                >
 
                     <img
                         src="img/exterior-02.jpg"
-                        alt="Casa Comunal para Estero Piedras"
+                        alt="Vista exterior de la Casa Comunal para Estero Piedras"
                     >
 
                 </figure>
 
 
-                <!-- exterior-03.jpg -->
-
-                <figure class="gallery-item">
+                <figure
+                    class="gallery-item"
+                >
 
                     <img
                         src="img/exterior-03.jpg"
@@ -1474,9 +1785,9 @@
                 </figure>
 
 
-                <!-- exterior-04.jpg -->
-
-                <figure class="gallery-item">
+                <figure
+                    class="gallery-item"
+                >
 
                     <img
                         src="img/exterior-04.jpg"
@@ -1492,21 +1803,262 @@
 
 
         <!-- =====================================
+             DOCUMENTACIÓN
+        ====================================== -->
+
+        <section class="documentation">
+
+
+            <div class="documentation-header">
+
+
+                <div class="documentation-title">
+
+                    <span class="section-label">
+                        05 — Documentación
+                    </span>
+
+                    <h2>
+                        Del concepto<br>
+                        al plano.
+                    </h2>
+
+                </div>
+
+
+                <div class="documentation-intro">
+
+                    <p>
+                        La propuesta arquitectónica se complementa con una
+                        documentación técnica que reúne la estructura,
+                        distribución espacial, instalaciones y representación
+                        del proyecto. Las láminas permiten recorrer el proceso
+                        desde la definición de la estructura hasta la
+                        resolución arquitectónica y técnica.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="documentation-list">
+
+
+                <!-- =================================
+                     LÁMINA 01
+                ================================== -->
+
+                <article
+                    class="document-item"
+                    data-image="img/lamina-01.jpg"
+                    data-caption="Lámina 01 — Estructura y cimentación"
+                >
+
+                    <div class="document-number">
+                        01
+                    </div>
+
+
+                    <h3 class="document-title">
+                        Estructura y<br>
+                        cimentación
+                    </h3>
+
+
+                    <p class="document-description">
+                        Planta de cimentación y organización de los ejes
+                        estructurales, acompañadas por detalles de columnas,
+                        vigas y elementos constructivos. La lámina incorpora
+                        especificaciones técnicas y referencias para la
+                        resolución estructural del proyecto.
+                    </p>
+
+
+                    <div class="document-image">
+
+                        <img
+                            src="img/lamina-01.jpg"
+                            alt="Lámina de estructura y cimentación"
+                        >
+
+                    </div>
+
+
+                    <span class="document-hint">
+                        Click para ampliar
+                    </span>
+
+                </article>
+
+
+                <!-- =================================
+                     LÁMINA 02
+                ================================== -->
+
+                <article
+                    class="document-item"
+                    data-image="img/lamina-02.jpg"
+                    data-caption="Lámina 02 — Cimentación e instalaciones sanitarias"
+                >
+
+                    <div class="document-number">
+                        02
+                    </div>
+
+
+                    <h3 class="document-title">
+                        Cimentación e<br>
+                        instalaciones sanitarias
+                    </h3>
+
+
+                    <p class="document-description">
+                        Desarrollo de la cimentación e instalaciones sanitarias
+                        para los bloques A y B, junto con la planta baja del
+                        bloque A. La documentación muestra la relación entre
+                        la estructura, la distribución arquitectónica y las
+                        redes de servicio.
+                    </p>
+
+
+                    <div class="document-image">
+
+                        <img
+                            src="img/lamina-02.jpg"
+                            alt="Lámina de cimentación e instalaciones sanitarias"
+                        >
+
+                    </div>
+
+
+                    <span class="document-hint">
+                        Click para ampliar
+                    </span>
+
+                </article>
+
+
+                <!-- =================================
+                     LÁMINA 03
+                ================================== -->
+
+                <article
+                    class="document-item"
+                    data-image="img/lamina-03.jpg"
+                    data-caption="Lámina 03 — Arquitectura, elevaciones y cubiertas"
+                >
+
+                    <div class="document-number">
+                        03
+                    </div>
+
+
+                    <h3 class="document-title">
+                        Arquitectura,<br>
+                        elevaciones y cubiertas
+                    </h3>
+
+
+                    <p class="document-description">
+                        Plantas arquitectónicas de los bloques A y B,
+                        emplazamiento, planta de cubiertas y representación
+                        de las elevaciones principales. La lámina permite
+                        comprender la organización general del conjunto y
+                        su expresión exterior.
+                    </p>
+
+
+                    <div class="document-image">
+
+                        <img
+                            src="img/lamina-03.jpg"
+                            alt="Lámina de arquitectura, elevaciones y cubiertas"
+                        >
+
+                    </div>
+
+
+                    <span class="document-hint">
+                        Click para ampliar
+                    </span>
+
+                </article>
+
+
+                <!-- =================================
+                     LÁMINA 04
+                ================================== -->
+
+                <article
+                    class="document-item"
+                    data-image="img/lamina-04.jpg"
+                    data-caption="Lámina 04 — Instalaciones eléctricas y secciones"
+                >
+
+                    <div class="document-number">
+                        04
+                    </div>
+
+
+                    <h3 class="document-title">
+                        Instalaciones eléctricas<br>
+                        y secciones
+                    </h3>
+
+
+                    <p class="document-description">
+                        Planos de instalaciones eléctricas para las diferentes
+                        áreas del proyecto, acompañados por secciones
+                        arquitectónicas que permiten comprender la relación
+                        vertical y espacial de los ambientes. La lámina
+                        incorpora además una síntesis visual mediante los
+                        renders del proyecto.
+                    </p>
+
+
+                    <div class="document-image">
+
+                        <img
+                            src="img/lamina-04.jpg"
+                            alt="Lámina de instalaciones eléctricas y secciones"
+                        >
+
+                    </div>
+
+
+                    <span class="document-hint">
+                        Click para ampliar
+                    </span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
              CIERRE
         ====================================== -->
 
         <section class="final-statement">
 
+
             <div class="final-statement-inner">
 
                 <span class="section-label">
-                    05 — Proyecto
+                    06 — Proyecto
                 </span>
+
 
                 <h2>
                     Arquitectura contemporánea
                     en diálogo con su territorio.
                 </h2>
+
 
                 <p>
                     El proyecto fue desarrollado como una propuesta
@@ -1516,6 +2068,7 @@
                 </p>
 
             </div>
+
 
         </section>
 
@@ -1533,7 +2086,7 @@
                 <div>
 
                     <span class="section-label">
-                        06 — Créditos
+                        07 — Créditos
                     </span>
 
                     <h2>
@@ -1614,7 +2167,9 @@
 
                 </div>
 
+
             </div>
+
 
         </section>
 
@@ -1634,6 +2189,7 @@
         >
             ← Inicio
         </a>
+
 
         <span class="footer-copy">
             ANDRO ARQ · Alejandro Salazar Arquitecto
@@ -1667,10 +2223,53 @@
 
 
     <!-- =========================================
-         LANGUAGE
+         MODAL PARA LÁMINAS
+    ========================================== -->
+
+    <div
+        class="modal"
+        id="documentModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Cerrar"
+            >
+                ×
+            </button>
+
+
+            <img
+                class="modal-image"
+                id="modalImage"
+                src=""
+                alt=""
+            >
+
+
+            <div
+                class="modal-caption"
+                id="modalCaption"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         SCRIPTS
     ========================================== -->
 
     <script>
+
+        /* =====================================
+           LANGUAGE SELECTOR
+        ====================================== */
 
         const languageButtons =
             document.querySelectorAll(".language button");
@@ -1686,6 +2285,98 @@
                 button.classList.add("active");
 
             });
+
+        });
+
+
+        /* =====================================
+           DOCUMENT MODAL
+        ====================================== */
+
+        const documentItems =
+            document.querySelectorAll(".document-item");
+
+        const modal =
+            document.getElementById("documentModal");
+
+        const modalImage =
+            document.getElementById("modalImage");
+
+        const modalCaption =
+            document.getElementById("modalCaption");
+
+        const modalClose =
+            document.getElementById("modalClose");
+
+
+        documentItems.forEach(item => {
+
+            item.addEventListener("click", () => {
+
+                const image =
+                    item.getAttribute("data-image");
+
+                const caption =
+                    item.getAttribute("data-caption");
+
+                modalImage.src = image;
+
+                modalImage.alt = caption;
+
+                modalCaption.textContent = caption;
+
+                modal.classList.add("active");
+
+                modal.setAttribute("aria-hidden", "false");
+
+                document.body.classList.add("modal-open");
+
+            });
+
+        });
+
+
+        function closeModal() {
+
+            modal.classList.remove("active");
+
+            modal.setAttribute("aria-hidden", "true");
+
+            document.body.classList.remove("modal-open");
+
+            setTimeout(() => {
+
+                modalImage.src = "";
+
+            }, 350);
+
+        }
+
+
+        modalClose.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        modal.addEventListener("click", event => {
+
+            if (event.target === modal) {
+
+                closeModal();
+
+            }
+
+        });
+
+
+        document.addEventListener("keydown", event => {
+
+            if (event.key === "Escape") {
+
+                closeModal();
+
+            }
 
         });
 
