@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vivienda Unifamiliar + Taller — ANDRO ARQ</title>
+
+    <meta name="description" content="Vivienda unifamiliar con taller en planta baja. Proyecto arquitectónico desarrollado por Alejandro Salazar. 2026.">
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f7f6f2;
+            color: #171717;
+            font-family: "Inter", sans-serif;
+            font-weight: 300;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5vw;
+
+            z-index: 100;
+
+            background: rgba(247, 246, 242, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            font-size: 13px;
+            letter-spacing: 0.22em;
+            font-weight: 500;
+        }
+
+        .back {
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: opacity 0.3s ease;
+        }
+
+        .back:hover {
+            opacity: 0.5;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            padding: 150px 7vw 8vh;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+
+            color: #888;
+
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 7vw, 105px);
+            font-weight: 400;
+            line-height: 0.98;
+
+            max-width: 1050px;
+
+            margin-bottom: 45px;
+        }
+
+        .hero-info {
+            display: grid;
+            grid-template-columns: repeat(4, max-content);
+            gap: 70px;
+
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        .hero-info span {
+            display: block;
+
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+
+            color: #999;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            padding: 14vh 7vw;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10vw;
+
+            border-top: 1px solid #dddcd7;
+        }
+
+        .intro-title {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(30px, 4vw, 55px);
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        .intro-text {
+            max-width: 550px;
+
+            font-size: 14px;
+            line-height: 1.9;
+
+            color: #555;
+        }
+
+        .intro-text p + p {
+            margin-top: 25px;
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        .section {
+            padding: 8vh 7vw 14vh;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+
+            margin-bottom: 45px;
+
+            border-bottom: 1px solid #d8d7d2;
+
+            padding-bottom: 18px;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            font-weight: 400;
+        }
+
+        .section-number {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            color: #999;
+        }
+
+
+        /* =========================
+           GALERÍA EXTERIOR
+        ========================= */
+
+        .exterior-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .image-wrapper {
+            overflow: hidden;
+            background: #e9e8e3;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+
+            transition: transform 0.8s cubic-bezier(.2,.6,.2,1);
+        }
+
+        .image-wrapper:hover img {
+            transform: scale(1.025);
+        }
+
+        .exterior-grid .image-wrapper:first-child {
+            grid-column: 1 / -1;
+        }
+
+
+        /* =========================
+           GALERÍA INTERIORES
+        ========================= */
+
+        .interior-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .interior-grid .image-wrapper:first-child {
+            grid-column: 1 / -1;
+        }
+
+
+        /* =========================
+           CIERRE
+        ========================= */
+
+        .closing {
+            padding: 18vh 7vw;
+
+            border-top: 1px solid #d8d7d2;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .closing-small {
+            font-size: 9px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+
+            color: #999;
+
+            margin-bottom: 25px;
+        }
+
+        .closing h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(35px, 5vw, 70px);
+
+            font-weight: 400;
+            line-height: 1.05;
+
+            max-width: 800px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 45px 7vw;
+
+            border-top: 1px solid #d8d7d2;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: 9px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+
+            color: #888;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                height: 70px;
+                padding: 0 6vw;
+            }
+
+            .hero {
+                min-height: 90vh;
+                padding: 130px 6vw 8vh;
+            }
+
+            h1 {
+                font-size: clamp(43px, 13vw, 75px);
+            }
+
+            .hero-info {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px 35px;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+                gap: 45px;
+
+                padding: 12vh 6vw;
+            }
+
+            .section {
+                padding: 7vh 6vw 10vh;
+            }
+
+            .section-header {
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                font-size: 31px;
+            }
+
+            .exterior-grid,
+            .interior-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .exterior-grid .image-wrapper:first-child,
+            .interior-grid .image-wrapper:first-child {
+                grid-column: auto;
+            }
+
+            .closing {
+                padding: 14vh 6vw;
+            }
+
+            footer {
+                padding: 35px 6vw;
+
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <a href="../../index.html" class="logo">
+            ANDRO ARQ
+        </a>
+
+        <a href="../../index.html#proyectos" class="back">
+            ← Proyectos
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="eyebrow">
+                ANDRO ARQ / PROYECTO 04
+            </div>
+
+            <h1>
+                Vivienda<br>
+                Unifamiliar + Taller
+            </h1>
+
+            <div class="hero-info">
+
+                <div>
+                    <span>Ubicación</span>
+                    Vía principal al Valle
+                </div>
+
+                <div>
+                    <span>Año</span>
+                    2026
+                </div>
+
+                <div>
+                    <span>Tipología</span>
+                    Vivienda
+                </div>
+
+                <div>
+                    <span>Autoría</span>
+                    Alejandro Salazar
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================= -->
+
+        <section class="intro">
+
+            <div class="intro-title">
+                Vivienda y espacio<br>
+                de trabajo bajo<br>
+                una misma arquitectura.
+            </div>
+
+            <div class="intro-text">
+
+                <p>
+                    Proyecto de vivienda unifamiliar desarrollado con un taller
+                    en planta baja, concebido como una arquitectura que integra
+                    los espacios domésticos y de trabajo dentro de una misma
+                    composición.
+                </p>
+
+                <p>
+                    El diseño fue desarrollado íntegramente por Alejandro Salazar,
+                    con el apoyo del Arq. Fernando Salazar.
+                </p>
+
+                <p>
+                    Uno de los elementos principales del proyecto es la utilización
+                    de las columnas como parte activa de la arquitectura: además
+                    de contribuir al soporte de las cargas, participan directamente
+                    en la composición y expresión de la fachada.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXTERIORES
+        ========================= -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div class="section-title">
+                    Exteriores
+                </div>
+
+                <div class="section-number">
+                    01 / 02
+                </div>
+
+            </div>
+
+
+            <div class="exterior-grid">
+
+                <div class="image-wrapper">
+                    <img
+                        src="img/exterior-01.jpg"
+                        alt="Vivienda unifamiliar y taller — vista exterior"
+                        loading="eager"
+                    >
+                </div>
+
+                <div class="image-wrapper">
+                    <img
+                        src="img/exterior-02.jpg"
+                        alt="Vivienda unifamiliar y taller — fachada exterior"
+                        loading="lazy"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTERIORES
+        ========================= -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div class="section-title">
+                    Interiores
+                </div>
+
+                <div class="section-number">
+                    02 / 02
+                </div>
+
+            </div>
+
+
+            <div class="interior-grid">
+
+                <div class="image-wrapper">
+                    <img
+                        src="img/interior-01.jpg"
+                        alt="Interior de la vivienda"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="image-wrapper">
+                    <img
+                        src="img/interior-02.jpg"
+                        alt="Interior de la vivienda"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="image-wrapper">
+                    <img
+                        src="img/interior-03.jpg"
+                        alt="Interior de la vivienda"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="image-wrapper">
+                    <img
+                        src="img/interior-04.jpg"
+                        alt="Interior de la vivienda"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="image-wrapper">
+                    <img
+                        src="img/interior-05.jpg"
+                        alt="Interior de la vivienda"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="image-wrapper">
+                    <img
+                        src="img/interior-06.jpg"
+                        alt="Interior de la vivienda"
+                        loading="lazy"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CIERRE
+        ========================= -->
+
+        <section class="closing">
+
+            <div class="closing-small">
+                Proyecto arquitectónico / 2026
+            </div>
+
+            <h2>
+                Arquitectura que integra
+                vivienda, trabajo y estructura.
+            </h2>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div>
+            ANDRO ARQ
+        </div>
+
+        <div>
+            Alejandro Salazar Arquitecto
+        </div>
+
+        <div>
+            © 2026
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
