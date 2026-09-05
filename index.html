@@ -336,6 +336,59 @@
 
 
         /* =====================================================
+           PROYECTOS
+        ===================================================== */
+
+        .project-links{
+
+            margin-top:20px;
+
+            width:100%;
+
+            display:flex;
+
+            flex-direction:column;
+
+            gap:10px;
+
+        }
+
+
+        .project-link{
+
+            display:block;
+
+            padding:9px 12px;
+
+            border:1px solid rgba(255,255,255,.18);
+
+            color:inherit;
+
+            text-decoration:none;
+
+            font-size:11px;
+
+            letter-spacing:1.5px;
+
+            transition:.3s ease;
+
+        }
+
+
+        .project-link:hover{
+
+            background:#fff;
+
+            color:#000;
+
+            border-color:#fff;
+
+            transform:translateY(-2px);
+
+        }
+
+
+        /* =====================================================
            RESPONSIVE
         ===================================================== */
 
@@ -373,6 +426,13 @@
                 gap:50px;
 
                 align-items:center;
+
+            }
+
+
+            .project-links{
+
+                max-width:250px;
 
             }
 
@@ -877,9 +937,50 @@
                 id="projectsLink"
             >
 
-                Ver proyectos →
+                Ver proyectos ↓
 
             </a>
+
+
+            <!-- PROYECTOS INDIVIDUALES -->
+
+            <div class="project-links">
+
+
+                <a
+                    href="proyectos/escuela-rural-senegal/"
+                    class="project-link"
+                    id="projectSenegal"
+                >
+
+                    Escuela Rural en Senegal
+
+                </a>
+
+
+                <a
+                    href="proyectos/centro-endoscopico/"
+                    class="project-link"
+                    id="projectEndoscopico"
+                >
+
+                    Centro Endoscópico
+
+                </a>
+
+
+                <a
+                    href="proyectos/casa-comunal-estero-piedras/"
+                    class="project-link"
+                    id="projectComunal"
+                >
+
+                    Casa Comunal para Estero Piedras
+
+                </a>
+
+
+            </div>
 
 
         </div>
@@ -1011,7 +1112,19 @@ const translations = {
 
 
         projectsLink:
-        "Ver proyectos →"
+        "Ver proyectos ↓",
+
+
+        projectSenegal:
+        "Escuela Rural en Senegal",
+
+
+        projectEndoscopico:
+        "Centro Endoscópico",
+
+
+        projectComunal:
+        "Casa Comunal para Estero Piedras"
 
     },
 
@@ -1122,7 +1235,19 @@ const translations = {
 
 
         projectsLink:
-        "View projects →"
+        "View projects ↓",
+
+
+        projectSenegal:
+        "Rural School in Senegal",
+
+
+        projectEndoscopico:
+        "Endoscopy Center",
+
+
+        projectComunal:
+        "Community Center for Estero Piedras"
 
     }
 
@@ -1259,6 +1384,18 @@ function applyLanguage(language){
 
     document.getElementById("projectsLink").innerText =
         t.projectsLink;
+
+
+    document.getElementById("projectSenegal").innerText =
+        t.projectSenegal;
+
+
+    document.getElementById("projectEndoscopico").innerText =
+        t.projectEndoscopico;
+
+
+    document.getElementById("projectComunal").innerText =
+        t.projectComunal;
 
 
 
