@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Casa Comunal para Estero Piedras — Alejandro Salazar Arquitecto</title>
+
+    <meta
+        name="description"
+        content="Casa Comunal para Estero Piedras, Naranjal. Proyecto arquitectónico desarrollado por Alejandro Salazar en 2026."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --ivory: #F4F1E9;
+            --white: #FFFFFF;
+            --ink: #242522;
+            --muted: #77766E;
+            --forest: #344438;
+            --stone: #8A765E;
+            --sand: #B69A6B;
+            --line: #D8D2C5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--ivory);
+            color: var(--ink);
+            font-family: "Inter", sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 28px 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            mix-blend-mode: multiply;
+            pointer-events: none;
+        }
+
+        .brand {
+            font-size: 12px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 500;
+            pointer-events: auto;
+        }
+
+        .language {
+            display: flex;
+            gap: 8px;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            pointer-events: auto;
+        }
+
+        .language button {
+            border: 0;
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .language button.active {
+            color: var(--forest);
+            font-weight: 500;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 130px 5vw 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-top {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .project-number {
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            color: var(--forest);
+            text-transform: uppercase;
+        }
+
+        .hero-meta {
+            text-align: right;
+            font-size: 11px;
+            line-height: 1.8;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .hero-title {
+            margin-top: auto;
+            padding-top: 100px;
+            max-width: 1050px;
+        }
+
+        .hero-title h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(58px, 9vw, 145px);
+            font-weight: 400;
+            line-height: 0.92;
+            letter-spacing: -0.045em;
+        }
+
+        .hero-title h1 span {
+            color: var(--forest);
+        }
+
+        .hero-bottom {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+        }
+
+        .hero-location {
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .scroll-note {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--stone);
+        }
+
+        /* =========================
+           MAIN IMAGE
+        ========================= */
+
+        .hero-image {
+            padding: 0 5vw;
+        }
+
+        .hero-image-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #ddd;
+        }
+
+        .hero-image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding-top: 12px;
+            font-size: 10px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        /* =========================
+           INTRO / PROJECT INFO
+        ========================= */
+
+        .intro {
+            padding: 180px 10vw;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 10vw;
+        }
+
+        .section-label {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--forest);
+        }
+
+        .intro-text {
+            max-width: 760px;
+        }
+
+        .intro-text h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(35px, 4.5vw, 65px);
+            font-weight: 400;
+            line-height: 1.08;
+            margin-bottom: 42px;
+            letter-spacing: -0.025em;
+        }
+
+        .intro-text p {
+            font-size: 16px;
+            color: #55554F;
+            max-width: 680px;
+        }
+
+        /* =========================
+           PROJECT DATA
+        ========================= */
+
+        .project-data {
+            margin: 0 10vw;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .data-item {
+            padding: 30px 25px 30px 0;
+            border-right: 1px solid var(--line);
+        }
+
+        .data-item:not(:first-child) {
+            padding-left: 25px;
+        }
+
+        .data-item:last-child {
+            border-right: 0;
+        }
+
+        .data-label {
+            display: block;
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .data-value {
+            font-size: 13px;
+            color: var(--ink);
+        }
+
+        /* =========================
+           CONCEPT
+        ========================= */
+
+        .concept {
+            padding: 190px 10vw;
+        }
+
+        .concept-heading {
+            max-width: 950px;
+            margin-bottom: 100px;
+        }
+
+        .concept-heading h2 {
+            margin-top: 25px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(45px, 6vw, 85px);
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: -0.035em;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8vw;
+            align-items: start;
+        }
+
+        .concept-block {
+            border-top: 1px solid var(--line);
+            padding-top: 25px;
+        }
+
+        .concept-block h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .concept-block p {
+            color: var(--muted);
+            font-size: 14px;
+            max-width: 520px;
+        }
+
+        /* =========================
+           FULL WIDTH IMAGE
+        ========================= */
+
+        .wide-image {
+            padding: 0 5vw;
+        }
+
+        .wide-image img {
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        /* =========================
+           STRATEGY
+        ========================= */
+
+        .strategy {
+            padding: 190px 10vw;
+        }
+
+        .strategy-header {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 8vw;
+            margin-bottom: 100px;
+        }
+
+        .strategy-header h2 {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            font-size: clamp(42px, 5vw, 72px);
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .strategy-header p {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .strategy-list {
+            border-top: 1px solid var(--line);
+        }
+
+        .strategy-item {
+            display: grid;
+            grid-template-columns: 100px 1fr 1.5fr;
+            gap: 40px;
+            padding: 35px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .strategy-number {
+            color: var(--forest);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+        }
+
+        .strategy-item h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            font-weight: 400;
+        }
+
+        .strategy-item p {
+            color: var(--muted);
+            font-size: 13px;
+            max-width: 550px;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            padding: 80px 5vw 190px;
+        }
+
+        .gallery-header {
+            padding: 0 5vw 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+        }
+
+        .gallery-header h2 {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            font-size: clamp(45px, 6vw, 85px);
+            line-height: 0.95;
+            letter-spacing: -0.035em;
+        }
+
+        .gallery-header p {
+            max-width: 350px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            background: #ddd;
+        }
+
+        .gallery-item img {
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(.2,.65,.25,1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.025);
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+        }
+
+        .gallery-item.large img {
+            aspect-ratio: 16 / 8;
+        }
+
+        /* =========================
+           DOCUMENTATION
+        ========================= */
+
+        .documentation {
+            background: #ECE8DE;
+            padding: 180px 10vw;
+        }
+
+        .documentation-header {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 8vw;
+            margin-bottom: 100px;
+        }
+
+        .documentation-header h2 {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            font-size: clamp(45px, 6vw, 80px);
+            line-height: 0.95;
+            letter-spacing: -0.035em;
+        }
+
+        .documentation-header p {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .plans {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .plan-item {
+            background: var(--white);
+            padding: 15px;
+        }
+
+        .plan-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .plan-caption {
+            padding: 15px 5px 5px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+        }
+
+        /* =========================
+           CREDITS
+        ========================= */
+
+        .credits {
+            padding: 180px 10vw 100px;
+        }
+
+        .credits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8vw;
+        }
+
+        .credits h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(42px, 5vw, 70px);
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        .credit-list {
+            border-top: 1px solid var(--line);
+        }
+
+        .credit {
+            padding: 22px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .credit span {
+            display: block;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--muted);
+            margin-bottom: 5px;
+        }
+
+        .credit strong {
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 50px 5vw 35px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .back-home {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--forest);
+            transition: opacity 0.3s ease;
+        }
+
+        .back-home:hover {
+            opacity: 0.55;
+        }
+
+        .footer-copy {
+            font-size: 9px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--forest);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 900;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp:hover {
+            transform: translateY(-4px);
+        }
+
+        .whatsapp svg {
+            width: 21px;
+            height: 21px;
+            fill: currentColor;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 22px 6vw;
+            }
+
+            .hero {
+                padding: 110px 6vw 50px;
+            }
+
+            .hero-top {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-meta {
+                text-align: left;
+            }
+
+            .hero-title {
+                padding-top: 80px;
+            }
+
+            .hero-bottom {
+                margin-top: 60px;
+            }
+
+            .hero-image {
+                padding: 0 6vw;
+            }
+
+            .intro,
+            .strategy-header,
+            .documentation-header,
+            .credits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro {
+                padding: 130px 8vw;
+                gap: 60px;
+            }
+
+            .project-data {
+                margin: 0 8vw;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .data-item:nth-child(2) {
+                border-right: 0;
+            }
+
+            .data-item:nth-child(3),
+            .data-item:nth-child(4) {
+                border-top: 1px solid var(--line);
+            }
+
+            .concept,
+            .strategy,
+            .documentation,
+            .credits {
+                padding: 140px 8vw;
+            }
+
+            .concept-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .strategy-item {
+                grid-template-columns: 60px 1fr;
+                gap: 20px;
+            }
+
+            .strategy-item p {
+                grid-column: 2;
+            }
+
+            .gallery {
+                padding: 50px 6vw 140px;
+            }
+
+            .gallery-header {
+                padding: 0 0 50px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+            }
+
+            .gallery-item.large img {
+                aspect-ratio: 4 / 3;
+            }
+
+            footer {
+                padding: 40px 6vw 30px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero-title h1 {
+                font-size: clamp(52px, 15vw, 90px);
+            }
+
+            .hero-image-frame {
+                aspect-ratio: 4 / 5;
+            }
+
+            .hero-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .project-data {
+                grid-template-columns: 1fr;
+            }
+
+            .data-item,
+            .data-item:not(:first-child) {
+                padding: 22px 0;
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .data-item:last-child {
+                border-bottom: 0;
+            }
+
+            .strategy-item {
+                grid-template-columns: 45px 1fr;
+            }
+
+            .strategy-item h3 {
+                font-size: 23px;
+            }
+
+            .strategy-item p {
+                grid-column: 2;
+            }
+
+            .whatsapp {
+                right: 18px;
+                bottom: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+        <a href="../../index.html" class="brand">ANDRO ARQ</a>
+
+        <div class="language">
+            <button class="active" data-lang="es">ES</button>
+            <span>/</span>
+            <button data-lang="en">EN</button>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-top">
+
+                <div class="project-number">
+                    05 / Proyecto
+                </div>
+
+                <div class="hero-meta">
+                    Naranjal · Ecuador<br>
+                    2026
+                </div>
+
+            </div>
+
+            <div class="hero-title">
+
+                <h1>
+                    Casa<br>
+                    Comunal <span>para</span><br>
+                    Estero Piedras
+                </h1>
+
+            </div>
+
+            <div class="hero-bottom">
+
+                <div class="hero-location">
+                    Equipamiento comunitario
+                </div>
+
+                <div class="scroll-note">
+                    Scroll ↓
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--
+            IMAGEN DE PORTADA
+            Por ahora queda preparada.
+            Luego colocaremos el nombre definitivo del render.
+        -->
+
+        <section class="hero-image">
+
+            <div class="hero-image-frame">
+                <img
+                    src="img/portada.jpg"
+                    alt="Casa Comunal para Estero Piedras"
+                >
+            </div>
+
+            <div class="image-caption">
+                <span>Casa Comunal para Estero Piedras</span>
+                <span>01 — Visualización</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTRO
+        ========================== -->
+
+        <section class="intro">
+
+            <div>
+                <span class="section-label">01 — Contexto</span>
+            </div>
+
+            <div class="intro-text">
+
+                <h2>
+                    Un espacio propio para la comunidad.
+                </h2>
+
+                <p>
+                    La Casa Comunal para Estero Piedras nace de la necesidad
+                    de contar con un espacio propio para la comunidad, capaz
+                    de reunir distintas actividades y convertirse en un lugar
+                    con el que sus habitantes puedan sentirse identificados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT DATA
+        ========================== -->
+
+        <section class="project-data">
+
+            <div class="data-item">
+                <span class="data-label">Proyecto</span>
+                <span class="data-value">Casa Comunal para Estero Piedras</span>
+            </div>
+
+            <div class="data-item">
+                <span class="data-label">Ubicación</span>
+                <span class="data-value">Estero Piedras, Naranjal, Ecuador</span>
+            </div>
+
+            <div class="data-item">
+                <span class="data-label">Año</span>
+                <span class="data-value">2026</span>
+            </div>
+
+            <div class="data-item">
+                <span class="data-label">Estado</span>
+                <span class="data-value">Proyecto arquitectónico</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONCEPT
+        ========================== -->
+
+        <section class="concept">
+
+            <div class="concept-heading">
+
+                <span class="section-label">02 — Idea</span>
+
+                <h2>
+                    Adaptar la arquitectura al lugar,
+                    sin perder su identidad contemporánea.
+                </h2>
+
+            </div>
+
+
+            <div class="concept-grid">
+
+                <article class="concept-block">
+
+                    <h3>Comunidad</h3>
+
+                    <p>
+                        El proyecto busca ofrecer un espacio propio para
+                        Estero Piedras, pensado para las actividades de la
+                        comunidad y para generar una arquitectura con la
+                        que sus habitantes puedan reconocerse.
+                    </p>
+
+                </article>
+
+
+                <article class="concept-block">
+
+                    <h3>Naturaleza</h3>
+
+                    <p>
+                        Una arquitectura de lenguaje moderno se encuentra
+                        con el entorno natural mediante una propuesta que
+                        busca integrarse al paisaje en lugar de competir
+                        con él.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!--
+            IMAGEN SECUNDARIA
+        -->
+
+        <section class="wide-image">
+
+            <img
+                src="img/exterior-01.jpg"
+                alt="Vista exterior de la Casa Comunal para Estero Piedras"
+            >
+
+            <div class="image-caption">
+                <span>Relación entre arquitectura y paisaje</span>
+                <span>02 — Visualización</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             STRATEGY
+        ========================== -->
+
+        <section class="strategy">
+
+            <div class="strategy-header">
+
+                <div>
+                    <span class="section-label">03 — Estrategia</span>
+                </div>
+
+                <div>
+
+                    <h2>
+                        Espacio, circulación y luz.
+                    </h2>
+
+                    <br>
+
+                    <p>
+                        La organización arquitectónica parte de la adaptación
+                        de los espacios y de la necesidad de establecer una
+                        circulación clara, acompañada por una adecuada entrada
+                        de iluminación natural.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="strategy-list">
+
+                <article class="strategy-item">
+
+                    <span class="strategy-number">01</span>
+
+                    <h3>Circulación</h3>
+
+                    <p>
+                        La distribución de los espacios se organiza a partir
+                        de recorridos claros que articulan las diferentes
+                        áreas del conjunto.
+                    </p>
+
+                </article>
+
+
+                <article class="strategy-item">
+
+                    <span class="strategy-number">02</span>
+
+                    <h3>Iluminación</h3>
+
+                    <p>
+                        La entrada de luz natural forma parte de la adaptación
+                        espacial y contribuye a construir ambientes más
+                        abiertos y habitables.
+                    </p>
+
+                </article>
+
+
+                <article class="strategy-item">
+
+                    <span class="strategy-number">03</span>
+
+                    <h3>Adaptación</h3>
+
+                    <p>
+                        Cada espacio responde a las necesidades planteadas
+                        para la comunidad, buscando equilibrio entre programa,
+                        funcionamiento y relación con el entorno.
+                    </p>
+
+                </article>
+
+
+                <article class="strategy-item">
+
+                    <span class="strategy-number">04</span>
+
+                    <h3>Naturaleza</h3>
+
+                    <p>
+                        El lenguaje contemporáneo del proyecto se relaciona
+                        con la vegetación y el paisaje de Estero Piedras,
+                        buscando una integración visual entre arquitectura
+                        y naturaleza.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             GALLERY
+        ========================== -->
+
+        <section class="gallery">
+
+            <div class="gallery-header">
+
+                <div>
+
+                    <span class="section-label">04 — Visualización</span>
+
+                    <h2>
+                        Arquitectura<br>
+                        y atmósfera.
+                    </h2>
+
+                </div>
+
+                <p>
+                    Una aproximación visual al proyecto, donde materialidad,
+                    vegetación, luz y arquitectura construyen la atmósfera
+                    propuesta para la Casa Comunal.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <figure class="gallery-item large">
+
+                    <img
+                        src="img/exterior-02.jpg"
+                        alt="Casa Comunal para Estero Piedras"
+                    >
+
+                </figure>
+
+
+                <figure class="gallery-item">
+
+                    <img
+                        src="img/exterior-03.jpg"
+                        alt="Vista exterior de la Casa Comunal"
+                    >
+
+                </figure>
+
+
+                <figure class="gallery-item">
+
+                    <img
+                        src="img/exterior-04.jpg"
+                        alt="Arquitectura y paisaje de Estero Piedras"
+                    >
+
+                </figure>
+
+
+                <figure class="gallery-item">
+
+                    <img
+                        src="img/interior-01.jpg"
+                        alt="Interior de la Casa Comunal"
+                    >
+
+                </figure>
+
+
+                <figure class="gallery-item">
+
+                    <img
+                        src="img/interior-02.jpg"
+                        alt="Espacio interior de la Casa Comunal"
+                    >
+
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DOCUMENTATION
+        ========================== -->
+
+        <section class="documentation">
+
+            <div class="documentation-header">
+
+                <div>
+
+                    <span class="section-label">05 — Documentación</span>
+
+                    <h2>
+                        Del concepto<br>
+                        al plano.
+                    </h2>
+
+                </div>
+
+                <p>
+                    La propuesta fue desarrollada como un proyecto
+                    arquitectónico integral, acompañado por documentación
+                    gráfica y técnica para su presentación a la comunidad.
+                </p>
+
+            </div>
+
+
+            <div class="plans">
+
+                <figure class="plan-item">
+
+                    <img
+                        src="img/lamina-01.jpg"
+                        alt="Documentación arquitectónica Casa Comunal para Estero Piedras"
+                    >
+
+                    <figcaption class="plan-caption">
+                        <span>Lámina 01</span>
+                        <span>Documentación arquitectónica</span>
+                    </figcaption>
+
+                </figure>
+
+
+                <figure class="plan-item">
+
+                    <img
+                        src="img/lamina-02.jpg"
+                        alt="Planos arquitectónicos Casa Comunal para Estero Piedras"
+                    >
+
+                    <figcaption class="plan-caption">
+                        <span>Lámina 02</span>
+                        <span>Planos y elevaciones</span>
+                    </figcaption>
+
+                </figure>
+
+
+                <figure class="plan-item">
+
+                    <img
+                        src="img/lamina-03.jpg"
+                        alt="Secciones e instalaciones Casa Comunal"
+                    >
+
+                    <figcaption class="plan-caption">
+                        <span>Lámina 03</span>
+                        <span>Secciones e instalaciones</span>
+                    </figcaption>
+
+                </figure>
+
+
+                <figure class="plan-item">
+
+                    <img
+                        src="img/lamina-04.jpg"
+                        alt="Documentación técnica Casa Comunal"
+                    >
+
+                    <figcaption class="plan-caption">
+                        <span>Lámina 04</span>
+                        <span>Documentación técnica</span>
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CREDITS
+        ========================== -->
+
+        <section class="credits">
+
+            <div class="credits-grid">
+
+                <div>
+
+                    <span class="section-label">06 — Créditos</span>
+
+                    <h2>
+                        Un proyecto<br>
+                        para la comunidad.
+                    </h2>
+
+                </div>
+
+
+                <div class="credit-list">
+
+                    <div class="credit">
+
+                        <span>Autoría arquitectónica</span>
+
+                        <strong>
+                            Arq. Alejandro Salazar
+                        </strong>
+
+                    </div>
+
+
+                    <div class="credit">
+
+                        <span>Diseño arquitectónico</span>
+
+                        <strong>
+                            Desarrollo integral del proyecto
+                        </strong>
+
+                    </div>
+
+
+                    <div class="credit">
+
+                        <span>Diseño estructural</span>
+
+                        <strong>
+                            Ing. Santiago Salazar, MSc.
+                        </strong>
+
+                    </div>
+
+
+                    <div class="credit">
+
+                        <span>Cliente</span>
+
+                        <strong>
+                            Comunidad de Estero Piedras
+                        </strong>
+
+                    </div>
+
+
+                    <div class="credit">
+
+                        <span>Presentación</span>
+
+                        <strong>
+                            Proyecto entregado y presentado a la comunidad
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <a href="../../index.html" class="back-home">
+            ← Inicio
+        </a>
+
+        <span class="footer-copy">
+            ANDRO ARQ · Alejandro Salazar Arquitecto
+        </span>
+
+    </footer>
+
+
+    <!-- =========================
+         WHATSAPP
+    ========================== -->
+
+    <a
+        href="https://wa.me/593000000000"
+        class="whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp"
+    >
+
+        <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path d="M20.52 3.48A11.87 11.87 0 0 0 12.04 0C5.46 0 .1 5.36.1 11.94c0 2.1.55 4.15 1.6 5.96L.03 24l6.25-1.64a11.9 11.9 0 0 0 5.75 1.47h.01c6.58 0 11.94-5.36 11.94-11.94 0-3.18-1.24-6.17-3.46-8.41ZM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.71.98.99-3.62-.23-.37a9.84 9.84 0 0 1-1.51-5.26c0-5.45 4.43-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c-.01 5.44-4.44 9.87-9.9 9.87Zm5.42-7.4c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.77-1.46-1.72-1.63-2.02-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.71.63.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+        </svg>
+
+    </a>
+
+
+    <!-- =========================
+         LANGUAGE
+    ========================== -->
+
+    <script>
+
+        const languageButtons = document.querySelectorAll(".language button");
+
+        languageButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                languageButtons.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                /*
+                    La versión bilingüe completa la ajustaremos
+                    posteriormente, manteniendo el contenido arquitectónico
+                    equivalente entre ES / EN.
+                */
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
