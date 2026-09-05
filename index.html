@@ -19,131 +19,73 @@
         ===================================================== */
 
         .language-screen{
-
             position:fixed;
-
             inset:0;
-
             background:#0d0d0d;
-
             color:#fff;
-
             display:flex;
-
             align-items:center;
-
             justify-content:center;
-
             z-index:99999;
-
             transition:
                 opacity .6s ease,
                 visibility .6s ease;
-
         }
-
 
         .language-screen.hidden{
-
             opacity:0;
-
             visibility:hidden;
-
             pointer-events:none;
-
         }
-
 
         .language-content{
-
             width:min(900px,90%);
-
             text-align:center;
-
         }
-
 
         .language-small{
-
             font-size:11px;
-
             letter-spacing:5px;
-
             color:#777;
-
             margin-bottom:25px;
-
         }
-
 
         .language-title{
-
             font-family:Georgia,serif;
-
             font-size:clamp(42px,7vw,82px);
-
             font-weight:400;
-
             margin-bottom:50px;
-
         }
-
 
         .language-title span{
-
             color:#555;
-
         }
-
 
         .language-options{
-
             display:flex;
-
             justify-content:center;
-
             gap:25px;
-
             flex-wrap:wrap;
-
         }
-
 
         .language-button{
-
             width:220px;
-
             padding:22px 30px;
-
             background:transparent;
-
             border:1px solid rgba(255,255,255,.35);
-
             color:#fff;
-
             cursor:pointer;
-
             font-size:13px;
-
             letter-spacing:3px;
-
             transition:.35s;
-
         }
-
 
         .language-button:hover{
-
             background:#fff;
-
             color:#000;
-
             border-color:#fff;
-
             transform:translateY(-3px);
-
         }
-
 
 
         /* =====================================================
@@ -151,69 +93,39 @@
         ===================================================== */
 
         .language-switcher{
-
             position:fixed;
-
             top:28px;
-
             right:40px;
-
             z-index:5000;
-
             display:flex;
-
             align-items:center;
-
             gap:8px;
-
             font-size:10px;
-
             letter-spacing:2px;
-
         }
-
 
         .language-switcher button{
-
             background:none;
-
             border:none;
-
             color:#888;
-
             cursor:pointer;
-
             padding:4px;
-
             font-size:10px;
-
             letter-spacing:2px;
-
             transition:.3s;
-
         }
-
 
         .language-switcher button:hover{
-
             color:#fff;
-
         }
-
 
         .language-switcher button.active{
-
             color:#fff;
-
         }
-
 
         .language-divider{
-
             color:#444;
-
         }
-
 
 
         /* =====================================================
@@ -221,38 +133,22 @@
         ===================================================== */
 
         .btn-cv{
-
             display:inline-block;
-
             margin-top:20px;
-
             padding:10px 22px;
-
             color:#fff;
-
             text-decoration:none;
-
             font-size:13px;
-
             letter-spacing:2px;
-
             border:1px solid rgba(255,255,255,0.4);
-
             transition:0.3s;
-
         }
-
 
         .btn-cv:hover{
-
             background:#fff;
-
             color:#000;
-
             border-color:#fff;
-
         }
-
 
 
         /* =====================================================
@@ -260,51 +156,29 @@
         ===================================================== */
 
         .btn-black{
-
             padding:8px 16px;
-
             background:#000;
-
             color:#fff;
-
             text-decoration:none;
-
             font-size:12px;
-
             border:1px solid rgba(255,255,255,0.2);
-
         }
-
 
         .btn-blue{
-
             padding:8px 16px;
-
             background:#1e90ff;
-
             color:#fff;
-
             text-decoration:none;
-
             font-size:12px;
-
         }
-
 
         .buttons-recursos{
-
             margin-top:15px;
-
             display:flex;
-
             flex-direction:column;
-
             gap:10px;
-
             align-items:center;
-
         }
-
 
 
         /* =====================================================
@@ -312,32 +186,19 @@
         ===================================================== */
 
         .grid{
-
             display:flex;
-
             justify-content:center;
-
             gap:60px;
-
             text-align:center;
-
             flex-wrap:wrap;
-
         }
-
 
         .block{
-
             max-width:250px;
-
             display:flex;
-
             flex-direction:column;
-
             align-items:center;
-
         }
-
 
 
         /* =====================================================
@@ -345,244 +206,136 @@
         ===================================================== */
 
         .projects-modal{
-
             position:fixed;
-
             inset:0;
-
             background:rgba(0,0,0,.72);
-
             backdrop-filter:blur(10px);
-
             -webkit-backdrop-filter:blur(10px);
-
             display:flex;
-
             align-items:center;
-
             justify-content:center;
-
             padding:30px;
-
             z-index:9000;
-
             opacity:0;
-
             visibility:hidden;
-
             pointer-events:none;
-
             transition:
                 opacity .4s ease,
                 visibility .4s ease;
-
         }
-
 
         .projects-modal.open{
-
             opacity:1;
-
             visibility:visible;
-
             pointer-events:auto;
-
         }
 
-
         .projects-modal-content{
-
             position:relative;
-
             width:min(720px,100%);
-
             max-height:85vh;
-
             overflow-y:auto;
-
             background:#f5f3ed;
-
             color:#111;
-
             padding:55px 60px 60px;
-
             box-shadow:
                 0 30px 100px rgba(0,0,0,.35);
-
             transform:
                 translateY(25px)
                 scale(.98);
-
             transition:
                 transform .45s cubic-bezier(.2,.8,.2,1);
-
         }
-
 
         .projects-modal.open
         .projects-modal-content{
-
             transform:
                 translateY(0)
                 scale(1);
-
         }
-
 
         .projects-modal-small{
-
             font-size:9px;
-
             letter-spacing:3px;
-
             color:#8b867c;
-
             margin-bottom:22px;
-
         }
-
 
         .projects-modal-content h2{
-
             margin:0 0 40px;
-
             font-family:Georgia,serif;
-
             font-size:clamp(42px,6vw,70px);
-
             line-height:.95;
-
             font-weight:400;
-
         }
-
 
         .projects-close{
-
             position:absolute;
-
             top:22px;
-
             right:25px;
-
             width:36px;
-
             height:36px;
-
             border:none;
-
             background:none;
-
             color:#111;
-
             cursor:pointer;
-
             font-size:28px;
-
             font-weight:300;
-
             line-height:1;
-
             transition:.3s;
-
         }
-
 
         .projects-close:hover{
-
             transform:rotate(90deg);
-
             opacity:.5;
-
         }
-
 
         .projects-list{
-
             border-top:1px solid rgba(0,0,0,.16);
-
         }
-
 
         .project-item{
-
             display:grid;
-
             grid-template-columns:55px 1fr 30px;
-
             align-items:center;
-
             gap:15px;
-
             padding:23px 0;
-
             border-bottom:1px solid rgba(0,0,0,.16);
-
             color:#111;
-
             text-decoration:none;
-
             transition:.35s ease;
-
         }
-
 
         .project-item span{
-
             font-family:Georgia,serif;
-
             font-size:15px;
-
             color:#999;
-
         }
-
 
         .project-item strong{
-
             font-family:Georgia,serif;
-
             font-size:20px;
-
             font-weight:400;
-
             line-height:1.2;
-
         }
-
 
         .project-item em{
-
             font-style:normal;
-
             font-size:17px;
-
             color:#999;
-
             text-align:right;
-
             transition:.3s;
-
         }
-
 
         .project-item:hover{
-
             padding-left:10px;
-
             padding-right:10px;
-
             background:rgba(0,0,0,.035);
-
         }
 
-
         .project-item:hover em{
-
             color:#111;
-
             transform:translateX(5px);
-
         }
 
 
@@ -593,83 +346,49 @@
         @media(max-width:700px){
 
             .language-options{
-
                 flex-direction:column;
-
                 align-items:center;
-
             }
-
 
             .language-button{
-
                 width:250px;
-
             }
-
 
             .language-switcher{
-
                 top:20px;
-
                 right:20px;
-
             }
-
 
             .grid{
-
                 flex-direction:column;
-
                 gap:50px;
-
                 align-items:center;
-
             }
-
 
             .projects-modal{
-
                 padding:18px;
-
             }
-
 
             .projects-modal-content{
-
                 padding:
                     45px 25px 35px;
-
                 max-height:88vh;
-
             }
-
 
             .projects-modal-content h2{
-
                 margin-bottom:30px;
-
             }
-
 
             .project-item{
-
                 grid-template-columns:
                     40px 1fr 20px;
-
                 gap:10px;
-
                 padding:20px 0;
-
             }
-
 
             .project-item strong{
-
                 font-size:17px;
-
             }
-
         }
 
     </style>
@@ -691,13 +410,9 @@
 
     <div class="language-content">
 
-
         <div class="language-small">
-
             ANDROARQ
-
         </div>
-
 
         <h1 class="language-title">
 
@@ -709,32 +424,23 @@
 
         </h1>
 
-
         <div class="language-options">
-
 
             <button
                 class="language-button"
                 onclick="selectLanguage('es')"
             >
-
                 ESPAÑOL
-
             </button>
-
 
             <button
                 class="language-button"
                 onclick="selectLanguage('en')"
             >
-
                 ENGLISH
-
             </button>
 
-
         </div>
-
 
     </div>
 
@@ -748,31 +454,23 @@
 
 <div class="language-switcher">
 
-
     <button
         id="langES"
         onclick="changeLanguage('es')"
     >
-
         ES
-
     </button>
-
 
     <span class="language-divider">
         /
     </span>
 
-
     <button
         id="langEN"
         onclick="changeLanguage('en')"
     >
-
         EN
-
     </button>
-
 
 </div>
 
@@ -804,16 +502,11 @@
 
 <section class="hero">
 
-
     <div class="hero-content">
 
-
         <h1 id="name">
-
             Arq. Alejandro Salazar
-
         </h1>
-
 
         <p id="description">
 
@@ -826,81 +519,50 @@
         </p>
 
 
-
         <!-- ESPECIALIZACIÓN -->
 
         <div class="specialties">
 
-
             <strong id="specialtyTitle">
-
                 Especialización:
-
             </strong>
 
-
             <span id="specialty1">
-
                 Arquitectura
-
             </span>
-
 
             <span id="specialty2">
-
                 Interiores
-
             </span>
-
 
             <span id="specialty3">
-
                 Planificación
-
             </span>
 
-
         </div>
-
 
 
         <!-- SOFTWARE -->
 
         <div class="software">
 
-
             <strong id="softwareTitle">
-
                 Dominio de aplicaciones:
-
             </strong>
 
-
             <span>AutoCAD</span>
-
             <span>Archicad</span>
-
             <span>SketchUp</span>
-
             <span>3ds Max</span>
-
             <span>Revit</span>
-
             <span>Lumion</span>
-
             <span>D5 Render</span>
-
             <span>Photoshop</span>
-
             <span>Illustrator</span>
-
             <span>InDesign</span>
-
             <span>Fotomontajes</span>
 
-
         </div>
-
 
 
         <!-- CV -->
@@ -910,11 +572,8 @@
             class="btn-cv"
             id="cvButton"
         >
-
             VER CV
-
         </a>
-
 
     </div>
 
@@ -928,31 +587,20 @@
 
 <section class="section">
 
-
     <div class="grid">
 
 
-
-        <!-- =================================================
-             01 TRÁMITES
-        ================================================== -->
+        <!-- 01 TRÁMITES -->
 
         <div class="block">
 
-
             <div class="number">
-
                 01
-
             </div>
 
-
             <h3 id="proceduresTitle">
-
                 Trámites
-
             </h3>
-
 
             <p id="proceduresText">
 
@@ -962,41 +610,28 @@
 
             </p>
 
-
             <a
                 href="tramites.html"
                 id="proceduresLink"
             >
-
                 Ver servicios →
-
             </a>
-
 
         </div>
 
 
 
-        <!-- =================================================
-             02 RENDERS
-        ================================================== -->
+        <!-- 02 RENDERS -->
 
         <div class="block">
 
-
             <div class="number">
-
                 02
-
             </div>
 
-
             <h3 id="rendersTitle">
-
                 Renders
-
             </h3>
-
 
             <p id="rendersText">
 
@@ -1005,41 +640,28 @@
 
             </p>
 
-
             <a
                 href="renders.html"
                 id="rendersLink"
             >
-
                 Ver renders →
-
             </a>
-
 
         </div>
 
 
 
-        <!-- =================================================
-             03 RECURSOS
-        ================================================== -->
+        <!-- 03 RECURSOS -->
 
         <div class="block">
 
-
             <div class="number">
-
                 03
-
             </div>
 
-
             <h3 id="resourcesTitle">
-
                 Recursos
-
             </h3>
-
 
             <p id="resourcesText">
 
@@ -1048,20 +670,15 @@
 
             </p>
 
-
             <a
                 href="recursos.html"
                 id="resourcesLink"
             >
-
                 Ver recursos →
-
             </a>
 
 
-
             <div class="buttons-recursos">
-
 
                 <a
                     class="btn-black"
@@ -1069,11 +686,8 @@
                     target="_blank"
                     id="tiktokButton"
                 >
-
                     TikTok @androarq
-
                 </a>
-
 
                 <a
                     class="btn-blue"
@@ -1081,39 +695,26 @@
                     target="_blank"
                     id="buyButton"
                 >
-
                     Comprar recursos
-
                 </a>
 
-
             </div>
-
 
         </div>
 
 
 
-        <!-- =================================================
-             04 CURSOS
-        ================================================== -->
+        <!-- 04 CURSOS -->
 
         <div class="block">
 
-
             <div class="number">
-
                 04
-
             </div>
 
-
             <h3 id="coursesTitle">
-
                 Cursos
-
             </h3>
-
 
             <p id="coursesText">
 
@@ -1122,41 +723,28 @@
 
             </p>
 
-
             <a
                 href="cursos.html"
                 id="coursesLink"
             >
-
                 Ver cursos →
-
             </a>
-
 
         </div>
 
 
 
-        <!-- =================================================
-             05 PROYECTOS
-        ================================================== -->
+        <!-- 05 PROYECTOS -->
 
         <div class="block">
 
-
             <div class="number">
-
                 05
-
             </div>
 
-
             <h3 id="projectsTitle">
-
                 Proyectos
-
             </h3>
-
 
             <p id="projectsText">
 
@@ -1165,23 +753,17 @@
 
             </p>
 
-
             <a
                 href="#"
                 id="projectsLink"
                 onclick="openProjects(event)"
             >
-
                 Ver proyectos ↓
-
             </a>
-
 
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -1197,39 +779,33 @@
     onclick="closeProjectsOutside(event)"
 >
 
-
     <div class="projects-modal-content">
-
 
         <button
             class="projects-close"
             onclick="closeProjects()"
             aria-label="Cerrar"
         >
-
             ×
-
         </button>
 
 
         <div class="projects-modal-small">
-
             ANDROARQ / PORTFOLIO
-
         </div>
 
 
         <h2 id="projectsModalTitle">
-
             Proyectos
-
         </h2>
 
 
         <div class="projects-list">
 
 
-            <!-- PROYECTO 01 -->
+            <!-- =================================================
+                 PROYECTO 01
+            ================================================== -->
 
             <a
                 href="proyectos/escuela-rural-senegal/"
@@ -1237,30 +813,24 @@
             >
 
                 <span>
-
                     01
-
                 </span>
 
-
                 <strong id="project01">
-
                     Escuela Rural en Senegal
-
                 </strong>
 
-
                 <em>
-
                     →
-
                 </em>
 
             </a>
 
 
 
-            <!-- PROYECTO 02 -->
+            <!-- =================================================
+                 PROYECTO 02
+            ================================================== -->
 
             <a
                 href="proyectos/centro-endoscopico/"
@@ -1268,30 +838,24 @@
             >
 
                 <span>
-
                     02
-
                 </span>
 
-
                 <strong id="project02">
-
                     Centro Endoscópico
-
                 </strong>
 
-
                 <em>
-
                     →
-
                 </em>
 
             </a>
 
 
 
-            <!-- PROYECTO 03 -->
+            <!-- =================================================
+                 PROYECTO 03
+            ================================================== -->
 
             <a
                 href="proyectos/casa-comunal-estero-piedras/"
@@ -1299,23 +863,40 @@
             >
 
                 <span>
-
                     03
-
                 </span>
 
-
                 <strong id="project03">
-
                     Casa Comunal para Estero Piedras
-
                 </strong>
 
+                <em>
+                    →
+                </em>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 PROYECTO 04 — NUEVO
+            ================================================== -->
+
+            <a
+                href="proyectos/vivienda-unifamiliar-taller/"
+                class="project-item"
+            >
+
+                <span>
+                    04
+                </span>
+
+                <strong id="project04">
+                    Vivienda Unifamiliar + Taller
+                </strong>
 
                 <em>
-
                     →
-
                 </em>
 
             </a>
@@ -1323,9 +904,7 @@
 
         </div>
 
-
     </div>
-
 
 </div>
 
@@ -1347,111 +926,85 @@ const translations = {
 
     es: {
 
-
         name:
         "Arq. Alejandro Salazar",
-
 
         description:
         "Diseñador arquitectónico enfocado en la integración entre técnica, materialidad y narrativa espacial. Mi trabajo explora sistemas constructivos sostenibles como la madera laminada, articulando arquitectura contemporánea con identidad local.",
 
-
         specialtyTitle:
         "Especialización:",
-
 
         specialty1:
         "Arquitectura",
 
-
         specialty2:
         "Interiores",
-
 
         specialty3:
         "Planificación",
 
-
         softwareTitle:
         "Dominio de aplicaciones:",
-
 
         cvButton:
         "VER CV",
 
 
-
         proceduresTitle:
         "Trámites",
 
-
         proceduresText:
         "Trámites, avalúos, diseño, asesoramiento y soluciones arquitectónicas.",
-
 
         proceduresLink:
         "Ver servicios →",
 
 
-
         rendersTitle:
         "Renders",
 
-
         rendersText:
         "Visualización arquitectónica con enfoque en atmósfera y narrativa espacial.",
-
 
         rendersLink:
         "Ver renders →",
 
 
-
         resourcesTitle:
         "Recursos",
-
 
         resourcesText:
         "Materiales y herramientas para potenciar procesos de diseño.",
 
-
         resourcesLink:
         "Ver recursos →",
 
-
         tiktokButton:
         "TikTok @androarq",
-
 
         buyButton:
         "Comprar recursos",
 
 
-
         coursesTitle:
         "Cursos",
 
-
         coursesText:
         "Formación práctica en representación, diseño y visualización.",
-
 
         coursesLink:
         "Ver cursos →",
 
 
-
         projectsTitle:
         "Proyectos",
-
 
         projectsText:
         "Proyectos arquitectónicos, diseño interior y propuestas desarrolladas.",
 
-
         projectsLink:
         "Ver proyectos ↓",
-
 
         projectsModalTitle:
         "Proyectos",
@@ -1460,125 +1013,99 @@ const translations = {
         project01:
         "Escuela Rural en Senegal",
 
-
         project02:
         "Centro Endoscópico",
 
-
         project03:
-        "Casa Comunal para Estero Piedras"
+        "Casa Comunal para Estero Piedras",
+
+        project04:
+        "Vivienda Unifamiliar + Taller"
 
     },
 
 
-
     en: {
-
 
         name:
         "Arch. Alejandro Salazar",
 
-
         description:
         "Architectural designer focused on the integration of technique, materiality and spatial narrative. My work explores sustainable construction systems such as laminated timber, combining contemporary architecture with local identity.",
-
 
         specialtyTitle:
         "Specialization:",
 
-
         specialty1:
         "Architecture",
-
 
         specialty2:
         "Interiors",
 
-
         specialty3:
         "Planning",
 
-
         softwareTitle:
         "Software proficiency:",
-
 
         cvButton:
         "VIEW CV",
 
 
-
         proceduresTitle:
         "Services",
 
-
         proceduresText:
         "Permits, property valuation, design, consulting and architectural solutions.",
-
 
         proceduresLink:
         "View services →",
 
 
-
         rendersTitle:
         "Renders",
 
-
         rendersText:
         "Architectural visualization focused on atmosphere and spatial narrative.",
-
 
         rendersLink:
         "View renders →",
 
 
-
         resourcesTitle:
         "Resources",
-
 
         resourcesText:
         "Materials and tools to enhance the design process.",
 
-
         resourcesLink:
         "View resources →",
 
-
         tiktokButton:
         "TikTok @androarq",
-
 
         buyButton:
         "Buy resources",
 
 
-
         coursesTitle:
         "Courses",
 
-
         coursesText:
         "Practical training in representation, design and visualization.",
-
 
         coursesLink:
         "View courses →",
 
 
-
         projectsTitle:
         "Projects",
-
 
         projectsText:
         "Architectural projects, interior design and developed proposals.",
 
-
         projectsLink:
         "View projects ↓",
-
 
         projectsModalTitle:
         "Projects",
@@ -1587,13 +1114,14 @@ const translations = {
         project01:
         "Rural School in Senegal",
 
-
         project02:
         "Endoscopy Center",
 
-
         project03:
-        "Community Center for Estero Piedras"
+        "Community Center for Estero Piedras",
+
+        project04:
+        "Single-Family House + Workshop"
 
     }
 
@@ -1609,13 +1137,10 @@ function openProjects(event){
 
     event.preventDefault();
 
-
     const modal =
         document.getElementById("projectsModal");
 
-
     modal.classList.add("open");
-
 
     document.body.style.overflow =
         "hidden";
@@ -1633,9 +1158,7 @@ function closeProjects(){
     const modal =
         document.getElementById("projectsModal");
 
-
     modal.classList.remove("open");
-
 
     document.body.style.overflow =
         "";
@@ -1690,43 +1213,33 @@ document.addEventListener(
 
 function applyLanguage(language){
 
-
     const t =
         translations[language];
-
 
     document.documentElement.lang =
         language;
 
 
-
     document.getElementById("name").innerText =
         t.name;
-
 
     document.getElementById("description").innerText =
         t.description;
 
-
     document.getElementById("specialtyTitle").innerText =
         t.specialtyTitle;
-
 
     document.getElementById("specialty1").innerText =
         t.specialty1;
 
-
     document.getElementById("specialty2").innerText =
         t.specialty2;
-
 
     document.getElementById("specialty3").innerText =
         t.specialty3;
 
-
     document.getElementById("softwareTitle").innerText =
         t.softwareTitle;
-
 
     document.getElementById("cvButton").innerText =
         t.cvButton;
@@ -1738,10 +1251,8 @@ function applyLanguage(language){
     document.getElementById("proceduresTitle").innerText =
         t.proceduresTitle;
 
-
     document.getElementById("proceduresText").innerText =
         t.proceduresText;
-
 
     document.getElementById("proceduresLink").innerText =
         t.proceduresLink;
@@ -1753,10 +1264,8 @@ function applyLanguage(language){
     document.getElementById("rendersTitle").innerText =
         t.rendersTitle;
 
-
     document.getElementById("rendersText").innerText =
         t.rendersText;
-
 
     document.getElementById("rendersLink").innerText =
         t.rendersLink;
@@ -1768,18 +1277,14 @@ function applyLanguage(language){
     document.getElementById("resourcesTitle").innerText =
         t.resourcesTitle;
 
-
     document.getElementById("resourcesText").innerText =
         t.resourcesText;
-
 
     document.getElementById("resourcesLink").innerText =
         t.resourcesLink;
 
-
     document.getElementById("tiktokButton").innerText =
         t.tiktokButton;
-
 
     document.getElementById("buyButton").innerText =
         t.buyButton;
@@ -1791,10 +1296,8 @@ function applyLanguage(language){
     document.getElementById("coursesTitle").innerText =
         t.coursesTitle;
 
-
     document.getElementById("coursesText").innerText =
         t.coursesText;
-
 
     document.getElementById("coursesLink").innerText =
         t.coursesLink;
@@ -1806,10 +1309,8 @@ function applyLanguage(language){
     document.getElementById("projectsTitle").innerText =
         t.projectsTitle;
 
-
     document.getElementById("projectsText").innerText =
         t.projectsText;
-
 
     document.getElementById("projectsLink").innerText =
         t.projectsLink;
@@ -1821,17 +1322,17 @@ function applyLanguage(language){
     document.getElementById("projectsModalTitle").innerText =
         t.projectsModalTitle;
 
-
     document.getElementById("project01").innerText =
         t.project01;
-
 
     document.getElementById("project02").innerText =
         t.project02;
 
-
     document.getElementById("project03").innerText =
         t.project03;
+
+    document.getElementById("project04").innerText =
+        t.project04;
 
 
 
@@ -1842,7 +1343,6 @@ function applyLanguage(language){
             "active",
             language === "es"
         );
-
 
     document.getElementById("langEN")
         .classList.toggle(
@@ -1869,15 +1369,12 @@ function applyLanguage(language){
 
 function selectLanguage(language){
 
-
     localStorage.setItem(
         "androarq-language",
         language
     );
 
-
     applyLanguage(language);
-
 
     document
         .getElementById("languageScreen")
@@ -1911,17 +1408,13 @@ const savedLanguage =
 
 if(savedLanguage){
 
-
     applyLanguage(savedLanguage);
-
 
     document
         .getElementById("languageScreen")
         .classList.add("hidden");
 
-
 }else{
-
 
     applyLanguage("es");
 
