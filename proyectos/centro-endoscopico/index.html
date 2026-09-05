@@ -16,13 +16,10 @@
 
     <meta
         name="description"
-        content="Centro Endoscópico — proyecto de diseño de interiores de Dis. Gabriela Matute. Renders y adaptación espacial por Arq. Alejandro Salazar."
+        content="Centro Endoscópico — Diseño de interiores por Dis. Gabriela Matute. Renders y adaptación espacial por Arq. Alejandro Salazar."
     >
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
         rel="preconnect"
@@ -38,7 +35,6 @@
 
     <style>
 
-
         /* =========================================================
            RESET
         ========================================================= */
@@ -49,52 +45,38 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
             background: #111111;
             color: #f2f0eb;
-
             font-family: "Inter", sans-serif;
             font-weight: 300;
-
             line-height: 1.6;
-
             overflow-x: hidden;
         }
-
 
         img {
             display: block;
             width: 100%;
         }
 
-
         a {
             color: inherit;
             text-decoration: none;
         }
 
-
         :root {
-
             --bg: #111111;
             --bg-soft: #171717;
-
             --text: #f2f0eb;
             --muted: #999994;
-
             --line: rgba(255,255,255,0.14);
-
             --serif: "Playfair Display", serif;
             --sans: "Inter", sans-serif;
-
         }
-
 
 
         /* =========================================================
@@ -102,12 +84,9 @@
         ========================================================= */
 
         .topbar {
-
             position: fixed;
-
             top: 0;
             left: 0;
-
             width: 100%;
             height: 82px;
 
@@ -118,6 +97,7 @@
             padding: 0 5vw;
 
             z-index: 1000;
+            pointer-events: none;
 
             background:
                 linear-gradient(
@@ -125,111 +105,66 @@
                     rgba(17,17,17,0.94),
                     rgba(17,17,17,0)
                 );
-
-            pointer-events: none;
-
         }
-
 
         .topbar a,
         .language-switch {
-
             pointer-events: auto;
-
         }
-
 
         .back-link {
-
             font-size: 10px;
-
             letter-spacing: 0.2em;
-
             text-transform: uppercase;
-
             color: rgba(255,255,255,0.72);
-
             transition: 0.3s ease;
-
         }
-
 
         .back-link:hover {
-
             color: white;
-
             transform: translateX(-4px);
-
         }
 
-
         .brand {
-
             position: absolute;
-
             left: 50%;
-
             transform: translateX(-50%);
 
             font-size: 12px;
-
             letter-spacing: 0.3em;
-
             font-weight: 500;
-
         }
-
 
         .language-switch {
-
             display: flex;
-
             align-items: center;
-
             gap: 7px;
-
         }
 
-
         .lang-btn {
-
             border: none;
-
             background: transparent;
-
             color: rgba(255,255,255,0.4);
 
             font-family: var(--sans);
-
             font-size: 10px;
-
             letter-spacing: 0.15em;
 
             cursor: pointer;
-
             padding: 5px;
 
             transition: 0.3s ease;
-
         }
-
 
         .lang-btn:hover,
         .lang-btn.active {
-
             color: white;
-
         }
-
 
         .lang-separator {
-
             color: rgba(255,255,255,0.2);
-
             font-size: 10px;
-
         }
-
 
 
         /* =========================================================
@@ -237,15 +172,12 @@
         ========================================================= */
 
         .hero {
-
             min-height: 100vh;
 
             position: relative;
 
             display: flex;
-
             flex-direction: column;
-
             justify-content: flex-end;
 
             padding: 0 5vw 8vh;
@@ -253,20 +185,15 @@
             overflow: hidden;
 
             background:
-
                 radial-gradient(
                     circle at 75% 35%,
                     rgba(210,190,165,0.08),
                     transparent 38%
                 ),
-
                 var(--bg);
-
         }
 
-
         .hero::before {
-
             content: "02";
 
             position: absolute;
@@ -276,81 +203,66 @@
 
             font-family: var(--serif);
 
-            font-size: clamp(
-                170px,
-                27vw,
-                420px
-            );
+            font-size:
+                clamp(
+                    170px,
+                    27vw,
+                    420px
+                );
 
             line-height: 1;
 
             color: rgba(255,255,255,0.025);
 
             pointer-events: none;
-
         }
 
-
         .hero-label {
-
             display: flex;
-
             align-items: center;
-
             gap: 18px;
 
             margin-bottom: 28px;
 
             font-size: 10px;
-
             letter-spacing: 0.28em;
-
             text-transform: uppercase;
 
             color: var(--muted);
-
         }
 
-
         .hero-label::before {
-
             content: "";
 
             width: 45px;
             height: 1px;
 
             background: var(--line);
-
         }
 
-
         .hero h1 {
-
             max-width: 1100px;
 
             font-family: var(--serif);
 
-            font-size: clamp(
-                62px,
-                9vw,
-                150px
-            );
+            font-size:
+                clamp(
+                    62px,
+                    9vw,
+                    150px
+                );
 
             font-weight: 400;
 
             line-height: 0.94;
 
             letter-spacing: -0.045em;
-
         }
 
-
         .hero-bottom {
-
             display: flex;
 
             justify-content: space-between;
-
             align-items: flex-end;
 
             gap: 50px;
@@ -358,31 +270,23 @@
             max-width: 1100px;
 
             margin-top: 55px;
-
         }
 
-
         .hero-description {
-
             max-width: 520px;
 
             color: var(--muted);
 
             font-size: 14px;
-
             line-height: 1.85;
-
         }
 
-
         .hero-credit {
-
             text-align: right;
 
             white-space: nowrap;
 
             font-size: 10px;
-
             line-height: 1.8;
 
             letter-spacing: 0.15em;
@@ -390,9 +294,7 @@
             text-transform: uppercase;
 
             color: rgba(255,255,255,0.5);
-
         }
-
 
 
         /* =========================================================
@@ -400,16 +302,11 @@
         ========================================================= */
 
         .cover {
-
             width: 100%;
-
             padding: 0 5vw;
-
         }
 
-
         .cover-image {
-
             width: 100%;
 
             aspect-ratio: 16 / 9;
@@ -417,12 +314,9 @@
             background: #202020;
 
             overflow: hidden;
-
         }
 
-
         .cover-image img {
-
             width: 100%;
             height: 100%;
 
@@ -431,24 +325,18 @@
             transition:
                 transform 1.2s
                 cubic-bezier(.2,.7,.2,1);
-
         }
-
 
         .cover-image:hover img {
-
             transform: scale(1.015);
-
         }
-
 
 
         /* =========================================================
-           INTRODUCCIÓN
+           INTRO
         ========================================================= */
 
         .intro {
-
             padding: 16vh 10vw;
 
             display: grid;
@@ -460,12 +348,9 @@
 
             border-bottom:
                 1px solid var(--line);
-
         }
 
-
         .section-number {
-
             margin-bottom: 25px;
 
             color: var(--muted);
@@ -475,31 +360,26 @@
             letter-spacing: 0.2em;
 
             text-transform: uppercase;
-
         }
 
-
         .section-title {
-
             font-family: var(--serif);
 
-            font-size: clamp(
-                42px,
-                5vw,
-                75px
-            );
+            font-size:
+                clamp(
+                    42px,
+                    5vw,
+                    75px
+                );
 
             font-weight: 400;
 
             line-height: 1.05;
 
             letter-spacing: -0.025em;
-
         }
 
-
         .intro-text {
-
             max-width: 680px;
 
             color: #b7b6b1;
@@ -507,16 +387,11 @@
             font-size: 16px;
 
             line-height: 2;
-
         }
-
 
         .intro-text p + p {
-
             margin-top: 26px;
-
         }
-
 
 
         /* =========================================================
@@ -524,7 +399,6 @@
         ========================================================= */
 
         .concept {
-
             padding: 16vh 10vw;
 
             display: grid;
@@ -536,12 +410,9 @@
 
             border-bottom:
                 1px solid var(--line);
-
         }
 
-
         .concept-text {
-
             max-width: 680px;
 
             color: #b7b6b1;
@@ -549,19 +420,13 @@
             font-size: 16px;
 
             line-height: 2;
-
         }
-
 
         .concept-text p + p {
-
             margin-top: 26px;
-
         }
 
-
         .concept-quote {
-
             margin-top: 50px;
 
             padding-top: 28px;
@@ -576,9 +441,7 @@
             line-height: 1.5;
 
             color: var(--text);
-
         }
-
 
 
         /* =========================================================
@@ -586,35 +449,25 @@
         ========================================================= */
 
         .intervention {
-
             padding: 16vh 10vw;
 
             background: var(--bg-soft);
 
             border-bottom:
                 1px solid var(--line);
-
         }
 
-
         .intervention-header {
-
             max-width: 1000px;
 
             margin-bottom: 80px;
-
         }
-
 
         .intervention-header .section-title {
-
             max-width: 850px;
-
         }
 
-
         .roles {
-
             display: grid;
 
             grid-template-columns:
@@ -625,12 +478,9 @@
 
             border-left:
                 1px solid var(--line);
-
         }
 
-
         .role {
-
             min-height: 250px;
 
             padding: 40px;
@@ -640,12 +490,9 @@
 
             border-bottom:
                 1px solid var(--line);
-
         }
 
-
         .role-number {
-
             display: block;
 
             margin-bottom: 35px;
@@ -655,12 +502,9 @@
             font-size: 10px;
 
             letter-spacing: 0.2em;
-
         }
 
-
         .role-title {
-
             margin-bottom: 18px;
 
             font-family: var(--serif);
@@ -668,12 +512,9 @@
             font-size: 29px;
 
             line-height: 1.15;
-
         }
 
-
         .role-description {
-
             max-width: 470px;
 
             color: var(--muted);
@@ -681,9 +522,7 @@
             font-size: 13px;
 
             line-height: 1.8;
-
         }
-
 
 
         /* =========================================================
@@ -691,36 +530,27 @@
         ========================================================= */
 
         .gallery-section {
-
             padding: 16vh 5vw 12vh;
-
         }
 
-
         .gallery-header {
-
             display: flex;
 
             justify-content: space-between;
 
             align-items: flex-end;
 
-            margin: 0 5vw 65px;
+            margin:
+                0 5vw 65px;
 
             gap: 40px;
-
         }
-
 
         .gallery-header-text {
-
             max-width: 700px;
-
         }
 
-
         .gallery-description {
-
             max-width: 350px;
 
             color: var(--muted);
@@ -728,33 +558,24 @@
             font-size: 12px;
 
             line-height: 1.8;
-
         }
 
-
         .gallery {
-
             display: grid;
 
             grid-template-columns:
                 repeat(12, 1fr);
 
             gap: 18px;
-
         }
 
-
         .gallery-item {
-
             overflow: hidden;
 
             background: #1c1c1c;
-
         }
 
-
         .gallery-item img {
-
             width: 100%;
             height: 100%;
 
@@ -763,93 +584,51 @@
             transition:
                 transform 1s
                 cubic-bezier(.2,.7,.2,1);
-
         }
-
 
         .gallery-item:hover img {
-
             transform: scale(1.025);
-
         }
 
 
-        /* Imagen 1 */
+        /* =========================================================
+           DISTRIBUCIÓN DE IMÁGENES
+        ========================================================= */
 
         .gallery-item:nth-child(1) {
-
             grid-column: span 8;
-
             aspect-ratio: 16 / 10;
-
         }
-
-
-        /* Imagen 2 */
 
         .gallery-item:nth-child(2) {
-
             grid-column: span 4;
-
             aspect-ratio: 4 / 5;
-
         }
-
-
-        /* Imagen 3 */
 
         .gallery-item:nth-child(3) {
-
             grid-column: span 4;
-
             aspect-ratio: 4 / 5;
-
         }
-
-
-        /* Imagen 4 */
 
         .gallery-item:nth-child(4) {
-
             grid-column: span 8;
-
             aspect-ratio: 16 / 10;
-
         }
-
-
-        /* Imagen 5 */
 
         .gallery-item:nth-child(5) {
-
             grid-column: span 7;
-
             aspect-ratio: 16 / 10;
-
         }
-
-
-        /* Imagen 6 */
 
         .gallery-item:nth-child(6) {
-
             grid-column: span 5;
-
             aspect-ratio: 4 / 5;
-
         }
-
-
-        /* Imagen 7 */
 
         .gallery-item:nth-child(7) {
-
             grid-column: span 12;
-
             aspect-ratio: 16 / 8;
-
         }
-
 
 
         /* =========================================================
@@ -857,7 +636,6 @@
         ========================================================= */
 
         .credits {
-
             padding: 15vh 10vw;
 
             border-top:
@@ -867,29 +645,24 @@
                 1px solid var(--line);
 
             background: var(--bg-soft);
-
         }
 
-
         .credits-title {
-
             margin-bottom: 70px;
 
             font-family: var(--serif);
 
-            font-size: clamp(
-                42px,
-                5vw,
-                70px
-            );
+            font-size:
+                clamp(
+                    42px,
+                    5vw,
+                    70px
+                );
 
             font-weight: 400;
-
         }
 
-
         .credits-grid {
-
             display: grid;
 
             grid-template-columns:
@@ -900,12 +673,9 @@
 
             border-left:
                 1px solid var(--line);
-
         }
 
-
         .credit {
-
             min-height: 180px;
 
             padding: 32px;
@@ -915,12 +685,9 @@
 
             border-bottom:
                 1px solid var(--line);
-
         }
 
-
         .credit-label {
-
             display: block;
 
             margin-bottom: 20px;
@@ -932,20 +699,15 @@
             letter-spacing: 0.2em;
 
             text-transform: uppercase;
-
         }
 
-
         .credit-value {
-
             font-family: var(--serif);
 
             font-size: 22px;
 
             line-height: 1.4;
-
         }
-
 
 
         /* =========================================================
@@ -953,7 +715,6 @@
         ========================================================= */
 
         .closing {
-
             min-height: 70vh;
 
             padding: 13vh 5vw 7vh;
@@ -966,33 +727,28 @@
 
             border-bottom:
                 1px solid var(--line);
-
         }
 
-
         .closing-title {
-
             max-width: 1000px;
 
             font-family: var(--serif);
 
-            font-size: clamp(
-                48px,
-                7vw,
-                110px
-            );
+            font-size:
+                clamp(
+                    48px,
+                    7vw,
+                    110px
+                );
 
             font-weight: 400;
 
             line-height: 1.02;
 
             letter-spacing: -0.04em;
-
         }
 
-
         .closing-bottom {
-
             display: flex;
 
             justify-content: space-between;
@@ -1002,23 +758,17 @@
             gap: 40px;
 
             margin-top: 100px;
-
         }
 
-
         .closing-note {
-
             color: var(--muted);
 
             font-size: 11px;
 
             line-height: 1.8;
-
         }
 
-
         .back-projects {
-
             display: inline-flex;
 
             align-items: center;
@@ -1037,18 +787,13 @@
             text-transform: uppercase;
 
             transition: 0.3s ease;
-
         }
 
-
         .back-projects:hover {
-
             gap: 20px;
 
             border-color: white;
-
         }
-
 
 
         /* =========================================================
@@ -1056,7 +801,6 @@
         ========================================================= */
 
         footer {
-
             padding: 45px 5vw;
 
             display: flex;
@@ -1072,16 +816,11 @@
             letter-spacing: 0.12em;
 
             text-transform: uppercase;
-
         }
-
 
         .footer-brand {
-
             color: var(--text);
-
         }
-
 
 
         /* =========================================================
@@ -1089,7 +828,6 @@
         ========================================================= */
 
         .whatsapp {
-
             position: fixed;
 
             right: 25px;
@@ -1114,26 +852,18 @@
                 rgba(0,0,0,0.3);
 
             transition: 0.3s ease;
-
         }
-
 
         .whatsapp:hover {
-
             transform: scale(1.08);
-
         }
 
-
         .whatsapp img {
-
             width: 24px;
             height: 24px;
 
             object-fit: contain;
-
         }
-
 
 
         /* =========================================================
@@ -1141,43 +871,24 @@
         ========================================================= */
 
         [data-lang="en"] {
-
             display: none;
-
         }
 
-
-        body.english
-        [data-lang="es"] {
-
+        body.english [data-lang="es"] {
             display: none;
-
         }
 
-
-        body.english
-        [data-lang="en"] {
-
+        body.english [data-lang="en"] {
             display: block;
-
         }
 
-
-        body.english
-        span[data-lang="en"] {
-
+        body.english span[data-lang="en"] {
             display: inline;
-
         }
 
-
-        body.english
-        span[data-lang="es"] {
-
+        body.english span[data-lang="es"] {
             display: none;
-
         }
-
 
 
         /* =========================================================
@@ -1186,70 +897,40 @@
 
         @media (max-width: 800px) {
 
-
             .topbar {
-
                 height: 70px;
-
-                padding:
-                    0 24px;
-
+                padding: 0 24px;
             }
-
 
             .brand {
-
                 display: none;
-
             }
-
 
             .back-link {
-
                 font-size: 8px;
-
             }
-
 
             .hero {
-
                 min-height: 100svh;
-
-                padding:
-                    110px 24px 55px;
-
+                padding: 110px 24px 55px;
             }
-
 
             .hero::before {
-
                 right: -25px;
-
                 top: 34%;
-
                 font-size: 190px;
-
             }
-
 
             .hero-label {
-
                 margin-bottom: 22px;
-
                 font-size: 8px;
-
             }
-
 
             .hero-label::before {
-
                 width: 30px;
-
             }
 
-
             .hero h1 {
-
                 font-size:
                     clamp(
                         53px,
@@ -1258,12 +939,9 @@
                     );
 
                 line-height: 0.97;
-
             }
 
-
             .hero-bottom {
-
                 margin-top: 45px;
 
                 flex-direction: column;
@@ -1271,152 +949,98 @@
                 align-items: flex-start;
 
                 gap: 25px;
-
             }
-
 
             .hero-description {
-
                 font-size: 13px;
-
             }
 
-
             .hero-credit {
-
                 text-align: left;
 
                 white-space: normal;
 
                 font-size: 8px;
-
             }
-
 
             .cover {
-
                 padding: 0 18px;
-
             }
-
 
             .cover-image {
-
                 aspect-ratio: 4 / 3;
-
             }
-
 
             .intro,
             .concept {
-
                 display: block;
 
                 padding:
                     100px 24px;
-
             }
 
-
             .section-title {
-
                 margin-bottom: 50px;
 
                 font-size: 48px;
-
             }
-
 
             .intro-text,
             .concept-text {
-
                 font-size: 14px;
 
                 line-height: 1.9;
-
             }
-
 
             .concept-quote {
-
                 font-size: 21px;
-
             }
-
 
             .intervention {
-
                 padding:
                     100px 24px;
-
             }
-
 
             .intervention-header {
-
                 margin-bottom: 50px;
-
             }
-
 
             .roles {
-
                 grid-template-columns: 1fr;
-
             }
-
 
             .role {
-
                 min-height: auto;
-
                 padding: 30px;
-
             }
-
 
             .role-title {
-
                 font-size: 27px;
-
             }
-
 
             .gallery-section {
-
                 padding:
                     100px 18px 80px;
-
             }
 
-
             .gallery-header {
-
                 display: block;
 
                 margin:
                     0 6px 40px;
-
             }
-
 
             .gallery-description {
-
                 margin-top: 25px;
-
             }
 
-
             .gallery {
-
                 display: flex;
 
                 flex-direction: column;
 
                 gap: 12px;
-
             }
-
 
             .gallery-item:nth-child(1),
             .gallery-item:nth-child(2),
@@ -1425,68 +1049,46 @@
             .gallery-item:nth-child(5),
             .gallery-item:nth-child(6),
             .gallery-item:nth-child(7) {
-
                 width: 100%;
 
                 aspect-ratio: 4 / 3;
-
             }
-
 
             .credits {
-
                 padding:
                     100px 24px;
-
             }
-
 
             .credits-title {
-
                 margin-bottom: 45px;
-
             }
-
 
             .credits-grid {
-
                 grid-template-columns: 1fr;
-
             }
 
-
             .credit {
-
                 min-height: auto;
 
                 padding: 25px;
-
             }
 
-
             .closing {
-
                 min-height: 70vh;
 
                 padding:
                     90px 24px 55px;
-
             }
 
-
             .closing-bottom {
-
                 margin-top: 80px;
 
                 flex-direction: column;
 
                 align-items: flex-start;
-
             }
 
-
             footer {
-
                 padding:
                     35px 24px;
 
@@ -1495,27 +1097,21 @@
                 align-items: flex-start;
 
                 gap: 15px;
-
             }
 
-
             .whatsapp {
-
                 width: 46px;
                 height: 46px;
 
                 right: 18px;
                 bottom: 18px;
-
             }
 
         }
 
-
     </style>
 
 </head>
-
 
 
 <body>
@@ -1526,7 +1122,6 @@
     ========================================================= -->
 
     <header class="topbar">
-
 
         <a
             href="../../index.html"
@@ -1545,42 +1140,31 @@
 
 
         <div class="brand">
-
             ANDRO ARQ
-
         </div>
 
 
         <div class="language-switch">
 
-
             <button
                 class="lang-btn active"
                 id="esBtn"
             >
-
                 ES
-
             </button>
-
 
             <span class="lang-separator">
                 /
             </span>
 
-
             <button
                 class="lang-btn"
                 id="enBtn"
             >
-
                 EN
-
             </button>
 
-
         </div>
-
 
     </header>
 
@@ -1592,46 +1176,37 @@
 
     <section class="hero">
 
-
         <div class="hero-label">
-
 
             <span data-lang="es">
                 Diseño de interiores · 2026
             </span>
 
-
             <span data-lang="en">
                 Interior design · 2026
             </span>
-
 
         </div>
 
 
         <h1>
 
-
             <span data-lang="es">
                 Centro<br>
                 Endoscópico
             </span>
-
 
             <span data-lang="en">
                 Endoscopy<br>
                 Center
             </span>
 
-
         </h1>
 
 
         <div class="hero-bottom">
 
-
             <p class="hero-description">
-
 
                 <span data-lang="es">
 
@@ -1643,7 +1218,6 @@
 
                 </span>
 
-
                 <span data-lang="en">
 
                     An interior design proposal that seeks
@@ -1654,12 +1228,10 @@
 
                 </span>
 
-
             </p>
 
 
             <div class="hero-credit">
-
 
                 <span data-lang="es">
 
@@ -1668,7 +1240,6 @@
 
                 </span>
 
-
                 <span data-lang="en">
 
                     Design<br>
@@ -1676,12 +1247,9 @@
 
                 </span>
 
-
             </div>
 
-
         </div>
-
 
     </section>
 
@@ -1693,18 +1261,14 @@
 
     <section class="cover">
 
-
         <div class="cover-image">
-
 
             <img
                 src="img/portada.jpg"
                 alt="Centro Endoscópico"
             >
 
-
         </div>
-
 
     </section>
 
@@ -1716,9 +1280,7 @@
 
     <section class="intro">
 
-
         <div>
-
 
             <div class="section-number">
 
@@ -1737,7 +1299,6 @@
 
             <h2 class="section-title">
 
-
                 <span data-lang="es">
 
                     Un espacio clínico<br>
@@ -1745,7 +1306,6 @@
                     lo humano.
 
                 </span>
-
 
                 <span data-lang="en">
 
@@ -1755,18 +1315,14 @@
 
                 </span>
 
-
             </h2>
-
 
         </div>
 
 
         <div class="intro-text">
 
-
             <div data-lang="es">
-
 
                 <p>
 
@@ -1802,12 +1358,10 @@
 
                 </p>
 
-
             </div>
 
 
             <div data-lang="en">
-
 
                 <p>
 
@@ -1841,12 +1395,9 @@
 
                 </p>
 
-
             </div>
 
-
         </div>
-
 
     </section>
 
@@ -1858,9 +1409,7 @@
 
     <section class="concept">
 
-
         <div>
-
 
             <div class="section-number">
 
@@ -1879,7 +1428,6 @@
 
             <h2 class="section-title">
 
-
                 <span data-lang="es">
 
                     Calma,<br>
@@ -1887,7 +1435,6 @@
                     y luz.
 
                 </span>
-
 
                 <span data-lang="en">
 
@@ -1897,18 +1444,14 @@
 
                 </span>
 
-
             </h2>
-
 
         </div>
 
 
         <div class="concept-text">
 
-
             <div data-lang="es">
-
 
                 <p>
 
@@ -1966,12 +1509,10 @@
 
                 </div>
 
-
             </div>
 
 
             <div data-lang="en">
-
 
                 <p>
 
@@ -2025,12 +1566,9 @@
 
                 </div>
 
-
             </div>
 
-
         </div>
-
 
     </section>
 
@@ -2042,9 +1580,7 @@
 
     <section class="intervention">
 
-
         <div class="intervention-header">
-
 
             <div class="section-number">
 
@@ -2063,14 +1599,12 @@
 
             <h2 class="section-title">
 
-
                 <span data-lang="es">
 
                     Del concepto<br>
                     al espacio.
 
                 </span>
-
 
                 <span data-lang="en">
 
@@ -2079,9 +1613,7 @@
 
                 </span>
 
-
             </h2>
-
 
         </div>
 
@@ -2093,7 +1625,6 @@
 
             <div class="role">
 
-
                 <span class="role-number">
                     01 /
                 </span>
@@ -2101,22 +1632,18 @@
 
                 <h3 class="role-title">
 
-
                     <span data-lang="es">
                         Diseño de interiores
                     </span>
-
 
                     <span data-lang="en">
                         Interior design
                     </span>
 
-
                 </h3>
 
 
                 <p class="role-description">
-
 
                     <span data-lang="es">
 
@@ -2128,7 +1655,6 @@
 
                     </span>
 
-
                     <span data-lang="en">
 
                         The conceptual and interior design
@@ -2139,9 +1665,7 @@
 
                     </span>
 
-
                 </p>
-
 
             </div>
 
@@ -2151,7 +1675,6 @@
 
             <div class="role">
 
-
                 <span class="role-number">
                     02 /
                 </span>
@@ -2159,22 +1682,18 @@
 
                 <h3 class="role-title">
 
-
                     <span data-lang="es">
                         Adaptación espacial
                     </span>
-
 
                     <span data-lang="en">
                         Spatial adaptation
                     </span>
 
-
                 </h3>
 
 
                 <p class="role-description">
-
 
                     <span data-lang="es">
 
@@ -2186,7 +1705,6 @@
 
                     </span>
 
-
                     <span data-lang="en">
 
                         Adaptation of the proposal to the
@@ -2197,9 +1715,7 @@
 
                     </span>
 
-
                 </p>
-
 
             </div>
 
@@ -2209,7 +1725,6 @@
 
             <div class="role">
 
-
                 <span class="role-number">
                     03 /
                 </span>
@@ -2217,22 +1732,18 @@
 
                 <h3 class="role-title">
 
-
                     <span data-lang="es">
                         Visualización
                     </span>
-
 
                     <span data-lang="en">
                         Visualization
                     </span>
 
-
                 </h3>
 
 
                 <p class="role-description">
-
 
                     <span data-lang="es">
 
@@ -2244,7 +1755,6 @@
 
                     </span>
 
-
                     <span data-lang="en">
 
                         Development of the architectural
@@ -2255,9 +1765,7 @@
 
                     </span>
 
-
                 </p>
-
 
             </div>
 
@@ -2267,7 +1775,6 @@
 
             <div class="role">
 
-
                 <span class="role-number">
                     04 /
                 </span>
@@ -2275,22 +1782,18 @@
 
                 <h3 class="role-title">
 
-
                     <span data-lang="es">
                         Representación
                     </span>
-
 
                     <span data-lang="en">
                         Representation
                     </span>
 
-
                 </h3>
 
 
                 <p class="role-description">
-
 
                     <span data-lang="es">
 
@@ -2302,7 +1805,6 @@
 
                     </span>
 
-
                     <span data-lang="en">
 
                         The visualization aimed to faithfully
@@ -2313,15 +1815,12 @@
 
                     </span>
 
-
                 </p>
-
 
             </div>
 
 
         </div>
-
 
     </section>
 
@@ -2333,12 +1832,9 @@
 
     <section class="gallery-section">
 
-
         <div class="gallery-header">
 
-
             <div class="gallery-header-text">
-
 
                 <div class="section-number">
 
@@ -2357,14 +1853,12 @@
 
                 <h2 class="section-title">
 
-
                     <span data-lang="es">
 
                         Una nueva<br>
                         experiencia clínica.
 
                     </span>
-
 
                     <span data-lang="en">
 
@@ -2373,15 +1867,12 @@
 
                     </span>
 
-
                 </h2>
-
 
             </div>
 
 
             <p class="gallery-description">
-
 
                 <span data-lang="es">
 
@@ -2392,7 +1883,6 @@
 
                 </span>
 
-
                 <span data-lang="en">
 
                     A sequence of interior spaces where
@@ -2401,9 +1891,7 @@
 
                 </span>
 
-
             </p>
-
 
         </div>
 
@@ -2412,10 +1900,9 @@
         <div class="gallery">
 
 
-            <!-- 01 -->
+            <!-- 01 PASILLO -->
 
             <div class="gallery-item">
-
 
                 <img
                     src="img/pasillo.jpg"
@@ -2423,15 +1910,13 @@
                     loading="lazy"
                 >
 
-
             </div>
 
 
 
-            <!-- 02 -->
+            <!-- 02 CONSULTORIO -->
 
             <div class="gallery-item">
-
 
                 <img
                     src="img/consultorio.jpg"
@@ -2439,15 +1924,13 @@
                     loading="lazy"
                 >
 
-
             </div>
 
 
 
-            <!-- 03 -->
+            <!-- 03 RECEPCIÓN 01 -->
 
             <div class="gallery-item">
-
 
                 <img
                     src="img/recepcion-01.jpg"
@@ -2455,31 +1938,27 @@
                     loading="lazy"
                 >
 
-
             </div>
 
 
 
-            <!-- 04 -->
+            <!-- 04 RECEPCIÓN 02 -->
 
             <div class="gallery-item">
-
 
                 <img
                     src="img/recepcion-02.jpg"
-                    alt="Vista de recepción"
+                    alt="Vista de recepción del Centro Endoscópico"
                     loading="lazy"
                 >
-
 
             </div>
 
 
 
-            <!-- 05 -->
+            <!-- 05 SALA DE ESPERA -->
 
             <div class="gallery-item">
-
 
                 <img
                     src="img/sala-espera.jpg"
@@ -2487,15 +1966,13 @@
                     loading="lazy"
                 >
 
-
             </div>
 
 
 
-            <!-- 06 -->
+            <!-- 06 SALA ENDOSCÓPICA -->
 
             <div class="gallery-item">
-
 
                 <img
                     src="img/sala-endoscopica.jpg"
@@ -2503,28 +1980,24 @@
                     loading="lazy"
                 >
 
-
             </div>
 
 
 
-            <!-- 07 -->
+            <!-- 07 PORTADA / VISTA GENERAL -->
 
             <div class="gallery-item">
 
-
                 <img
-                    src="img/vista-general.jpg"
+                    src="img/portada.jpg"
                     alt="Vista general del Centro Endoscópico"
                     loading="lazy"
                 >
-
 
             </div>
 
 
         </div>
-
 
     </section>
 
@@ -2535,7 +2008,6 @@
     ========================================================= -->
 
     <section class="credits">
-
 
         <div class="section-number">
 
@@ -2554,18 +2026,19 @@
 
         <h2 class="credits-title">
 
-
             <span data-lang="es">
+
                 Un proyecto<br>
                 construido en colaboración.
-            </span>
 
+            </span>
 
             <span data-lang="en">
+
                 A project<br>
                 built through collaboration.
-            </span>
 
+            </span>
 
         </h2>
 
@@ -2577,19 +2050,15 @@
 
             <div class="credit">
 
-
                 <span class="credit-label">
-
 
                     <span data-lang="es">
                         Diseño de interiores
                     </span>
 
-
                     <span data-lang="en">
                         Interior design
                     </span>
-
 
                 </span>
 
@@ -2600,7 +2069,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -2609,19 +2077,15 @@
 
             <div class="credit">
 
-
                 <span class="credit-label">
-
 
                     <span data-lang="es">
                         Renders
                     </span>
 
-
                     <span data-lang="en">
                         Visualization
                     </span>
-
 
                 </span>
 
@@ -2632,7 +2096,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -2641,38 +2104,30 @@
 
             <div class="credit">
 
-
                 <span class="credit-label">
-
 
                     <span data-lang="es">
                         Adaptación espacial
                     </span>
 
-
                     <span data-lang="en">
                         Spatial adaptation
                     </span>
-
 
                 </span>
 
 
                 <div class="credit-value">
 
-
                     <span data-lang="es">
                         Arq. Alejandro Salazar
                     </span>
-
 
                     <span data-lang="en">
                         Arch. Alejandro Salazar
                     </span>
 
-
                 </div>
-
 
             </div>
 
@@ -2682,19 +2137,15 @@
 
             <div class="credit">
 
-
                 <span class="credit-label">
-
 
                     <span data-lang="es">
                         Año
                     </span>
 
-
                     <span data-lang="en">
                         Year
                     </span>
-
 
                 </span>
 
@@ -2705,47 +2156,38 @@
 
                 </div>
 
-
             </div>
 
 
 
-            <!-- TIPO -->
+            <!-- TIPOLOGÍA -->
 
             <div class="credit">
 
-
                 <span class="credit-label">
-
 
                     <span data-lang="es">
                         Tipología
                     </span>
 
-
                     <span data-lang="en">
                         Typology
                     </span>
-
 
                 </span>
 
 
                 <div class="credit-value">
 
-
                     <span data-lang="es">
                         Espacio sanitario
                     </span>
-
 
                     <span data-lang="en">
                         Healthcare interior
                     </span>
 
-
                 </div>
-
 
             </div>
 
@@ -2755,55 +2197,45 @@
 
             <div class="credit">
 
-
                 <span class="credit-label">
-
 
                     <span data-lang="es">
                         Alcance
                     </span>
 
-
                     <span data-lang="en">
                         Scope
                     </span>
-
 
                 </span>
 
 
                 <div class="credit-value">
 
-
                     <span data-lang="es">
                         Diseño + visualización
                     </span>
-
 
                     <span data-lang="en">
                         Design + visualization
                     </span>
 
-
                 </div>
-
 
             </div>
 
 
         </div>
 
-
     </section>
 
 
 
     <!-- =========================================================
-         CIERRE
+         06 — CIERRE
     ========================================================= -->
 
     <section class="closing">
-
 
         <div class="section-number">
 
@@ -2814,14 +2246,12 @@
 
         <h2 class="closing-title">
 
-
             <span data-lang="es">
 
                 La arquitectura también
                 puede cuidar.
 
             </span>
-
 
             <span data-lang="en">
 
@@ -2830,15 +2260,12 @@
 
             </span>
 
-
         </h2>
 
 
         <div class="closing-bottom">
 
-
             <div class="closing-note">
-
 
                 <span data-lang="es">
 
@@ -2859,7 +2286,6 @@
 
                 </span>
 
-
             </div>
 
 
@@ -2868,22 +2294,17 @@
                 class="back-projects"
             >
 
-
                 <span data-lang="es">
                     ← Volver a inicio
                 </span>
-
 
                 <span data-lang="en">
                     ← Back home
                 </span>
 
-
             </a>
 
-
         </div>
-
 
     </section>
 
@@ -2895,11 +2316,8 @@
 
     <footer>
 
-
         <div class="footer-brand">
-
             ANDRO ARQ
-
         </div>
 
 
@@ -2910,7 +2328,6 @@
             Alejandro Salazar
 
         </div>
-
 
     </footer>
 
@@ -2927,12 +2344,10 @@
         aria-label="WhatsApp"
     >
 
-
         <img
             src="../../img/whatsapp.png"
             alt="WhatsApp"
         >
-
 
     </a>
 
@@ -2943,7 +2358,6 @@
     ========================================================= -->
 
     <script>
-
 
         /* =====================================================
            AÑO
@@ -2965,53 +2379,41 @@
             document.getElementById("enBtn");
 
 
-
         function setLanguage(language) {
 
-
             if (language === "en") {
-
 
                 document.body.classList.add(
                     "english"
                 );
 
-
                 esBtn.classList.remove(
                     "active"
                 );
-
 
                 enBtn.classList.add(
                     "active"
                 );
 
-
                 document.documentElement.lang =
                     "en";
 
-
             } else {
-
 
                 document.body.classList.remove(
                     "english"
                 );
 
-
                 enBtn.classList.remove(
                     "active"
                 );
-
 
                 esBtn.classList.add(
                     "active"
                 );
 
-
                 document.documentElement.lang =
                     "es";
-
             }
 
 
@@ -3021,7 +2423,6 @@
             );
 
         }
-
 
 
         esBtn.addEventListener(
@@ -3056,7 +2457,6 @@
             setLanguage("es");
 
         }
-
 
     </script>
 
