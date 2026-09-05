@@ -1,1 +1,3066 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Centro Endoscópico — Alejandro Salazar
+    </title>
+
+    <meta
+        name="description"
+        content="Centro Endoscópico — proyecto de diseño de interiores de Dis. Gabriela Matute. Renders y adaptación espacial por Arq. Alejandro Salazar."
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            background: #111111;
+            color: #f2f0eb;
+
+            font-family: "Inter", sans-serif;
+            font-weight: 300;
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        :root {
+
+            --bg: #111111;
+            --bg-soft: #171717;
+
+            --text: #f2f0eb;
+            --muted: #999994;
+
+            --line: rgba(255,255,255,0.14);
+
+            --serif: "Playfair Display", serif;
+            --sans: "Inter", sans-serif;
+
+        }
+
+
+
+        /* =========================================================
+           NAVEGACIÓN
+        ========================================================= */
+
+        .topbar {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 82px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5vw;
+
+            z-index: 1000;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(17,17,17,0.94),
+                    rgba(17,17,17,0)
+                );
+
+            pointer-events: none;
+
+        }
+
+
+        .topbar a,
+        .language-switch {
+
+            pointer-events: auto;
+
+        }
+
+
+        .back-link {
+
+            font-size: 10px;
+
+            letter-spacing: 0.2em;
+
+            text-transform: uppercase;
+
+            color: rgba(255,255,255,0.72);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .back-link:hover {
+
+            color: white;
+
+            transform: translateX(-4px);
+
+        }
+
+
+        .brand {
+
+            position: absolute;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            font-size: 12px;
+
+            letter-spacing: 0.3em;
+
+            font-weight: 500;
+
+        }
+
+
+        .language-switch {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+        }
+
+
+        .lang-btn {
+
+            border: none;
+
+            background: transparent;
+
+            color: rgba(255,255,255,0.4);
+
+            font-family: var(--sans);
+
+            font-size: 10px;
+
+            letter-spacing: 0.15em;
+
+            cursor: pointer;
+
+            padding: 5px;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .lang-btn:hover,
+        .lang-btn.active {
+
+            color: white;
+
+        }
+
+
+        .lang-separator {
+
+            color: rgba(255,255,255,0.2);
+
+            font-size: 10px;
+
+        }
+
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: flex-end;
+
+            padding: 0 5vw 8vh;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 75% 35%,
+                    rgba(210,190,165,0.08),
+                    transparent 38%
+                ),
+
+                var(--bg);
+
+        }
+
+
+        .hero::before {
+
+            content: "02";
+
+            position: absolute;
+
+            right: 4vw;
+            top: 27%;
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                170px,
+                27vw,
+                420px
+            );
+
+            line-height: 1;
+
+            color: rgba(255,255,255,0.025);
+
+            pointer-events: none;
+
+        }
+
+
+        .hero-label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            margin-bottom: 28px;
+
+            font-size: 10px;
+
+            letter-spacing: 0.28em;
+
+            text-transform: uppercase;
+
+            color: var(--muted);
+
+        }
+
+
+        .hero-label::before {
+
+            content: "";
+
+            width: 45px;
+            height: 1px;
+
+            background: var(--line);
+
+        }
+
+
+        .hero h1 {
+
+            max-width: 1100px;
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                62px,
+                9vw,
+                150px
+            );
+
+            font-weight: 400;
+
+            line-height: 0.94;
+
+            letter-spacing: -0.045em;
+
+        }
+
+
+        .hero-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            gap: 50px;
+
+            max-width: 1100px;
+
+            margin-top: 55px;
+
+        }
+
+
+        .hero-description {
+
+            max-width: 520px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.85;
+
+        }
+
+
+        .hero-credit {
+
+            text-align: right;
+
+            white-space: nowrap;
+
+            font-size: 10px;
+
+            line-height: 1.8;
+
+            letter-spacing: 0.15em;
+
+            text-transform: uppercase;
+
+            color: rgba(255,255,255,0.5);
+
+        }
+
+
+
+        /* =========================================================
+           PORTADA
+        ========================================================= */
+
+        .cover {
+
+            width: 100%;
+
+            padding: 0 5vw;
+
+        }
+
+
+        .cover-image {
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            background: #202020;
+
+            overflow: hidden;
+
+        }
+
+
+        .cover-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 1.2s
+                cubic-bezier(.2,.7,.2,1);
+
+        }
+
+
+        .cover-image:hover img {
+
+            transform: scale(1.015);
+
+        }
+
+
+
+        /* =========================================================
+           INTRODUCCIÓN
+        ========================================================= */
+
+        .intro {
+
+            padding: 16vh 10vw;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1.45fr;
+
+            gap: 10vw;
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .section-number {
+
+            margin-bottom: 25px;
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+            letter-spacing: 0.2em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .section-title {
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                42px,
+                5vw,
+                75px
+            );
+
+            font-weight: 400;
+
+            line-height: 1.05;
+
+            letter-spacing: -0.025em;
+
+        }
+
+
+        .intro-text {
+
+            max-width: 680px;
+
+            color: #b7b6b1;
+
+            font-size: 16px;
+
+            line-height: 2;
+
+        }
+
+
+        .intro-text p + p {
+
+            margin-top: 26px;
+
+        }
+
+
+
+        /* =========================================================
+           CONCEPTO
+        ========================================================= */
+
+        .concept {
+
+            padding: 16vh 10vw;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1.45fr;
+
+            gap: 10vw;
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .concept-text {
+
+            max-width: 680px;
+
+            color: #b7b6b1;
+
+            font-size: 16px;
+
+            line-height: 2;
+
+        }
+
+
+        .concept-text p + p {
+
+            margin-top: 26px;
+
+        }
+
+
+        .concept-quote {
+
+            margin-top: 50px;
+
+            padding-top: 28px;
+
+            border-top:
+                1px solid var(--line);
+
+            font-family: var(--serif);
+
+            font-size: 24px;
+
+            line-height: 1.5;
+
+            color: var(--text);
+
+        }
+
+
+
+        /* =========================================================
+           INTERVENCIÓN
+        ========================================================= */
+
+        .intervention {
+
+            padding: 16vh 10vw;
+
+            background: var(--bg-soft);
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .intervention-header {
+
+            max-width: 1000px;
+
+            margin-bottom: 80px;
+
+        }
+
+
+        .intervention-header .section-title {
+
+            max-width: 850px;
+
+        }
+
+
+        .roles {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            border-top:
+                1px solid var(--line);
+
+            border-left:
+                1px solid var(--line);
+
+        }
+
+
+        .role {
+
+            min-height: 250px;
+
+            padding: 40px;
+
+            border-right:
+                1px solid var(--line);
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .role-number {
+
+            display: block;
+
+            margin-bottom: 35px;
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+            letter-spacing: 0.2em;
+
+        }
+
+
+        .role-title {
+
+            margin-bottom: 18px;
+
+            font-family: var(--serif);
+
+            font-size: 29px;
+
+            line-height: 1.15;
+
+        }
+
+
+        .role-description {
+
+            max-width: 470px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        /* =========================================================
+           GALERÍA
+        ========================================================= */
+
+        .gallery-section {
+
+            padding: 16vh 5vw 12vh;
+
+        }
+
+
+        .gallery-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            margin: 0 5vw 65px;
+
+            gap: 40px;
+
+        }
+
+
+        .gallery-header-text {
+
+            max-width: 700px;
+
+        }
+
+
+        .gallery-description {
+
+            max-width: 350px;
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .gallery {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(12, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .gallery-item {
+
+            overflow: hidden;
+
+            background: #1c1c1c;
+
+        }
+
+
+        .gallery-item img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 1s
+                cubic-bezier(.2,.7,.2,1);
+
+        }
+
+
+        .gallery-item:hover img {
+
+            transform: scale(1.025);
+
+        }
+
+
+        /* Imagen 1 */
+
+        .gallery-item:nth-child(1) {
+
+            grid-column: span 8;
+
+            aspect-ratio: 16 / 10;
+
+        }
+
+
+        /* Imagen 2 */
+
+        .gallery-item:nth-child(2) {
+
+            grid-column: span 4;
+
+            aspect-ratio: 4 / 5;
+
+        }
+
+
+        /* Imagen 3 */
+
+        .gallery-item:nth-child(3) {
+
+            grid-column: span 4;
+
+            aspect-ratio: 4 / 5;
+
+        }
+
+
+        /* Imagen 4 */
+
+        .gallery-item:nth-child(4) {
+
+            grid-column: span 8;
+
+            aspect-ratio: 16 / 10;
+
+        }
+
+
+        /* Imagen 5 */
+
+        .gallery-item:nth-child(5) {
+
+            grid-column: span 7;
+
+            aspect-ratio: 16 / 10;
+
+        }
+
+
+        /* Imagen 6 */
+
+        .gallery-item:nth-child(6) {
+
+            grid-column: span 5;
+
+            aspect-ratio: 4 / 5;
+
+        }
+
+
+        /* Imagen 7 */
+
+        .gallery-item:nth-child(7) {
+
+            grid-column: span 12;
+
+            aspect-ratio: 16 / 8;
+
+        }
+
+
+
+        /* =========================================================
+           CRÉDITOS
+        ========================================================= */
+
+        .credits {
+
+            padding: 15vh 10vw;
+
+            border-top:
+                1px solid var(--line);
+
+            border-bottom:
+                1px solid var(--line);
+
+            background: var(--bg-soft);
+
+        }
+
+
+        .credits-title {
+
+            margin-bottom: 70px;
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                42px,
+                5vw,
+                70px
+            );
+
+            font-weight: 400;
+
+        }
+
+
+        .credits-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            border-top:
+                1px solid var(--line);
+
+            border-left:
+                1px solid var(--line);
+
+        }
+
+
+        .credit {
+
+            min-height: 180px;
+
+            padding: 32px;
+
+            border-right:
+                1px solid var(--line);
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .credit-label {
+
+            display: block;
+
+            margin-bottom: 20px;
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+            letter-spacing: 0.2em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .credit-value {
+
+            font-family: var(--serif);
+
+            font-size: 22px;
+
+            line-height: 1.4;
+
+        }
+
+
+
+        /* =========================================================
+           CIERRE
+        ========================================================= */
+
+        .closing {
+
+            min-height: 70vh;
+
+            padding: 13vh 5vw 7vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .closing-title {
+
+            max-width: 1000px;
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                48px,
+                7vw,
+                110px
+            );
+
+            font-weight: 400;
+
+            line-height: 1.02;
+
+            letter-spacing: -0.04em;
+
+        }
+
+
+        .closing-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            gap: 40px;
+
+            margin-top: 100px;
+
+        }
+
+
+        .closing-note {
+
+            color: var(--muted);
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .back-projects {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            padding-bottom: 8px;
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.35);
+
+            font-size: 10px;
+
+            letter-spacing: 0.2em;
+
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .back-projects:hover {
+
+            gap: 20px;
+
+            border-color: white;
+
+        }
+
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            padding: 45px 5vw;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .footer-brand {
+
+            color: var(--text);
+
+        }
+
+
+
+        /* =========================================================
+           WHATSAPP
+        ========================================================= */
+
+        .whatsapp {
+
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.3);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .whatsapp:hover {
+
+            transform: scale(1.08);
+
+        }
+
+
+        .whatsapp img {
+
+            width: 24px;
+            height: 24px;
+
+            object-fit: contain;
+
+        }
+
+
+
+        /* =========================================================
+           SISTEMA DE IDIOMAS
+        ========================================================= */
+
+        [data-lang="en"] {
+
+            display: none;
+
+        }
+
+
+        body.english
+        [data-lang="es"] {
+
+            display: none;
+
+        }
+
+
+        body.english
+        [data-lang="en"] {
+
+            display: block;
+
+        }
+
+
+        body.english
+        span[data-lang="en"] {
+
+            display: inline;
+
+        }
+
+
+        body.english
+        span[data-lang="es"] {
+
+            display: none;
+
+        }
+
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 800px) {
+
+
+            .topbar {
+
+                height: 70px;
+
+                padding:
+                    0 24px;
+
+            }
+
+
+            .brand {
+
+                display: none;
+
+            }
+
+
+            .back-link {
+
+                font-size: 8px;
+
+            }
+
+
+            .hero {
+
+                min-height: 100svh;
+
+                padding:
+                    110px 24px 55px;
+
+            }
+
+
+            .hero::before {
+
+                right: -25px;
+
+                top: 34%;
+
+                font-size: 190px;
+
+            }
+
+
+            .hero-label {
+
+                margin-bottom: 22px;
+
+                font-size: 8px;
+
+            }
+
+
+            .hero-label::before {
+
+                width: 30px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    clamp(
+                        53px,
+                        15vw,
+                        78px
+                    );
+
+                line-height: 0.97;
+
+            }
+
+
+            .hero-bottom {
+
+                margin-top: 45px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 25px;
+
+            }
+
+
+            .hero-description {
+
+                font-size: 13px;
+
+            }
+
+
+            .hero-credit {
+
+                text-align: left;
+
+                white-space: normal;
+
+                font-size: 8px;
+
+            }
+
+
+            .cover {
+
+                padding: 0 18px;
+
+            }
+
+
+            .cover-image {
+
+                aspect-ratio: 4 / 3;
+
+            }
+
+
+            .intro,
+            .concept {
+
+                display: block;
+
+                padding:
+                    100px 24px;
+
+            }
+
+
+            .section-title {
+
+                margin-bottom: 50px;
+
+                font-size: 48px;
+
+            }
+
+
+            .intro-text,
+            .concept-text {
+
+                font-size: 14px;
+
+                line-height: 1.9;
+
+            }
+
+
+            .concept-quote {
+
+                font-size: 21px;
+
+            }
+
+
+            .intervention {
+
+                padding:
+                    100px 24px;
+
+            }
+
+
+            .intervention-header {
+
+                margin-bottom: 50px;
+
+            }
+
+
+            .roles {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .role {
+
+                min-height: auto;
+
+                padding: 30px;
+
+            }
+
+
+            .role-title {
+
+                font-size: 27px;
+
+            }
+
+
+            .gallery-section {
+
+                padding:
+                    100px 18px 80px;
+
+            }
+
+
+            .gallery-header {
+
+                display: block;
+
+                margin:
+                    0 6px 40px;
+
+            }
+
+
+            .gallery-description {
+
+                margin-top: 25px;
+
+            }
+
+
+            .gallery {
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 12px;
+
+            }
+
+
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(2),
+            .gallery-item:nth-child(3),
+            .gallery-item:nth-child(4),
+            .gallery-item:nth-child(5),
+            .gallery-item:nth-child(6),
+            .gallery-item:nth-child(7) {
+
+                width: 100%;
+
+                aspect-ratio: 4 / 3;
+
+            }
+
+
+            .credits {
+
+                padding:
+                    100px 24px;
+
+            }
+
+
+            .credits-title {
+
+                margin-bottom: 45px;
+
+            }
+
+
+            .credits-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .credit {
+
+                min-height: auto;
+
+                padding: 25px;
+
+            }
+
+
+            .closing {
+
+                min-height: 70vh;
+
+                padding:
+                    90px 24px 55px;
+
+            }
+
+
+            .closing-bottom {
+
+                margin-top: 80px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+
+            footer {
+
+                padding:
+                    35px 24px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 15px;
+
+            }
+
+
+            .whatsapp {
+
+                width: 46px;
+                height: 46px;
+
+                right: 18px;
+                bottom: 18px;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =========================================================
+         NAVEGACIÓN
+    ========================================================= -->
+
+    <header class="topbar">
+
+
+        <a
+            href="../../index.html"
+            class="back-link"
+        >
+
+            <span data-lang="es">
+                ← Inicio
+            </span>
+
+            <span data-lang="en">
+                ← Home
+            </span>
+
+        </a>
+
+
+        <div class="brand">
+
+            ANDRO ARQ
+
+        </div>
+
+
+        <div class="language-switch">
+
+
+            <button
+                class="lang-btn active"
+                id="esBtn"
+            >
+
+                ES
+
+            </button>
+
+
+            <span class="lang-separator">
+                /
+            </span>
+
+
+            <button
+                class="lang-btn"
+                id="enBtn"
+            >
+
+                EN
+
+            </button>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="hero">
+
+
+        <div class="hero-label">
+
+
+            <span data-lang="es">
+                Diseño de interiores · 2026
+            </span>
+
+
+            <span data-lang="en">
+                Interior design · 2026
+            </span>
+
+
+        </div>
+
+
+        <h1>
+
+
+            <span data-lang="es">
+                Centro<br>
+                Endoscópico
+            </span>
+
+
+            <span data-lang="en">
+                Endoscopy<br>
+                Center
+            </span>
+
+
+        </h1>
+
+
+        <div class="hero-bottom">
+
+
+            <p class="hero-description">
+
+
+                <span data-lang="es">
+
+                    Una propuesta de interiorismo que busca
+                    transformar un espacio clínico en una
+                    experiencia más cálida, serena y humana,
+                    a través de la materialidad, la iluminación
+                    y la continuidad espacial.
+
+                </span>
+
+
+                <span data-lang="en">
+
+                    An interior design proposal that seeks
+                    to transform a clinical environment into
+                    a warmer, calmer and more human experience
+                    through materiality, lighting and spatial
+                    continuity.
+
+                </span>
+
+
+            </p>
+
+
+            <div class="hero-credit">
+
+
+                <span data-lang="es">
+
+                    Diseño<br>
+                    Dis. Gabriela Matute
+
+                </span>
+
+
+                <span data-lang="en">
+
+                    Design<br>
+                    Dis. Gabriela Matute
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         PORTADA
+    ========================================================= -->
+
+    <section class="cover">
+
+
+        <div class="cover-image">
+
+
+            <img
+                src="img/portada.jpg"
+                alt="Centro Endoscópico"
+            >
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         01 — EL PROYECTO
+    ========================================================= -->
+
+    <section class="intro">
+
+
+        <div>
+
+
+            <div class="section-number">
+
+                01 /
+
+                <span data-lang="es">
+                    El proyecto
+                </span>
+
+                <span data-lang="en">
+                    The project
+                </span>
+
+            </div>
+
+
+            <h2 class="section-title">
+
+
+                <span data-lang="es">
+
+                    Un espacio clínico<br>
+                    pensado desde<br>
+                    lo humano.
+
+                </span>
+
+
+                <span data-lang="en">
+
+                    A clinical space<br>
+                    designed around<br>
+                    people.
+
+                </span>
+
+
+            </h2>
+
+
+        </div>
+
+
+        <div class="intro-text">
+
+
+            <div data-lang="es">
+
+
+                <p>
+
+                    El Centro Endoscópico plantea una
+                    renovación integral de sus espacios
+                    interiores a partir de una propuesta
+                    desarrollada por la diseñadora de
+                    interiores Dis. Gabriela Matute.
+
+                </p>
+
+
+                <p>
+
+                    La intervención busca alejarse de la
+                    imagen tradicionalmente fría de los
+                    espacios sanitarios y construir una
+                    atmósfera donde el paciente pueda
+                    sentirse acompañado desde el momento
+                    de su ingreso.
+
+                </p>
+
+
+                <p>
+
+                    La propuesta articula recepción,
+                    circulación, consultorios y espacios
+                    de atención mediante una misma
+                    paleta material y cromática, generando
+                    continuidad visual a lo largo del
+                    recorrido.
+
+                </p>
+
+
+            </div>
+
+
+            <div data-lang="en">
+
+
+                <p>
+
+                    The Endoscopy Center proposes a
+                    comprehensive renovation of its
+                    interior spaces based on a design
+                    developed by interior designer
+                    Dis. Gabriela Matute.
+
+                </p>
+
+
+                <p>
+
+                    The intervention seeks to move away
+                    from the traditionally cold image of
+                    healthcare environments and create an
+                    atmosphere where patients feel welcomed
+                    from the moment they enter.
+
+                </p>
+
+
+                <p>
+
+                    Reception, circulation, consultation
+                    rooms and treatment areas are connected
+                    through a consistent material and
+                    chromatic palette, creating visual
+                    continuity throughout the journey.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         02 — CONCEPTO
+    ========================================================= -->
+
+    <section class="concept">
+
+
+        <div>
+
+
+            <div class="section-number">
+
+                02 /
+
+                <span data-lang="es">
+                    Concepto
+                </span>
+
+                <span data-lang="en">
+                    Concept
+                </span>
+
+            </div>
+
+
+            <h2 class="section-title">
+
+
+                <span data-lang="es">
+
+                    Calma,<br>
+                    textura<br>
+                    y luz.
+
+                </span>
+
+
+                <span data-lang="en">
+
+                    Calm,<br>
+                    texture<br>
+                    and light.
+
+                </span>
+
+
+            </h2>
+
+
+        </div>
+
+
+        <div class="concept-text">
+
+
+            <div data-lang="es">
+
+
+                <p>
+
+                    El concepto interior se construye
+                    alrededor de una atmósfera cálida y
+                    contenida. Tonos crema, superficies
+                    texturizadas, madera natural y una
+                    iluminación cuidadosamente integrada
+                    forman el lenguaje predominante del
+                    proyecto.
+
+                </p>
+
+
+                <p>
+
+                    Las formas curvas aparecen como un
+                    recurso recurrente. Suavizan la
+                    percepción de los recorridos y
+                    elementos arquitectónicos, aportando
+                    una sensación de continuidad y
+                    tranquilidad.
+
+                </p>
+
+
+                <p>
+
+                    La iluminación indirecta acompaña
+                    los cambios de geometría y enfatiza
+                    determinados elementos del diseño,
+                    mientras que la vegetación introduce
+                    pequeños puntos de contraste natural
+                    dentro de la composición.
+
+                </p>
+
+
+                <p>
+
+                    El resultado busca que la experiencia
+                    espacial no esté definida únicamente
+                    por su función médica, sino también
+                    por la percepción, el confort y la
+                    identidad del lugar.
+
+                </p>
+
+
+                <div class="concept-quote">
+
+                    Diseñar un espacio clínico también
+                    significa diseñar la experiencia
+                    de quien lo habita.
+
+                </div>
+
+
+            </div>
+
+
+            <div data-lang="en">
+
+
+                <p>
+
+                    The interior concept is built around
+                    a warm and restrained atmosphere.
+                    Cream tones, textured surfaces,
+                    natural wood and carefully integrated
+                    lighting form the predominant language
+                    of the project.
+
+                </p>
+
+
+                <p>
+
+                    Curved forms appear as a recurring
+                    design element. They soften the
+                    perception of circulation paths and
+                    architectural elements, creating a
+                    sense of continuity and calm.
+
+                </p>
+
+
+                <p>
+
+                    Indirect lighting follows changes in
+                    geometry and emphasizes selected
+                    design elements, while vegetation
+                    introduces small points of natural
+                    contrast throughout the composition.
+
+                </p>
+
+
+                <p>
+
+                    The result seeks to make the spatial
+                    experience defined not only by medical
+                    function, but also by perception,
+                    comfort and identity.
+
+                </p>
+
+
+                <div class="concept-quote">
+
+                    Designing a clinical space also means
+                    designing the experience of those who
+                    inhabit it.
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         03 — INTERVENCIÓN
+    ========================================================= -->
+
+    <section class="intervention">
+
+
+        <div class="intervention-header">
+
+
+            <div class="section-number">
+
+                03 /
+
+                <span data-lang="es">
+                    Intervención
+                </span>
+
+                <span data-lang="en">
+                    Intervention
+                </span>
+
+            </div>
+
+
+            <h2 class="section-title">
+
+
+                <span data-lang="es">
+
+                    Del concepto<br>
+                    al espacio.
+
+                </span>
+
+
+                <span data-lang="en">
+
+                    From concept<br>
+                    to space.
+
+                </span>
+
+
+            </h2>
+
+
+        </div>
+
+
+        <div class="roles">
+
+
+            <!-- ROL 01 -->
+
+            <div class="role">
+
+
+                <span class="role-number">
+                    01 /
+                </span>
+
+
+                <h3 class="role-title">
+
+
+                    <span data-lang="es">
+                        Diseño de interiores
+                    </span>
+
+
+                    <span data-lang="en">
+                        Interior design
+                    </span>
+
+
+                </h3>
+
+
+                <p class="role-description">
+
+
+                    <span data-lang="es">
+
+                        La propuesta conceptual y de
+                        interiorismo corresponde a la
+                        Dis. Gabriela Matute, quien
+                        desarrolla el lenguaje espacial,
+                        material y estético del proyecto.
+
+                    </span>
+
+
+                    <span data-lang="en">
+
+                        The conceptual and interior design
+                        proposal was developed by
+                        Dis. Gabriela Matute, defining
+                        the spatial, material and aesthetic
+                        language of the project.
+
+                    </span>
+
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ROL 02 -->
+
+            <div class="role">
+
+
+                <span class="role-number">
+                    02 /
+                </span>
+
+
+                <h3 class="role-title">
+
+
+                    <span data-lang="es">
+                        Adaptación espacial
+                    </span>
+
+
+                    <span data-lang="en">
+                        Spatial adaptation
+                    </span>
+
+
+                </h3>
+
+
+                <p class="role-description">
+
+
+                    <span data-lang="es">
+
+                        Adaptación de la propuesta al
+                        espacio arquitectónico y desarrollo
+                        de los elementos necesarios para
+                        construir una representación
+                        coherente del diseño.
+
+                    </span>
+
+
+                    <span data-lang="en">
+
+                        Adaptation of the proposal to the
+                        architectural space and development
+                        of the elements required to create
+                        a coherent representation of the
+                        design.
+
+                    </span>
+
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ROL 03 -->
+
+            <div class="role">
+
+
+                <span class="role-number">
+                    03 /
+                </span>
+
+
+                <h3 class="role-title">
+
+
+                    <span data-lang="es">
+                        Visualización
+                    </span>
+
+
+                    <span data-lang="en">
+                        Visualization
+                    </span>
+
+
+                </h3>
+
+
+                <p class="role-description">
+
+
+                    <span data-lang="es">
+
+                        Desarrollo de las imágenes
+                        arquitectónicas y renders utilizados
+                        para comunicar la propuesta de
+                        diseño y explorar su atmósfera,
+                        materialidad y escala.
+
+                    </span>
+
+
+                    <span data-lang="en">
+
+                        Development of the architectural
+                        images and renders used to
+                        communicate the design proposal
+                        and explore its atmosphere,
+                        materiality and scale.
+
+                    </span>
+
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ROL 04 -->
+
+            <div class="role">
+
+
+                <span class="role-number">
+                    04 /
+                </span>
+
+
+                <h3 class="role-title">
+
+
+                    <span data-lang="es">
+                        Representación
+                    </span>
+
+
+                    <span data-lang="en">
+                        Representation
+                    </span>
+
+
+                </h3>
+
+
+                <p class="role-description">
+
+
+                    <span data-lang="es">
+
+                        El objetivo de la visualización fue
+                        representar fielmente la intención
+                        del diseño, manteniendo la identidad
+                        propuesta y trasladándola a una
+                        experiencia visual realista.
+
+                    </span>
+
+
+                    <span data-lang="en">
+
+                        The visualization aimed to faithfully
+                        represent the design intention,
+                        preserving its identity while
+                        translating it into a realistic
+                        visual experience.
+
+                    </span>
+
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         04 — GALERÍA
+    ========================================================= -->
+
+    <section class="gallery-section">
+
+
+        <div class="gallery-header">
+
+
+            <div class="gallery-header-text">
+
+
+                <div class="section-number">
+
+                    04 /
+
+                    <span data-lang="es">
+                        Galería
+                    </span>
+
+                    <span data-lang="en">
+                        Gallery
+                    </span>
+
+                </div>
+
+
+                <h2 class="section-title">
+
+
+                    <span data-lang="es">
+
+                        Una nueva<br>
+                        experiencia clínica.
+
+                    </span>
+
+
+                    <span data-lang="en">
+
+                        A new<br>
+                        clinical experience.
+
+                    </span>
+
+
+                </h2>
+
+
+            </div>
+
+
+            <p class="gallery-description">
+
+
+                <span data-lang="es">
+
+                    Una secuencia de espacios interiores
+                    donde la materialidad, la iluminación
+                    y la geometría construyen una atmósfera
+                    continua.
+
+                </span>
+
+
+                <span data-lang="en">
+
+                    A sequence of interior spaces where
+                    materiality, lighting and geometry
+                    create a continuous atmosphere.
+
+                </span>
+
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="gallery">
+
+
+            <!-- 01 -->
+
+            <div class="gallery-item">
+
+
+                <img
+                    src="img/pasillo.jpg"
+                    alt="Pasillo del Centro Endoscópico"
+                    loading="lazy"
+                >
+
+
+            </div>
+
+
+
+            <!-- 02 -->
+
+            <div class="gallery-item">
+
+
+                <img
+                    src="img/consultorio.jpg"
+                    alt="Consultorio del Centro Endoscópico"
+                    loading="lazy"
+                >
+
+
+            </div>
+
+
+
+            <!-- 03 -->
+
+            <div class="gallery-item">
+
+
+                <img
+                    src="img/recepcion-01.jpg"
+                    alt="Recepción del Centro Endoscópico"
+                    loading="lazy"
+                >
+
+
+            </div>
+
+
+
+            <!-- 04 -->
+
+            <div class="gallery-item">
+
+
+                <img
+                    src="img/recepcion-02.jpg"
+                    alt="Vista de recepción"
+                    loading="lazy"
+                >
+
+
+            </div>
+
+
+
+            <!-- 05 -->
+
+            <div class="gallery-item">
+
+
+                <img
+                    src="img/sala-espera.jpg"
+                    alt="Sala de espera del Centro Endoscópico"
+                    loading="lazy"
+                >
+
+
+            </div>
+
+
+
+            <!-- 06 -->
+
+            <div class="gallery-item">
+
+
+                <img
+                    src="img/sala-endoscopica.jpg"
+                    alt="Sala endoscópica"
+                    loading="lazy"
+                >
+
+
+            </div>
+
+
+
+            <!-- 07 -->
+
+            <div class="gallery-item">
+
+
+                <img
+                    src="img/vista-general.jpg"
+                    alt="Vista general del Centro Endoscópico"
+                    loading="lazy"
+                >
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         05 — CRÉDITOS
+    ========================================================= -->
+
+    <section class="credits">
+
+
+        <div class="section-number">
+
+            05 /
+
+            <span data-lang="es">
+                Créditos
+            </span>
+
+            <span data-lang="en">
+                Credits
+            </span>
+
+        </div>
+
+
+        <h2 class="credits-title">
+
+
+            <span data-lang="es">
+                Un proyecto<br>
+                construido en colaboración.
+            </span>
+
+
+            <span data-lang="en">
+                A project<br>
+                built through collaboration.
+            </span>
+
+
+        </h2>
+
+
+        <div class="credits-grid">
+
+
+            <!-- DISEÑO -->
+
+            <div class="credit">
+
+
+                <span class="credit-label">
+
+
+                    <span data-lang="es">
+                        Diseño de interiores
+                    </span>
+
+
+                    <span data-lang="en">
+                        Interior design
+                    </span>
+
+
+                </span>
+
+
+                <div class="credit-value">
+
+                    Dis. Gabriela Matute
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RENDERS -->
+
+            <div class="credit">
+
+
+                <span class="credit-label">
+
+
+                    <span data-lang="es">
+                        Renders
+                    </span>
+
+
+                    <span data-lang="en">
+                        Visualization
+                    </span>
+
+
+                </span>
+
+
+                <div class="credit-value">
+
+                    Arq. Alejandro Salazar
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ADAPTACIÓN -->
+
+            <div class="credit">
+
+
+                <span class="credit-label">
+
+
+                    <span data-lang="es">
+                        Adaptación espacial
+                    </span>
+
+
+                    <span data-lang="en">
+                        Spatial adaptation
+                    </span>
+
+
+                </span>
+
+
+                <div class="credit-value">
+
+
+                    <span data-lang="es">
+                        Arq. Alejandro Salazar
+                    </span>
+
+
+                    <span data-lang="en">
+                        Arch. Alejandro Salazar
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- AÑO -->
+
+            <div class="credit">
+
+
+                <span class="credit-label">
+
+
+                    <span data-lang="es">
+                        Año
+                    </span>
+
+
+                    <span data-lang="en">
+                        Year
+                    </span>
+
+
+                </span>
+
+
+                <div class="credit-value">
+
+                    2026
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TIPO -->
+
+            <div class="credit">
+
+
+                <span class="credit-label">
+
+
+                    <span data-lang="es">
+                        Tipología
+                    </span>
+
+
+                    <span data-lang="en">
+                        Typology
+                    </span>
+
+
+                </span>
+
+
+                <div class="credit-value">
+
+
+                    <span data-lang="es">
+                        Espacio sanitario
+                    </span>
+
+
+                    <span data-lang="en">
+                        Healthcare interior
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ALCANCE -->
+
+            <div class="credit">
+
+
+                <span class="credit-label">
+
+
+                    <span data-lang="es">
+                        Alcance
+                    </span>
+
+
+                    <span data-lang="en">
+                        Scope
+                    </span>
+
+
+                </span>
+
+
+                <div class="credit-value">
+
+
+                    <span data-lang="es">
+                        Diseño + visualización
+                    </span>
+
+
+                    <span data-lang="en">
+                        Design + visualization
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CIERRE
+    ========================================================= -->
+
+    <section class="closing">
+
+
+        <div class="section-number">
+
+            06 / ANDRO ARQ
+
+        </div>
+
+
+        <h2 class="closing-title">
+
+
+            <span data-lang="es">
+
+                La arquitectura también
+                puede cuidar.
+
+            </span>
+
+
+            <span data-lang="en">
+
+                Architecture can
+                also care.
+
+            </span>
+
+
+        </h2>
+
+
+        <div class="closing-bottom">
+
+
+            <div class="closing-note">
+
+
+                <span data-lang="es">
+
+                    Centro Endoscópico<br>
+                    Diseño de interiores · 2026<br>
+                    Diseño: Dis. Gabriela Matute<br>
+                    Renders y adaptación: Arq. Alejandro Salazar
+
+                </span>
+
+
+                <span data-lang="en">
+
+                    Endoscopy Center<br>
+                    Interior design · 2026<br>
+                    Design: Dis. Gabriela Matute<br>
+                    Visualization & adaptation: Arch. Alejandro Salazar
+
+                </span>
+
+
+            </div>
+
+
+            <a
+                href="../../index.html"
+                class="back-projects"
+            >
+
+
+                <span data-lang="es">
+                    ← Volver a inicio
+                </span>
+
+
+                <span data-lang="en">
+                    ← Back home
+                </span>
+
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+
+        <div class="footer-brand">
+
+            ANDRO ARQ
+
+        </div>
+
+
+        <div>
+
+            ©
+            <span id="year"></span>
+            Alejandro Salazar
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         WHATSAPP
+    ========================================================= -->
+
+    <a
+        href="https://wa.me/593984527298"
+        class="whatsapp"
+        target="_blank"
+        aria-label="WhatsApp"
+    >
+
+
+        <img
+            src="../../img/whatsapp.png"
+            alt="WhatsApp"
+        >
+
+
+    </a>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+
+        /* =====================================================
+           AÑO
+        ===================================================== */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+
+        /* =====================================================
+           BOTONES DE IDIOMA
+        ===================================================== */
+
+        const esBtn =
+            document.getElementById("esBtn");
+
+        const enBtn =
+            document.getElementById("enBtn");
+
+
+
+        function setLanguage(language) {
+
+
+            if (language === "en") {
+
+
+                document.body.classList.add(
+                    "english"
+                );
+
+
+                esBtn.classList.remove(
+                    "active"
+                );
+
+
+                enBtn.classList.add(
+                    "active"
+                );
+
+
+                document.documentElement.lang =
+                    "en";
+
+
+            } else {
+
+
+                document.body.classList.remove(
+                    "english"
+                );
+
+
+                enBtn.classList.remove(
+                    "active"
+                );
+
+
+                esBtn.classList.add(
+                    "active"
+                );
+
+
+                document.documentElement.lang =
+                    "es";
+
+            }
+
+
+            localStorage.setItem(
+                "androarq-language",
+                language
+            );
+
+        }
+
+
+
+        esBtn.addEventListener(
+            "click",
+            () => setLanguage("es")
+        );
+
+
+        enBtn.addEventListener(
+            "click",
+            () => setLanguage("en")
+        );
+
+
+
+        /* =====================================================
+           RECUPERAR IDIOMA DEL SITIO
+        ===================================================== */
+
+        const savedLanguage =
+            localStorage.getItem(
+                "androarq-language"
+            );
+
+
+        if (savedLanguage === "en") {
+
+            setLanguage("en");
+
+        } else {
+
+            setLanguage("es");
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
