@@ -8,11 +8,11 @@
 
     <meta name="description" content="Vivienda unifamiliar con taller en planta baja. Proyecto arquitectónico desarrollado por Alejandro Salazar. 2026.">
 
-    <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
 
     <style>
 
@@ -38,6 +38,7 @@
             text-decoration: none;
         }
 
+
         /* =========================
            HEADER
         ========================= */
@@ -58,6 +59,7 @@
             z-index: 100;
 
             background: rgba(247, 246, 242, 0.88);
+
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
 
@@ -74,6 +76,7 @@
             font-size: 11px;
             letter-spacing: 0.08em;
             text-transform: uppercase;
+
             transition: opacity 0.3s ease;
         }
 
@@ -108,8 +111,11 @@
 
         h1 {
             font-family: "Playfair Display", serif;
+
             font-size: clamp(48px, 7vw, 105px);
+
             font-weight: 400;
+
             line-height: 0.98;
 
             max-width: 1050px;
@@ -119,10 +125,13 @@
 
         .hero-info {
             display: grid;
+
             grid-template-columns: repeat(4, max-content);
+
             gap: 70px;
 
             font-size: 11px;
+
             line-height: 1.7;
         }
 
@@ -130,7 +139,9 @@
             display: block;
 
             font-size: 9px;
+
             letter-spacing: 0.18em;
+
             text-transform: uppercase;
 
             color: #999;
@@ -147,7 +158,9 @@
             padding: 14vh 7vw;
 
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 10vw;
 
             border-top: 1px solid #dddcd7;
@@ -155,8 +168,11 @@
 
         .intro-title {
             font-family: "Playfair Display", serif;
+
             font-size: clamp(30px, 4vw, 55px);
+
             font-weight: 400;
+
             line-height: 1.1;
         }
 
@@ -164,6 +180,7 @@
             max-width: 550px;
 
             font-size: 14px;
+
             line-height: 1.9;
 
             color: #555;
@@ -184,7 +201,9 @@
 
         .section-header {
             display: flex;
+
             align-items: baseline;
+
             justify-content: space-between;
 
             margin-bottom: 45px;
@@ -196,42 +215,57 @@
 
         .section-title {
             font-family: "Playfair Display", serif;
+
             font-size: 38px;
+
             font-weight: 400;
         }
 
         .section-number {
             font-size: 10px;
+
             letter-spacing: 0.18em;
+
             color: #999;
         }
 
 
         /* =========================
-           GALERÍA EXTERIOR
+           IMÁGENES
         ========================= */
-
-        .exterior-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
 
         .image-wrapper {
             overflow: hidden;
+
             background: #e9e8e3;
         }
 
         .image-wrapper img {
             width: 100%;
+
             height: auto;
+
             display: block;
 
-            transition: transform 0.8s cubic-bezier(.2,.6,.2,1);
+            transition:
+                transform 0.8s cubic-bezier(.2,.6,.2,1);
         }
 
         .image-wrapper:hover img {
             transform: scale(1.025);
+        }
+
+
+        /* =========================
+           EXTERIORES
+        ========================= */
+
+        .exterior-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
         }
 
         .exterior-grid .image-wrapper:first-child {
@@ -240,7 +274,7 @@
 
 
         /* =========================
-           GALERÍA INTERIORES
+           INTERIORES
         ========================= */
 
         .interior-grid {
@@ -257,6 +291,23 @@
 
 
         /* =========================
+           DOCUMENTACIÓN
+        ========================= */
+
+        .documentation-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+        .documentation-grid .image-wrapper {
+            background: #e9e8e3;
+        }
+
+
+        /* =========================
            CIERRE
         ========================= */
 
@@ -266,14 +317,19 @@
             border-top: 1px solid #d8d7d2;
 
             display: flex;
+
             flex-direction: column;
+
             align-items: center;
+
             text-align: center;
         }
 
         .closing-small {
             font-size: 9px;
+
             letter-spacing: 0.25em;
+
             text-transform: uppercase;
 
             color: #999;
@@ -287,6 +343,7 @@
             font-size: clamp(35px, 5vw, 70px);
 
             font-weight: 400;
+
             line-height: 1.05;
 
             max-width: 800px;
@@ -303,11 +360,15 @@
             border-top: 1px solid #d8d7d2;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             font-size: 9px;
+
             letter-spacing: 0.15em;
+
             text-transform: uppercase;
 
             color: #888;
@@ -322,11 +383,13 @@
 
             header {
                 height: 70px;
+
                 padding: 0 6vw;
             }
 
             .hero {
                 min-height: 90vh;
+
                 padding: 130px 6vw 8vh;
             }
 
@@ -336,11 +399,13 @@
 
             .hero-info {
                 grid-template-columns: repeat(2, 1fr);
+
                 gap: 25px 35px;
             }
 
             .intro {
                 grid-template-columns: 1fr;
+
                 gap: 45px;
 
                 padding: 12vh 6vw;
@@ -359,8 +424,10 @@
             }
 
             .exterior-grid,
-            .interior-grid {
+            .interior-grid,
+            .documentation-grid {
                 grid-template-columns: 1fr;
+
                 gap: 12px;
             }
 
@@ -377,6 +444,7 @@
                 padding: 35px 6vw;
 
                 flex-direction: column;
+
                 gap: 15px;
             }
         }
@@ -406,10 +474,15 @@
 
 
     <!-- =========================
-         HERO
+         CONTENIDO
     ========================= -->
 
     <main>
+
+
+        <!-- =========================
+             HERO
+        ========================= -->
 
         <section class="hero">
 
@@ -461,6 +534,7 @@
                 una misma arquitectura.
             </div>
 
+
             <div class="intro-text">
 
                 <p>
@@ -500,7 +574,7 @@
                 </div>
 
                 <div class="section-number">
-                    01 / 02
+                    01 / 03
                 </div>
 
             </div>
@@ -509,19 +583,24 @@
             <div class="exterior-grid">
 
                 <div class="image-wrapper">
+
                     <img
                         src="img/exterior-01.jpg"
                         alt="Vivienda unifamiliar y taller — vista exterior"
                         loading="eager"
                     >
+
                 </div>
 
+
                 <div class="image-wrapper">
+
                     <img
                         src="img/exterior-02.jpg"
                         alt="Vivienda unifamiliar y taller — fachada exterior"
                         loading="lazy"
                     >
+
                 </div>
 
             </div>
@@ -542,7 +621,7 @@
                 </div>
 
                 <div class="section-number">
-                    02 / 02
+                    02 / 03
                 </div>
 
             </div>
@@ -550,53 +629,110 @@
 
             <div class="interior-grid">
 
+
                 <div class="image-wrapper">
+
                     <img
                         src="img/interior-01.jpg"
                         alt="Interior de la vivienda"
                         loading="lazy"
                     >
+
                 </div>
 
-                <div class="image-wrapper">
-                    <img
-                        src="img/interior-02.jpg"
-                        alt="Interior de la vivienda"
-                        loading="lazy"
-                    >
-                </div>
 
                 <div class="image-wrapper">
+
                     <img
                         src="img/interior-03.jpg"
                         alt="Interior de la vivienda"
                         loading="lazy"
                     >
+
                 </div>
 
+
                 <div class="image-wrapper">
+
                     <img
                         src="img/interior-04.jpg"
                         alt="Interior de la vivienda"
                         loading="lazy"
                     >
+
                 </div>
 
+
                 <div class="image-wrapper">
+
                     <img
                         src="img/interior-05.jpg"
                         alt="Interior de la vivienda"
                         loading="lazy"
                     >
+
                 </div>
 
+
                 <div class="image-wrapper">
+
                     <img
                         src="img/interior-06.jpg"
                         alt="Interior de la vivienda"
                         loading="lazy"
                     >
+
                 </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DOCUMENTACIÓN
+        ========================= -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div class="section-title">
+                    Documentación
+                </div>
+
+                <div class="section-number">
+                    03 / 03
+                </div>
+
+            </div>
+
+
+            <div class="documentation-grid">
+
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="img/lamina-01.jpg"
+                        alt="Lámina arquitectónica del proyecto"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="img/lamina-02.jpg"
+                        alt="Lámina arquitectónica del proyecto"
+                        loading="lazy"
+                    >
+
+                </div>
+
 
             </div>
 
@@ -619,6 +755,7 @@
             </h2>
 
         </section>
+
 
     </main>
 
