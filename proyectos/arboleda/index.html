@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ARBOLEDA | ANDRO ARQ</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f3ee;
+    color:#171717;
+    font-family:"Inter", sans-serif;
+    font-weight:300;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:76px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 5vw;
+    background:rgba(245,243,238,.88);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+.logo{
+    font-size:12px;
+    letter-spacing:4px;
+    font-weight:500;
+}
+
+.back{
+    color:#171717;
+    text-decoration:none;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+.back:hover{
+    opacity:.5;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    padding-top:76px;
+}
+
+.hero-image{
+    width:100%;
+    height:calc(100vh - 76px);
+    min-height:600px;
+    object-fit:cover;
+    display:block;
+}
+
+.hero-caption{
+    max-width:1200px;
+    margin:auto;
+    padding:55px 6vw 75px;
+}
+
+.kicker{
+    font-size:10px;
+    letter-spacing:4px;
+    color:#777;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.hero-title{
+    font-family:"Playfair Display", serif;
+    font-size:clamp(48px,8vw,105px);
+    font-weight:400;
+    line-height:.95;
+    margin-bottom:28px;
+}
+
+.hero-description{
+    max-width:680px;
+    font-size:15px;
+    line-height:1.9;
+    color:#555;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 6vw 110px;
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:100px;
+    border-top:1px solid #d8d5ce;
+}
+
+.section-number{
+    font-size:11px;
+    letter-spacing:3px;
+    color:#999;
+}
+
+.section-title{
+    font-family:"Playfair Display", serif;
+    font-size:42px;
+    font-weight:400;
+    margin-top:14px;
+}
+
+.intro-text{
+    font-size:15px;
+    line-height:2;
+    color:#555;
+}
+
+.intro-text p{
+    margin-bottom:25px;
+}
+
+/* =========================
+   CONCEPT
+========================= */
+
+.concept{
+    background:#ebe9e3;
+    padding:110px 6vw;
+}
+
+.concept-inner{
+    max-width:1200px;
+    margin:auto;
+}
+
+.concept-heading{
+    font-family:"Playfair Display", serif;
+    font-size:50px;
+    font-weight:400;
+    margin-bottom:35px;
+}
+
+.concept-text{
+    max-width:760px;
+    font-size:15px;
+    line-height:2;
+    color:#555;
+}
+
+.concept-keywords{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:45px;
+}
+
+.keyword{
+    border:1px solid #c8c5be;
+    padding:10px 18px;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.gallery{
+    max-width:1400px;
+    margin:auto;
+    padding:110px 4vw;
+}
+
+.gallery-header{
+    margin-bottom:55px;
+}
+
+.gallery-header h2{
+    font-family:"Playfair Display", serif;
+    font-size:50px;
+    font-weight:400;
+}
+
+.gallery-header p{
+    margin-top:15px;
+    color:#777;
+    font-size:13px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    background:#e8e5de;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    min-height:500px;
+    object-fit:cover;
+    display:block;
+    transition:transform .8s cubic-bezier(.2,.6,.2,1);
+}
+
+.gallery-item:hover img{
+    transform:scale(1.025);
+}
+
+.gallery-item.large{
+    grid-column:span 2;
+}
+
+.gallery-item.large img{
+    min-height:700px;
+}
+
+/* =========================
+   DOWNLOAD
+========================= */
+
+.download{
+    background:#181818;
+    color:#f5f3ee;
+    padding:120px 6vw;
+}
+
+.download-inner{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:100px;
+    align-items:center;
+}
+
+.download-label{
+    font-size:10px;
+    letter-spacing:4px;
+    color:#999;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.download-title{
+    font-family:"Playfair Display", serif;
+    font-size:55px;
+    font-weight:400;
+    line-height:1;
+}
+
+.download-text{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.file-info{
+    display:flex;
+    gap:30px;
+    border-top:1px solid #3b3b3b;
+    border-bottom:1px solid #3b3b3b;
+    padding:22px 0;
+    margin-bottom:35px;
+}
+
+.file-info div{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.file-label{
+    font-size:8px;
+    letter-spacing:2px;
+    color:#777;
+    text-transform:uppercase;
+}
+
+.file-value{
+    font-size:12px;
+}
+
+.download-button{
+    display:inline-block;
+    text-decoration:none;
+    color:#181818;
+    background:#f5f3ee;
+    padding:15px 25px;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+.download-button:hover{
+    background:#dcd9d1;
+}
+
+/* =========================
+   NOTE
+========================= */
+
+.note{
+    max-width:1200px;
+    margin:auto;
+    padding:75px 6vw;
+    color:#777;
+    font-size:11px;
+    line-height:1.8;
+    text-align:center;
+}
+
+/* =========================
+   CREDITS
+========================= */
+
+.credits{
+    border-top:1px solid #d8d5ce;
+    padding:70px 6vw 90px;
+    text-align:center;
+}
+
+.credits-label{
+    font-size:9px;
+    letter-spacing:4px;
+    color:#999;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.credits p{
+    font-size:11px;
+    line-height:2;
+    color:#666;
+}
+
+.credits strong{
+    color:#222;
+    font-weight:500;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111;
+    color:#aaa;
+    padding:35px 6vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+footer span{
+    color:#eee;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+    header{
+        height:65px;
+        padding:0 6vw;
+    }
+
+    .hero{
+        padding-top:65px;
+    }
+
+    .hero-image{
+        height:70vh;
+        min-height:500px;
+    }
+
+    .hero-caption{
+        padding:45px 7vw 65px;
+    }
+
+    .hero-title{
+        font-size:58px;
+    }
+
+    .intro{
+        grid-template-columns:1fr;
+        gap:45px;
+        padding:70px 7vw;
+    }
+
+    .section-title{
+        font-size:36px;
+    }
+
+    .concept{
+        padding:75px 7vw;
+    }
+
+    .concept-heading{
+        font-size:40px;
+    }
+
+    .gallery{
+        padding:75px 5vw;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item,
+    .gallery-item.large{
+        grid-column:span 1;
+    }
+
+    .gallery-item img,
+    .gallery-item.large img{
+        min-height:420px;
+    }
+
+    .download{
+        padding:80px 7vw;
+    }
+
+    .download-inner{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .download-title{
+        font-size:45px;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+        ANDRO ARQ
+    </div>
+
+    <a href="../index.html" class="back">
+        ← Proyectos
+    </a>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <img
+        src="img/exterior-01.jpg"
+        alt="ARBOLEDA - Vista exterior principal"
+        class="hero-image"
+    >
+
+    <div class="hero-caption">
+
+        <div class="kicker">
+            Exploración arquitectónica · Residencial
+        </div>
+
+        <h1 class="hero-title">
+            ARBOLEDA
+        </h1>
+
+        <p class="hero-description">
+            Una exploración arquitectónica centrada en la relación entre
+            materia, luz, vegetación y espacio. Una propuesta residencial
+            contemporánea concebida como ejercicio de diseño y visualización
+            arquitectónica.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCCIÓN
+========================= -->
+
+<section class="intro">
+
+    <div>
+
+        <div class="section-number">
+            01
+        </div>
+
+        <h2 class="section-title">
+            La propuesta
+        </h2>
+
+    </div>
+
+    <div class="intro-text">
+
+        <p>
+            ARBOLEDA es una propuesta arquitectónica desarrollada como
+            ejercicio de exploración formal, espacial y visual.
+        </p>
+
+        <p>
+            El proyecto parte de una arquitectura residencial contemporánea
+            donde la simetría, los grandes vanos arqueados y la materialidad
+            pétrea construyen una presencia sólida y atemporal.
+        </p>
+
+        <p>
+            Los grandes paños de vidrio permiten que la arquitectura se
+            prolongue hacia el exterior, generando una relación constante
+            entre los espacios habitables, las terrazas, la vegetación y
+            el agua.
+        </p>
+
+        <p>
+            Más que un proyecto destinado a una ubicación específica,
+            ARBOLEDA nace como una exploración de lenguaje arquitectónico,
+            iluminación, materialidad y atmósfera.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONCEPTO
+========================= -->
+
+<section class="concept">
+
+    <div class="concept-inner">
+
+        <div class="section-number">
+            02
+        </div>
+
+        <h2 class="concept-heading">
+            Materia · Luz · Paisaje
+        </h2>
+
+        <p class="concept-text">
+            Una arquitectura de líneas limpias y proporciones marcadas,
+            donde los arcos funcionan como elemento protagonista de la
+            composición. La piedra clara aporta continuidad y permanencia,
+            mientras que el vidrio introduce transparencia y permite que
+            el paisaje forme parte de la experiencia interior.
+            La vegetación y el agua completan la composición, generando
+            una atmósfera residencial sofisticada y serena.
+        </p>
+
+        <div class="concept-keywords">
+
+            <span class="keyword">Arquitectura residencial</span>
+            <span class="keyword">Arcos</span>
+            <span class="keyword">Piedra</span>
+            <span class="keyword">Vidrio</span>
+            <span class="keyword">Paisaje</span>
+            <span class="keyword">Luz</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALERÍA
+========================= -->
+
+<section class="gallery">
+
+    <div class="gallery-header">
+
+        <div class="section-number">
+            03
+        </div>
+
+        <h2>
+            Galería
+        </h2>
+
+        <p>
+            Exploración exterior e interior de ARBOLEDA.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <!-- EXTERIOR 01 -->
+
+        <div class="gallery-item large">
+
+            <img
+                src="img/exterior-01.jpg"
+                alt="ARBOLEDA - Vista exterior principal"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <!-- EXTERIOR 02 -->
+
+        <div class="gallery-item">
+
+            <img
+                src="img/exterior-02.jpg"
+                alt="ARBOLEDA - Vista exterior lateral"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <!-- EXTERIOR 03 -->
+
+        <div class="gallery-item">
+
+            <img
+                src="img/exterior-03.jpg"
+                alt="ARBOLEDA - Vista exterior nocturna"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <!-- INTERIOR 01 -->
+
+        <div class="gallery-item large">
+
+            <img
+                src="img/interior-01.jpg"
+                alt="ARBOLEDA - Vista interior"
+                loading="lazy"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DESCARGA SKP
+========================= -->
+
+<section class="download">
+
+    <div class="download-inner">
+
+        <div>
+
+            <div class="download-label">
+                Archivo del proyecto
+            </div>
+
+            <h2 class="download-title">
+                Explora<br>
+                ARBOLEDA.
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p class="download-text">
+                El archivo original de SketchUp se encuentra disponible
+                para descarga como material de estudio y práctica.
+                Puedes explorar el modelo, modificarlo y utilizarlo
+                como base para tus propias visualizaciones arquitectónicas.
+            </p>
+
+
+            <div class="file-info">
+
+                <div>
+
+                    <span class="file-label">
+                        Archivo
+                    </span>
+
+                    <span class="file-value">
+                        ARBOLEDA
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <span class="file-label">
+                        Formato
+                    </span>
+
+                    <span class="file-value">
+                        SketchUp · .SKP
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!--
+            IMPORTANTE:
+            El archivo debe llamarse exactamente:
+
+            arboleda.skp
+
+            y estar dentro de:
+
+            proyectos/arboleda/arboleda.skp
+            -->
+
+            <a
+                href="arboleda.skp"
+                class="download-button"
+                download
+            >
+                Descargar proyecto →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NOTA DE USO
+========================= -->
+
+<div class="note">
+
+    Archivo proporcionado por ANDRO ARQ para fines de estudio y práctica.
+    El proyecto puede ser utilizado como base para exploración y
+    visualización arquitectónica. Se agradece mantener los créditos
+    correspondientes de autoría.
+
+</div>
+
+
+<!-- =========================
+     CRÉDITOS
+========================= -->
+
+<section class="credits">
+
+    <div class="credits-label">
+        Créditos
+    </div>
+
+    <p>
+        <strong>Diseño y desarrollo:</strong>
+        Alejandro Salazar · ANDRO ARQ
+    </p>
+
+    <p>
+        <strong>Guía de modelado:</strong>
+        MrRenders
+    </p>
+
+    <p>
+        <strong>Visualización arquitectónica:</strong>
+        ANDRO ARQ
+    </p>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div>
+        ANDRO ARQ
+    </div>
+
+    <div>
+        <span>ARBOLEDA</span> · Exploración arquitectónica
+    </div>
+
+</footer>
+
+
+</body>
+</html>
